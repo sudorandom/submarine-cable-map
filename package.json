@@ -1,0 +1,17 @@
+{
+  "name": "submarine-cable-map",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "node map.js"
+  },
+  "dependencies": {
+    "d3": "^7.3.0",
+    "d3-geo": "^3.0.1",
+    "d3-node": "^2.2.3",
+    "jsdom": "^19.0.0"
+  },
+  "devDependencies": {
+  }
+}
