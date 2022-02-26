@@ -4,10 +4,10 @@ import {geoConicConformal, geoConicEqualArea, geoNaturalEarth1, geoMercator, geo
 
 function buildImage(projection, outfile) {
     const d3n = new D3Node()
-    const svg = d3n.createSVG(5000, 3000).append('g')
+    const svg = d3n.createSVG(5000, 2800).append('g')
 
     const width = 5000,
-          height = 3000
+          height = 2800
 
     svg.append("rect")
         .attr("width", "100%")
@@ -17,8 +17,16 @@ function buildImage(projection, outfile) {
     var gfg = projection
         .scale(width / 2.5 / Math.PI)
         .rotate([0, 0])
-        .center([0, 0])
+        .center([0, 40])
         .translate([width / 2, height / 2]);
+
+    svg.append('script')
+        .attr('type', 'text/javascript')
+        .text(`<script type="text/javascript"><![CDATA[
+        function displayName(name) {
+            document.getElementById('fiber-name').firstChild.data = name;
+        }
+    ]]></script>`)
 
     // Drawing the map
     let worldMapData = fs.readFileSync('./data/world.geo.json');
@@ -34,7 +42,7 @@ function buildImage(projection, outfile) {
         .style("stroke-width", 1);
 
     // Drawing Cables
-    let cableGeoData = fs.readFileSync('./data/cable-geo.json');
+    let cableGeoData = fs.readFileSync('./data/www.submarinecablemap.com/web/public/api/v3/cable/cable-geo.json');
     let cableGeo = JSON.parse(cableGeoData);
     svg.append("g")
         .selectAll("path")
@@ -42,11 +50,25 @@ function buildImage(projection, outfile) {
         .enter()
         .append("path")
         .attr("d", geoPath().projection(gfg))
+        .attr("onmouseover", function(d) { return "displayName(`" + d.properties.name + "`)";})
         .attr("fill", "none")
         .attr("stroke", function(d) { return d.properties.color; })
         // .attr("stroke", function(d) { return "#555"; })
         .style("stroke-width", 1);
 
+    // Drawing Landings
+    let landingPointGeoData = fs.readFileSync('./data/www.submarinecablemap.com/web/public/api/v3/landing-point/landing-point-geo.json');
+    let landingPointGeo = JSON.parse(landingPointGeoData);
+    svg.append("g")
+        .selectAll("path")
+        .data(landingPointGeo.features)
+        .enter()
+        .append("path")
+        .attr("onmouseover", function(d) { return `displayName('${d.properties.name}')`;})
+        .attr("d", geoPath().projection(gfg).pointRadius(function(d) { return 0.3; }))
+        .attr("fill", "#555")
+        .attr("stroke", function(d) { return "#eee"; })
+        .style("stroke-width", 1);
 
     console.log('writing output to ' + outfile);
     fs.writeFile(outfile, d3n.svgString(), function (err) {

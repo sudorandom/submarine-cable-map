@@ -4,8 +4,9 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build": "npm run clean && npm run build:svg && npm run build:png",
-    "build:svg": "node map.js",
+    "build": "npm run clean && npm run build:map && npm run build:png",
+    "build:map": "node map.js",
+    "build:chord": "node chord.js",
     "build:png": "mogrify -format png ./output/*.svg",
     "clean": "rm output/*"
   },
