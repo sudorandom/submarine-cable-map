@@ -4,10 +4,11 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build": "npm run clean && npm run build:map && npm run build:png",
+    "build": "python3 process_data.py && npm run clean && npm run build:map && npm run build:png",
     "build:map": "node map.js",
     "build:chord": "node chord.js",
-    "build:png": "mogrify -format png ./output/*.svg",
+    "build:png": "mogrify -format png ./output/*.svg && npm run build:displate",
+    "build:displate": "./build_displate.sh",
     "clean": "rm output/*"
   },
   "dependencies": {

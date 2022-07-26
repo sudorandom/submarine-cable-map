@@ -4,10 +4,9 @@ import {geoConicConformal, geoConicEqualArea, geoNaturalEarth1, geoMercator, geo
 
 function buildImage(projection, outfile) {
     const d3n = new D3Node()
-    const svg = d3n.createSVG(5000, 2800).append('g')
-
-    const width = 5000,
-          height = 2800
+    const width = 5600,
+          height = 4000
+    const svg = d3n.createSVG(width, height).append('g')
 
     svg.append("rect")
         .attr("width", "100%")
@@ -15,7 +14,7 @@ function buildImage(projection, outfile) {
         .attr("fill", "#333");
 
     var gfg = projection
-        .scale(width / 2.5 / Math.PI)
+        .scale(width / 2.02 / Math.PI)
         .rotate([0, 0])
         .center([0, 40])
         .translate([width / 2, height / 2]);
@@ -76,7 +75,7 @@ function buildImage(projection, outfile) {
     })
 }
 
-buildImage(geoConicConformal(), 'output/geo-conic-conformal.svg')
-buildImage(geoConicEqualArea(), 'output/geo-conic-equal-area.svg')
-buildImage(geoNaturalEarth1(), 'output/geo-natural-earth-1.svg')
+// buildImage(geoConicConformal(), 'output/geo-conic-conformal.svg')
+// buildImage(geoConicEqualArea(), 'output/geo-conic-equal-area.svg')
+// buildImage(geoNaturalEarth1(), 'output/geo-natural-earth-1.svg')
 buildImage(geoMercator(), 'output/geo-mercator.svg')
