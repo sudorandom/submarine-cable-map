@@ -53,7 +53,7 @@ function buildImage(projection, outfile) {
         .attr("fill", "none")
         .attr("stroke", function(d) { return d.properties.color; })
         // .attr("stroke", function(d) { return "#555"; })
-        .style("stroke-width", 1);
+        .style("stroke-width", 2);
 
     // Drawing Landings
     let landingPointGeoData = fs.readFileSync('./data/www.submarinecablemap.com/web/public/api/v3/landing-point/landing-point-geo.json');
