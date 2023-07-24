@@ -41,7 +41,7 @@ function buildImage(projection, outfile) {
         .style("stroke-width", 1);
 
     // Drawing Cables
-    let cableGeoData = fs.readFileSync('./data/www.submarinecablemap.com/web/public/api/v3/cable/cable-geo.json');
+    let cableGeoData = fs.readFileSync('./data/cable-geo.json');
     let cableGeo = JSON.parse(cableGeoData);
     svg.append("g")
         .selectAll("path")
