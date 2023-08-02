@@ -41,6 +41,9 @@ function buildImage(projection, outfile) {
         .style("stroke", "#333")
         .style("stroke-width", 1);
 
+    const colorScale = scaleSequential(["#577590", "#4D908E", "#43AA8B", "#90BE6D", "#F9C74F", "#F9844A", "#F8961E", "#F3722C", "#F94144"]) // You can choose any color scale you prefer
+        .domain([0, 1000000]); // Set the domain of the color scale based on the available bandwidth
+
     // Drawing Cables
     let cableGeoData = fs.readFileSync('./data/cable-geo.json');
     let cableGeo = JSON.parse(cableGeoData);
@@ -52,9 +55,9 @@ function buildImage(projection, outfile) {
         .attr("d", geoPath().projection(gfg))
         .attr("onmouseover", function(d) { return "displayName(`" + d.properties.name + "`)";})
         .attr("fill", "none")
-        .attr("stroke", function(d) { return d.properties.color; })
-        // .attr("stroke", function(d) { return "#555"; })
-        .style("stroke-width", 3);
+        // .attr("stroke", function(d) { return d.properties.color; })
+        .attr("stroke", function(d) { return colorScale(0); })
+        .style("stroke-width", 2);
 
     // Drawing Landings
     let landingPointGeoData = fs.readFileSync('./data/landing-point-geo.json');
@@ -72,8 +75,6 @@ function buildImage(projection, outfile) {
 
     let citySpeedsData = fs.readFileSync('./data/city-speeds.json');
     let citySpeeds = JSON.parse(citySpeedsData);
-    const colorScale = scaleSequential(interpolateYlOrRd) // You can choose any color scale you prefer
-        .domain([0, 10000000]); // Set the domain of the color scale based on the maximum speed value    
     const sizeScale = scalePow([0, 100000000], [10, 20])
 
     svg.append("g")
@@ -84,7 +85,9 @@ function buildImage(projection, outfile) {
         .attr("cx", d => gfg([d.long, d.lat])[0])
         .attr("cy", d => gfg([d.long, d.lat])[1])
         .attr("r", d => Math.floor(sizeScale(d.speed)))
-        .attr("fill", d => colorScale(d.speed));
+        .attr("fill", d => colorScale(d.speed))
+        .attr("stroke", "white")
+        .attr("stroke-width", 1);
 
     console.log('writing output to ' + outfile);
     fs.writeFile(outfile, d3n.svgString(), function (err) {
