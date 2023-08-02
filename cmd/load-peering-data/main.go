@@ -13,7 +13,7 @@ import (
 )
 
 const PeeringDataPath = "peeringdata"
-const GeoDataPath = "geodata"
+const GeoDataPath = "data"
 const OutputPath = "data"
 
 type DataSpec struct {
