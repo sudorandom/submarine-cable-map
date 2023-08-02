@@ -137,6 +137,7 @@ func (db *GeoDatabase) Load() error {
 
 		addCoords(Location{City: record[0], Country: record[5], Lat: lat, Long: long, Population: population})
 		addCoords(Location{City: record[1], Country: record[5], Lat: lat, Long: long, Population: population})
+		addCoords(Location{City: record[7], Country: record[5], Lat: lat, Long: long, Population: population})
 	}
 
 	db.cityCoords = cityCoords
@@ -144,6 +145,10 @@ func (db *GeoDatabase) Load() error {
 }
 
 func (db *GeoDatabase) Lookup(city, country string) (Location, bool) {
+	if newCityName, ok := manualCityMapping[city]; ok {
+		city = newCityName
+	}
+
 	if coords, ok := db.cityCoords[KeyCityCountry{City: city, Country: country}]; ok {
 		return coords, true
 	}
@@ -328,14 +333,16 @@ func getLocationsForIX(geoDB *GeoDatabase, ix peeringdb.InternetExchange) []Loca
 		cities = strings.Split(ix.City, " and ")
 	}
 
-	for _, city := range cities {
+	for idx, city := range cities {
 		city := strings.TrimSpace(city)
 		if city == "" {
 			continue
 		}
 
 		location, ok := geoDB.Lookup(city, ix.Country)
-		if !ok && len(city) == 2 {
+		if !ok && idx != 0 && len(city) == 2 {
+			continue
+		} else if !ok && idx != 0 && len(city) == 3 {
 			continue
 		} else if !ok {
 			log.Printf("WARN: could not find coordinates; ix=%d, city='%v', full-city='%v', country='%v'", ix.ID, city, ix.City, ix.Country)
