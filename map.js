@@ -1,3 +1,4 @@
+import {scaleSequential, scalePow, interpolateYlOrRd} from 'd3';
 import D3Node from 'd3-node';
 import fs from 'fs';
 import {geoConicConformal, geoConicEqualArea, geoNaturalEarth1, geoMercator, geoPath} from 'd3-geo'
@@ -53,10 +54,10 @@ function buildImage(projection, outfile) {
         .attr("fill", "none")
         .attr("stroke", function(d) { return d.properties.color; })
         // .attr("stroke", function(d) { return "#555"; })
-        .style("stroke-width", 2);
+        .style("stroke-width", 3);
 
     // Drawing Landings
-    let landingPointGeoData = fs.readFileSync('./data/www.submarinecablemap.com/web/public/api/v3/landing-point/landing-point-geo.json');
+    let landingPointGeoData = fs.readFileSync('./data/landing-point-geo.json');
     let landingPointGeo = JSON.parse(landingPointGeoData);
     svg.append("g")
         .selectAll("path")
@@ -68,6 +69,22 @@ function buildImage(projection, outfile) {
         .attr("fill", "#555")
         .attr("stroke", function(d) { return "#eee"; })
         .style("stroke-width", 1);
+
+    let citySpeedsData = fs.readFileSync('./data/city-speeds.json');
+    let citySpeeds = JSON.parse(citySpeedsData);
+    const colorScale = scaleSequential(interpolateYlOrRd) // You can choose any color scale you prefer
+        .domain([0, 10000000]); // Set the domain of the color scale based on the maximum speed value    
+    const sizeScale = scalePow([0, 100000000], [10, 20])
+
+    svg.append("g")
+        .selectAll("circle")
+        .data(citySpeeds)
+        .enter()
+        .append("circle")
+        .attr("cx", d => gfg([d.long, d.lat])[0])
+        .attr("cy", d => gfg([d.long, d.lat])[1])
+        .attr("r", d => Math.floor(sizeScale(d.speed)))
+        .attr("fill", d => colorScale(d.speed));
 
     console.log('writing output to ' + outfile);
     fs.writeFile(outfile, d3n.svgString(), function (err) {

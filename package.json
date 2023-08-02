@@ -4,13 +4,12 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build": "npm run clean && npm run build:map && npm run build:png && npm run build:displate",
+    "build": "npm run clean && npm run build:map && npm run build:convert",
     "download": "curl https://www.submarinecablemap.com/api/v3/cable/cable-geo.json > data/cable-geo.json",
     "build:map": "node map.js",
     "build:chord": "node chord.js",
-    "build:png": "mogrify -format png ./output/*.svg && npm run build:displate",
-    "build:displate": "./build_displate.sh",
-    "clean": "rm output/*"
+    "build:convert": "./convert.sh",
+    "clean": "rm -f output/*"
   },
   "dependencies": {
     "d3": "^7.3.0",
