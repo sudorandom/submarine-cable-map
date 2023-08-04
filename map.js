@@ -1,18 +1,19 @@
 import {scaleSequential, scalePow, interpolateYlOrRd} from 'd3';
+import geoJson from 'world-geojson'
 import D3Node from 'd3-node';
 import fs from 'fs';
 import {geoConicConformal, geoConicEqualArea, geoNaturalEarth1, geoMercator, geoPath} from 'd3-geo'
 
-function buildImage(projection, outfile) {
+function buildImage(projection, opts) {
     const d3n = new D3Node()
-    const width = 5600,
-          height = 4000
+    const width = opts.width,
+          height = opts.height
     const svg = d3n.createSVG(width, height).append('g')
 
     svg.append("rect")
         .attr("width", "100%")
         .attr("height", "100%")
-        .attr("fill", "#333");
+        .attr("fill", opts.backgroundColor);
 
     var gfg = projection
         .scale(width / 2.02 / Math.PI)
@@ -28,20 +29,23 @@ function buildImage(projection, outfile) {
         }
     ]]></script>`)
 
-    // Drawing the map
-    let worldMapData = fs.readFileSync('./data/world.geo.json');
-    let worldMap = JSON.parse(worldMapData);
-    svg.append("g")
-        .selectAll("path")
-        .data(worldMap.features)
-        .enter()
-        .append("path")
-        .attr("fill", "#888")
-        .attr("d", geoPath().projection(gfg))
-        .style("stroke", "#333")
-        .style("stroke-width", 1);
+    if (opts.showCountryLines) {
+        // Drawing the country boundaries
+        let worldMapData = fs.readFileSync('./data/world.geo.json');
+        let worldMap = JSON.parse(worldMapData);
+        svg.append("g")
+            .selectAll("path")
+            .data(worldMap.features)
+            .enter()
+            .append("path")
+            .attr("fill", opts.countryBorderColor)
+            .attr("d", geoPath().projection(gfg))
+            .style("stroke", opts.backgroundColor)
+            .style("stroke-width", 1);
+    }
 
-    const colorScale = scaleSequential(["#577590", "#4D908E", "#43AA8B", "#90BE6D", "#F9C74F", "#F9844A", "#F8961E", "#F3722C", "#F94144"]) // You can choose any color scale you prefer
+    // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
+    const colorScale = scaleSequential(["#577590", "#4D908E", "#43AA8B", "#90BE6D", "#F9C74F", "#F9844A", "#F8961E", "#F3722C", "#F94144"])
         .domain([0, 1000000]); // Set the domain of the color scale based on the available bandwidth
 
     // Drawing Cables
@@ -89,13 +93,27 @@ function buildImage(projection, outfile) {
         .attr("stroke", "white")
         .attr("stroke-width", 1);
 
-    console.log('writing output to ' + outfile);
-    fs.writeFile(outfile, d3n.svgString(), function (err) {
+    const outFile = opts.outputPrefix + "geo-mercator.svg"
+    console.log('writing output to ' + outFile);
+    fs.writeFile(outFile, d3n.svgString(), function (err) {
       if (err) return console.log(err);
     })
 }
 
-// buildImage(geoConicConformal(), 'output/geo-conic-conformal.svg')
-// buildImage(geoConicEqualArea(), 'output/geo-conic-equal-area.svg')
-// buildImage(geoNaturalEarth1(), 'output/geo-natural-earth-1.svg')
-buildImage(geoMercator(), 'output/geo-mercator.svg')
+buildImage(geoMercator(), {
+    width: 5600,
+    height: 4000,
+    showCountryLines: true,
+    backgroundColor: "#333",
+    countryBorderColor: "#888",
+    outputPrefix: "output/"
+})
+
+buildImage(geoMercator(), {
+    width: 5600,
+    height: 4000,
+    showCountryLines: false,
+    backgroundColor: "#333",
+    countryBorderColor: "#888",
+    outputPrefix: "output/nocountrylines_"
+})

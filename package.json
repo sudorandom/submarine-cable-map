@@ -15,7 +15,8 @@
     "d3": "^7.3.0",
     "d3-geo": "^3.0.1",
     "d3-node": "^2.2.3",
-    "jsdom": "^19.0.0"
+    "jsdom": "^19.0.0",
+    "world-geojson": "^3.0"
   },
   "devDependencies": {
   }

@@ -8,6 +8,9 @@ convert -format png output/geo-mercator.svg -crop 1300x1300+2380+2000 output/geo
 convert -format png output/geo-mercator.svg -crop 1050x1400+1400+2400 output/geo-mercator-sa.png
 convert -format png output/geo-mercator.svg -crop 1800x1600+3500+1800 output/geo-mercator-apac.png
 
+convert -format png -resize 4096x output/geo-mercator.svg output/geo-mercator-small.png
+convert -format png -resize 4096x output/nocountrylines_geo-mercator.svg output/nocountrylines_geo-mercator-small.png
+
 mogrify -format png ./output/*.svg
 convert output/geo-mercator.svg \
 	-verbose -strip -auto-orient \
@@ -20,3 +23,15 @@ convert output/geo-mercator.svg \
 	-extent 5600x4000 \
 	-quality 100 \
 	output/displate_geo-mercator.jpg
+
+convert output/nocountrylines_geo-mercator.svg \
+	-verbose -strip -auto-orient \
+	-colorspace sRGB \
+	-density 300 \
+	-units pixelsperinch \
+	-background '#333' \
+	-gravity center \
+	-resize 5600x4000 \
+	-extent 5600x4000 \
+	-quality 100 \
+	output/displate_nocountrylines_geo-mercator.jpg
