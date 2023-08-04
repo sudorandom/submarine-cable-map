@@ -49,11 +49,24 @@ function buildImage(projection, opts) {
         .domain([0, 1000000]); // Set the domain of the color scale based on the available bandwidth
 
     // Drawing Cables
-    let cableGeoData = fs.readFileSync('./data/cable-geo.json');
+    let cableGeoData = fs.readFileSync('./data/submarinecables/cable/cable-geo.json');
     let cableGeo = JSON.parse(cableGeoData);
+
+    const cableGeoFilteredFeatures = []
+    for (const feature of cableGeo.features) {
+        let cableData = fs.readFileSync('./data/submarinecables/cable/'+ feature.properties.id +'.json');
+        let cable = JSON.parse(cableData);
+        if (cable.is_planned) {
+            console.log("skipping cable: "+ feature.properties.id)
+            continue
+        }
+
+        cableGeoFilteredFeatures.push(feature)
+    }
+
     svg.append("g")
         .selectAll("path")
-        .data(cableGeo.features)
+        .data(cableGeoFilteredFeatures)
         .enter()
         .append("path")
         .attr("d", geoPath().projection(gfg))
@@ -64,8 +77,25 @@ function buildImage(projection, opts) {
         .style("stroke-width", 2);
 
     // Drawing Landings
-    let landingPointGeoData = fs.readFileSync('./data/landing-point-geo.json');
+    let landingPointGeoData = fs.readFileSync('./data/submarinecables/landing-point/landing-point-geo.json');
     let landingPointGeo = JSON.parse(landingPointGeoData);
+
+    const landingPointFilteredFeatures = []
+    for (const feature of landingPointGeo.features) {
+        try {
+            let landingPointData = fs.readFileSync('./data/submarinecables/landing-point/'+ feature.properties.id +'.json');
+            let landingPoint = JSON.parse(landingPointData);
+            if (landingPoint.is_planned) {
+                console.log("skipping landing point: "+ feature.properties.id)
+                continue
+            }
+        } catch (ENOENT) {
+            console.log("data for landingPoint "+ feature.properties.id +" does not exist")
+        }
+
+        landingPointFilteredFeatures.push(feature)
+    }
+
     svg.append("g")
         .selectAll("path")
         .data(landingPointGeo.features)
