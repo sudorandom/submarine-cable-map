@@ -1,530 +1,5 @@
 [
   {
-    "city": "Helsinki",
-    "country": "FI",
-    "lat": 60.1708,
-    "long": 24.9375,
-    "speed": 27901288
-  },
-  {
-    "city": "Londrina",
-    "country": "BR",
-    "lat": -23.31,
-    "long": -51.1628,
-    "speed": 436400
-  },
-  {
-    "city": "Des Moines",
-    "country": "US",
-    "lat": 41.5725,
-    "long": -93.6105,
-    "speed": 60000
-  },
-  {
-    "city": "Cali",
-    "country": "CO",
-    "lat": 3.4206,
-    "long": -76.5222,
-    "speed": 80000
-  },
-  {
-    "city": "Hamburg",
-    "country": "DE",
-    "lat": 53.55,
-    "long": 10,
-    "speed": 3644000
-  },
-  {
-    "city": "Graz",
-    "country": "AT",
-    "lat": 47.0708,
-    "long": 15.4386,
-    "speed": 33000
-  },
-  {
-    "city": "Florida",
-    "country": "US",
-    "lat": 25.784,
-    "long": -80.2101,
-    "speed": 32000
-  },
-  {
-    "city": "The Hague",
-    "country": "NL",
-    "lat": 52.08,
-    "long": 4.31,
-    "speed": 1124000
-  },
-  {
-    "city": "Budapest",
-    "country": "HU",
-    "lat": 47.4925,
-    "long": 19.0514,
-    "speed": 4276500
-  },
-  {
-    "city": "Minneapolis",
-    "country": "US",
-    "lat": 44.9635,
-    "long": -93.2678,
-    "speed": 8060000
-  },
-  {
-    "city": "Detroit",
-    "country": "US",
-    "lat": 42.3834,
-    "long": -83.1024,
-    "speed": 4263000
-  },
-  {
-    "city": "McAllen",
-    "country": "US",
-    "lat": 26.2252,
-    "long": -98.2467,
-    "speed": 920000
-  },
-  {
-    "city": "Palmas",
-    "country": "BR",
-    "lat": -10.1844,
-    "long": -48.3336,
-    "speed": 134000
-  },
-  {
-    "city": "Mount Hagen",
-    "country": "PG",
-    "lat": -5.86,
-    "long": 144.24,
-    "speed": 30000
-  },
-  {
-    "city": "Rio Branco",
-    "country": "BR",
-    "lat": -9.9747,
-    "long": -67.81,
-    "speed": 14000
-  },
-  {
-    "city": "Salvador",
-    "country": "BR",
-    "lat": -12.9747,
-    "long": -38.4767,
-    "speed": 1765384
-  },
-  {
-    "city": "Krakow",
-    "country": "PL",
-    "lat": 50.0614,
-    "long": 19.9372,
-    "speed": 83000
-  },
-  {
-    "city": "Tacna",
-    "country": "PE",
-    "lat": -18.0147,
-    "long": -70.2489,
-    "speed": 20000
-  },
-  {
-    "city": "Copenhagen",
-    "country": "DK",
-    "lat": 55.6761,
-    "long": 12.5683,
-    "speed": 29319700
-  },
-  {
-    "city": "Yorkshire",
-    "country": "US",
-    "lat": 38.7882,
-    "long": -77.4496,
-    "speed": 186100
-  },
-  {
-    "city": "Guatemala",
-    "country": "GT",
-    "lat": 14.6099,
-    "long": -90.5252,
-    "speed": 311000
-  },
-  {
-    "city": "Hafnarfjörður",
-    "country": "IS",
-    "lat": 64.02,
-    "long": -21.97,
-    "speed": 27000
-  },
-  {
-    "city": "Palmerston North",
-    "country": "NZ",
-    "lat": -40.355,
-    "long": 175.6117,
-    "speed": 100
-  },
-  {
-    "city": "Jawa Tengah",
-    "country": "ID",
-    "lat": -6.9667,
-    "long": 110.4167,
-    "speed": 63000
-  },
-  {
-    "city": "Okinawa",
-    "country": "JP",
-    "lat": 26.2122,
-    "long": 127.6792,
-    "speed": 220000
-  },
-  {
-    "city": "San José",
-    "country": "CR",
-    "lat": 9.9325,
-    "long": -84.08,
-    "speed": 2000
-  },
-  {
-    "city": "Arequipa",
-    "country": "PE",
-    "lat": -16.4,
-    "long": -71.5333,
-    "speed": 170000
-  },
-  {
-    "city": "Zaporizhzhia",
-    "country": "UA",
-    "lat": 47.85,
-    "long": 35.1175,
-    "speed": 20000
-  },
-  {
-    "city": "Maputo",
-    "country": "MZ",
-    "lat": -25.9667,
-    "long": 32.5833,
-    "speed": 93124
-  },
-  {
-    "city": "Tunis",
-    "country": "TN",
-    "lat": 36.8064,
-    "long": 10.1817,
-    "speed": 4000
-  },
-  {
-    "city": "Szczecin",
-    "country": "PL",
-    "lat": 53.4325,
-    "long": 14.5481,
-    "speed": 21000
-  },
-  {
-    "city": "Bandar Seri Begawan",
-    "country": "BN",
-    "lat": 4.8903,
-    "long": 114.9422,
-    "speed": 62000
-  },
-  {
-    "city": "Berlin",
-    "country": "DE",
-    "lat": 52.52,
-    "long": 13.405,
-    "speed": 32012400
-  },
-  {
-    "city": "Cairo",
-    "country": "EG",
-    "lat": 30.0444,
-    "long": 31.2358,
-    "speed": 452500
-  },
-  {
-    "city": "Campinas",
-    "country": "BR",
-    "lat": -22.9058,
-    "long": -47.0608,
-    "speed": 624024
-  },
-  {
-    "city": "Omsk",
-    "country": "RU",
-    "lat": 54.9667,
-    "long": 73.3833,
-    "speed": 30000
-  },
-  {
-    "city": "Chiclayo",
-    "country": "PE",
-    "lat": -6.763,
-    "long": -79.8366,
-    "speed": 160000
-  },
-  {
-    "city": "Umea",
-    "country": "SE",
-    "lat": 63.825,
-    "long": 20.2639,
-    "speed": 11000
-  },
-  {
-    "city": "Krasnodar",
-    "country": "RU",
-    "lat": 45.0333,
-    "long": 38.9667,
-    "speed": 241450
-  },
-  {
-    "city": "Irkutsk",
-    "country": "RU",
-    "lat": 52.2833,
-    "long": 104.2833,
-    "speed": 201000
-  },
-  {
-    "city": "Blumenau",
-    "country": "BR",
-    "lat": -26.9333,
-    "long": -49.05,
-    "speed": 12500
-  },
-  {
-    "city": "Kansas",
-    "country": "US",
-    "lat": 37.6895,
-    "long": -97.3443,
-    "speed": 28000
-  },
-  {
-    "city": "Edmonton",
-    "country": "CA",
-    "lat": 53.5344,
-    "long": -113.4903,
-    "speed": 74000
-  },
-  {
-    "city": "Beijing",
-    "country": "CN",
-    "lat": 39.904,
-    "long": 116.4075,
-    "speed": 1622000
-  },
-  {
-    "city": "Port Moresby",
-    "country": "PG",
-    "lat": -9.4789,
-    "long": 147.1494,
-    "speed": 84024
-  },
-  {
-    "city": "Bekasi",
-    "country": "ID",
-    "lat": -6.2349,
-    "long": 106.9923,
-    "speed": 377000
-  },
-  {
-    "city": "Conakry",
-    "country": "GN",
-    "lat": 9.5092,
-    "long": -13.7122,
-    "speed": 3100
-  },
-  {
-    "city": "Mbabane",
-    "country": "SZ",
-    "lat": -26.3208,
-    "long": 31.1617,
-    "speed": 100
-  },
-  {
-    "city": "Road Town",
-    "country": "VG",
-    "lat": 18.4167,
-    "long": -64.6167,
-    "speed": 6000
-  },
-  {
-    "city": "Galway",
-    "country": "IE",
-    "lat": 53.2719,
-    "long": -9.0489,
-    "speed": 20000
-  },
-  {
-    "city": "Toulouse",
-    "country": "FR",
-    "lat": 43.6045,
-    "long": 1.444,
-    "speed": 60200
-  },
-  {
-    "city": "Salt Lake City",
-    "country": "US",
-    "lat": 40.7776,
-    "long": -111.9311,
-    "speed": 1857000
-  },
-  {
-    "city": "Dronten",
-    "country": "NL",
-    "lat": 52.5167,
-    "long": 5.7167,
-    "speed": 6876800
-  },
-  {
-    "city": "Bologna",
-    "country": "IT",
-    "lat": 44.4939,
-    "long": 11.3428,
-    "speed": 283000
-  },
-  {
-    "city": "Suceava",
-    "country": "RO",
-    "lat": 47.6514,
-    "long": 26.2556,
-    "speed": 2475000
-  },
-  {
-    "city": "Montgomery",
-    "country": "US",
-    "lat": 32.3482,
-    "long": -86.2668,
-    "speed": 358000
-  },
-  {
-    "city": "Niigata",
-    "country": "JP",
-    "lat": 37.9161,
-    "long": 139.0364,
-    "speed": 3000
-  },
-  {
-    "city": "Ho Chi Minh City",
-    "country": "VN",
-    "lat": 10.7756,
-    "long": 106.7019,
-    "speed": 3000
-  },
-  {
-    "city": "Odessa",
-    "country": "US",
-    "lat": 31.8801,
-    "long": -102.3448,
-    "speed": 21713888
-  },
-  {
-    "city": "Tromsø",
-    "country": "NO",
-    "lat": 69.6828,
-    "long": 18.9428,
-    "speed": 3000
-  },
-  {
-    "city": "Frauenfeld",
-    "country": "CH",
-    "lat": 47.55,
-    "long": 8.9,
-    "speed": 146200
-  },
-  {
-    "city": "Saint-Barthélemy-d’Anjou",
-    "country": "FR",
-    "lat": 47.4675,
-    "long": -0.495,
-    "speed": 100000
-  },
-  {
-    "city": "Constanta",
-    "country": "RO",
-    "lat": 44.1667,
-    "long": 28.6333,
-    "speed": 2475000
-  },
-  {
-    "city": "Palermo",
-    "country": "IT",
-    "lat": 38.1157,
-    "long": 13.3613,
-    "speed": 389200
-  },
-  {
-    "city": "Suva",
-    "country": "FJ",
-    "lat": -18.1416,
-    "long": 178.4419,
-    "speed": 130000
-  },
-  {
-    "city": "Albany",
-    "country": "US",
-    "lat": 42.6664,
-    "long": -73.7987,
-    "speed": 30000
-  },
-  {
-    "city": "Indore",
-    "country": "IN",
-    "lat": 22.7167,
-    "long": 75.8472,
-    "speed": 42000
-  },
-  {
-    "city": "Dublin",
-    "country": "IE",
-    "lat": 53.35,
-    "long": -6.2603,
-    "speed": 6253100
-  },
-  {
-    "city": "Lagos",
-    "country": "NG",
-    "lat": 6.455,
-    "long": 3.3841,
-    "speed": 1908432
-  },
-  {
-    "city": "Reston",
-    "country": "US",
-    "lat": 38.9497,
-    "long": -77.3461,
-    "speed": 1009000
-  },
-  {
-    "city": "São José do Rio Preto",
-    "country": "BR",
-    "lat": -22.1508,
-    "long": -42.9239,
-    "speed": 211000
-  },
-  {
-    "city": "Serang",
-    "country": "ID",
-    "lat": -6.12,
-    "long": 106.1503,
-    "speed": 1000
-  },
-  {
-    "city": "San Francisco",
-    "country": "US",
-    "lat": 37.7558,
-    "long": -122.4449,
-    "speed": 13476300
-  },
-  {
-    "city": "Newcastle",
-    "country": "GB",
-    "lat": 54.98,
-    "long": -1.61,
-    "speed": 73000
-  },
-  {
-    "city": "Beirut",
-    "country": "LB",
-    "lat": 33.8869,
-    "long": 35.5131,
-    "speed": 105620
-  },
-  {
     "city": "Altoona",
     "country": "US",
     "lat": 40.5082,
@@ -532,1299 +7,11 @@
     "speed": 20000
   },
   {
-    "city": "Orlando",
-    "country": "US",
-    "lat": 28.4773,
-    "long": -81.337,
-    "speed": 62000
-  },
-  {
-    "city": "Munich",
+    "city": "Bremen",
     "country": "DE",
-    "lat": 48.1375,
-    "long": 11.575,
-    "speed": 3795610
-  },
-  {
-    "city": "Atlanta",
-    "country": "US",
-    "lat": 33.7628,
-    "long": -84.422,
-    "speed": 16453100
-  },
-  {
-    "city": "Tokyo",
-    "country": "JP",
-    "lat": 35.6897,
-    "long": 139.6922,
-    "speed": 64230620
-  },
-  {
-    "city": "Massachusetts",
-    "country": "US",
-    "lat": 42.3188,
-    "long": -71.0852,
-    "speed": 2145000
-  },
-  {
-    "city": "Lomé",
-    "country": "TG",
-    "lat": 6.1319,
-    "long": 1.2228,
-    "speed": 7000
-  },
-  {
-    "city": "Buenos Aires",
-    "country": "AR",
-    "lat": -34.5997,
-    "long": -58.3819,
-    "speed": 8580484
-  },
-  {
-    "city": "Maina",
-    "country": "GU",
-    "lat": 13.4692,
-    "long": 144.7332,
-    "speed": 10000
-  },
-  {
-    "city": "Denver",
-    "country": "US",
-    "lat": 39.762,
-    "long": -104.8758,
-    "speed": 6270000
-  },
-  {
-    "city": "Salzburg",
-    "country": "AT",
-    "lat": 47.8,
-    "long": 13.045,
-    "speed": 135000
-  },
-  {
-    "city": "Ashburn",
-    "country": "US",
-    "lat": 39.0277,
-    "long": -77.4714,
-    "speed": 20996100
-  },
-  {
-    "city": "Brasília",
-    "country": "BR",
-    "lat": -15.7939,
-    "long": -47.8828,
-    "speed": 1916052
-  },
-  {
-    "city": "Vitória",
-    "country": "BR",
-    "lat": -20.2889,
-    "long": -40.3083,
-    "speed": 633240
-  },
-  {
-    "city": "Serekunda",
-    "country": "GM",
-    "lat": 13.4333,
-    "long": -16.6667,
-    "speed": 10000
-  },
-  {
-    "city": "Iasi",
-    "country": "RO",
-    "lat": 47.1622,
-    "long": 27.5889,
-    "speed": 2475000
-  },
-  {
-    "city": "Yekaterinburg",
-    "country": "RU",
-    "lat": 56.8356,
-    "long": 60.6128,
-    "speed": 22641032
-  },
-  {
-    "city": "Kherson",
-    "country": "UA",
-    "lat": 46.6425,
-    "long": 32.625,
-    "speed": 40000
-  },
-  {
-    "city": "Lahore",
-    "country": "PK",
-    "lat": 31.5497,
-    "long": 74.3436,
-    "speed": 20000
-  },
-  {
-    "city": "Arica",
-    "country": "CL",
-    "lat": -18.4667,
-    "long": -70.3167,
-    "speed": 16000
-  },
-  {
-    "city": "Kano",
-    "country": "NG",
-    "lat": 12,
-    "long": 8.5167,
-    "speed": 445
-  },
-  {
-    "city": "Birmingham",
-    "country": "GB",
-    "lat": 52.48,
-    "long": -1.9025,
-    "speed": 10000
-  },
-  {
-    "city": "Zurich",
-    "country": "CH",
-    "lat": 47.3744,
-    "long": 8.5411,
-    "speed": 7349300
-  },
-  {
-    "city": "St. Petersburg",
-    "country": "US",
-    "lat": 27.7931,
-    "long": -82.6652,
-    "speed": 28896536
-  },
-  {
-    "city": "Recife",
-    "country": "BR",
-    "lat": -8.05,
-    "long": -34.9,
-    "speed": 1013888
-  },
-  {
-    "city": "Aracaju",
-    "country": "BR",
-    "lat": -10.9167,
-    "long": -37.05,
-    "speed": 216000
-  },
-  {
-    "city": "Kampala",
-    "country": "UG",
-    "lat": 0.3136,
-    "long": 32.5811,
-    "speed": 111148
-  },
-  {
-    "city": "Donetsk",
-    "country": "UA",
-    "lat": 48.0028,
-    "long": 37.8053,
-    "speed": 11000
-  },
-  {
-    "city": "Darwin",
-    "country": "AU",
-    "lat": -12.4381,
-    "long": 130.8411,
-    "speed": 61000
-  },
-  {
-    "city": "Sandefjord",
-    "country": "NO",
-    "lat": 59.1306,
-    "long": 10.2167,
-    "speed": 76000
-  },
-  {
-    "city": "Geneva",
-    "country": "CH",
-    "lat": 46.2017,
-    "long": 6.1469,
-    "speed": 1862300
-  },
-  {
-    "city": "Toronto",
-    "country": "CA",
-    "lat": 43.7417,
-    "long": -79.3733,
-    "speed": 11568800
-  },
-  {
-    "city": "Münster",
-    "country": "DE",
-    "lat": 51.9625,
-    "long": 7.6256,
-    "speed": 87100
-  },
-  {
-    "city": "Billings",
-    "country": "US",
-    "lat": 45.7891,
-    "long": -108.5526,
-    "speed": 100
-  },
-  {
-    "city": "Florence",
-    "country": "IT",
-    "lat": 43.7714,
-    "long": 11.2542,
-    "speed": 14534
-  },
-  {
-    "city": "Guayaquil",
-    "country": "EC",
-    "lat": -2.19,
-    "long": -79.8875,
-    "speed": 225000
-  },
-  {
-    "city": "Osorno",
-    "country": "CL",
-    "lat": -40.5725,
-    "long": -73.1353,
-    "speed": 1000
-  },
-  {
-    "city": "Guntur",
-    "country": "IN",
-    "lat": 16.3008,
-    "long": 80.4428,
-    "speed": 10000
-  },
-  {
-    "city": "Madrid",
-    "country": "ES",
-    "lat": 40.4169,
-    "long": -3.7033,
-    "speed": 15097524
-  },
-  {
-    "city": "Tampa",
-    "country": "US",
-    "lat": 27.9945,
-    "long": -82.4447,
-    "speed": 143000
-  },
-  {
-    "city": "Rome",
-    "country": "IT",
-    "lat": 41.8931,
-    "long": 12.4828,
-    "speed": 3206564
-  },
-  {
-    "city": "Kuala Lumpur",
-    "country": "MY",
-    "lat": 3.1478,
-    "long": 101.6953,
-    "speed": 4361175
-  },
-  {
-    "city": "Zhuhai",
-    "country": "CN",
-    "lat": 22.2769,
-    "long": 113.5678,
-    "speed": 15100
-  },
-  {
-    "city": "Paris",
-    "country": "FR",
-    "lat": 48.8567,
-    "long": 2.3522,
-    "speed": 44668244
-  },
-  {
-    "city": "Kabul",
-    "country": "AF",
-    "lat": 34.5253,
-    "long": 69.1783,
-    "speed": 45024
-  },
-  {
-    "city": "Edinburgh",
-    "country": "GB",
-    "lat": 55.9533,
-    "long": -3.1892,
-    "speed": 356200
-  },
-  {
-    "city": "Nizhniy Novgorod",
-    "country": "RU",
-    "lat": 56.3269,
-    "long": 44.0075,
-    "speed": 10000
-  },
-  {
-    "city": "Valencia",
-    "country": "ES",
-    "lat": 39.47,
-    "long": -0.3764,
-    "speed": 64024
-  },
-  {
-    "city": "Sundsvall",
-    "country": "SE",
-    "lat": 62.4,
-    "long": 17.3167,
-    "speed": 463000
-  },
-  {
-    "city": "Wellington",
-    "country": "NZ",
-    "lat": -41.2889,
-    "long": 174.7772,
-    "speed": 287604
-  },
-  {
-    "city": "Querétaro",
-    "country": "MX",
-    "lat": 20.5875,
-    "long": -100.3928,
-    "speed": 30000
-  },
-  {
-    "city": "Podgorica",
-    "country": "ME",
-    "lat": 42.4413,
-    "long": 19.2629,
-    "speed": 11000
-  },
-  {
-    "city": "Marseille",
-    "country": "FR",
-    "lat": 43.2964,
-    "long": 5.37,
-    "speed": 32245624
-  },
-  {
-    "city": "Canberra",
-    "country": "AU",
-    "lat": -35.2931,
-    "long": 149.1269,
-    "speed": 151200
-  },
-  {
-    "city": "Leuven",
-    "country": "BE",
-    "lat": 50.8833,
-    "long": 4.7,
-    "speed": 417000
-  },
-  {
-    "city": "Pomezia",
-    "country": "IT",
-    "lat": 41.6693,
-    "long": 12.5021,
-    "speed": 126000
-  },
-  {
-    "city": "Kristiansand",
-    "country": "NO",
-    "lat": 58.1472,
-    "long": 7.9972,
-    "speed": 20000
-  },
-  {
-    "city": "Madison",
-    "country": "US",
-    "lat": 43.0822,
-    "long": -89.393,
-    "speed": 143500
-  },
-  {
-    "city": "New Jersey",
-    "country": "US",
-    "lat": 40.2237,
-    "long": -74.7641,
-    "speed": 2148000
-  },
-  {
-    "city": "Manaus",
-    "country": "BR",
-    "lat": -3.1,
-    "long": -60.0167,
-    "speed": 464048
-  },
-  {
-    "city": "Muscat",
-    "country": "OM",
-    "lat": 23.6139,
-    "long": 58.5922,
-    "speed": 380000
-  },
-  {
-    "city": "Nashville",
-    "country": "US",
-    "lat": 36.1715,
-    "long": -86.7842,
-    "speed": 51000
-  },
-  {
-    "city": "Bend",
-    "country": "US",
-    "lat": 44.0563,
-    "long": -121.3095,
-    "speed": 63000
-  },
-  {
-    "city": "Fryslân",
-    "country": "NL",
-    "lat": 53.2,
-    "long": 5.7833,
-    "speed": 2320000
-  },
-  {
-    "city": "Carolina",
-    "country": "PR",
-    "lat": 18.4054,
-    "long": -65.9792,
-    "speed": 241000
-  },
-  {
-    "city": "Kansas City",
-    "country": "US",
-    "lat": 39.1238,
-    "long": -94.5541,
-    "speed": 5044024
-  },
-  {
-    "city": "Kapolei",
-    "country": "US",
-    "lat": 21.3399,
-    "long": -158.0677,
-    "speed": 43000
-  },
-  {
-    "city": "Bangalore",
-    "country": "IN",
-    "lat": 12.9789,
-    "long": 77.5917,
-    "speed": 576100
-  },
-  {
-    "city": "Brest",
-    "country": "FR",
-    "lat": 48.39,
-    "long": -4.49,
-    "speed": 2000
-  },
-  {
-    "city": "Novosibirsk",
-    "country": "RU",
-    "lat": 55.0333,
-    "long": 82.9167,
-    "speed": 22993138
-  },
-  {
-    "city": "Padova",
-    "country": "IT",
-    "lat": 45.4064,
-    "long": 11.8778,
-    "speed": 526000
-  },
-  {
-    "city": "Kolkata",
-    "country": "IN",
-    "lat": 22.5675,
-    "long": 88.37,
-    "speed": 1301920
-  },
-  {
-    "city": "Omaha",
-    "country": "US",
-    "lat": 41.2627,
-    "long": -96.0529,
-    "speed": 1722000
-  },
-  {
-    "city": "Sioux City",
-    "country": "US",
-    "lat": 42.4959,
-    "long": -96.3901,
-    "speed": 10000
-  },
-  {
-    "city": "Kathmandu",
-    "country": "NP",
-    "lat": 27.7172,
-    "long": 85.324,
-    "speed": 246400
-  },
-  {
-    "city": "Tirana",
-    "country": "AL",
-    "lat": 41.3289,
-    "long": 19.8178,
-    "speed": 88000
-  },
-  {
-    "city": "Bamako",
-    "country": "ML",
-    "lat": 12.6458,
-    "long": -7.9922,
-    "speed": 5024
-  },
-  {
-    "city": "Cebu",
-    "country": "PH",
-    "lat": 10.32,
-    "long": 123.75,
-    "speed": 70000
-  },
-  {
-    "city": "Perth",
-    "country": "AU",
-    "lat": -31.9559,
-    "long": 115.8606,
-    "speed": 3916928
-  },
-  {
-    "city": "St. Louis",
-    "country": "US",
-    "lat": 38.6359,
-    "long": -90.2451,
-    "speed": 1229010
-  },
-  {
-    "city": "Baltimore",
-    "country": "US",
-    "lat": 39.3051,
-    "long": -76.6144,
-    "speed": 112000
-  },
-  {
-    "city": "Vaduz",
-    "country": "LI",
-    "lat": 47.141,
-    "long": 9.521,
-    "speed": 132300
-  },
-  {
-    "city": "Kremenchuk",
-    "country": "UA",
-    "lat": 49.0631,
-    "long": 33.4039,
-    "speed": 160000
-  },
-  {
-    "city": "San Jose",
-    "country": "US",
-    "lat": 37.3012,
-    "long": -121.848,
-    "speed": 10070124
-  },
-  {
-    "city": "Timisoara",
-    "country": "RO",
-    "lat": 45.7597,
-    "long": 21.23,
-    "speed": 2475000
-  },
-  {
-    "city": "Buffalo",
-    "country": "US",
-    "lat": 42.9018,
-    "long": -78.8487,
-    "speed": 12000
-  },
-  {
-    "city": "Jacksonville",
-    "country": "US",
-    "lat": 30.3322,
-    "long": -81.6749,
-    "speed": 163000
-  },
-  {
-    "city": "Las Vegas",
-    "country": "US",
-    "lat": 36.2333,
-    "long": -115.2654,
-    "speed": 254600
-  },
-  {
-    "city": "Sacramento",
-    "country": "US",
-    "lat": 38.5677,
-    "long": -121.4685,
-    "speed": 42000
-  },
-  {
-    "city": "Thimphu",
-    "country": "BT",
-    "lat": 27.4722,
-    "long": 89.6361,
-    "speed": 48000
-  },
-  {
-    "city": "Fukuoka",
-    "country": "JP",
-    "lat": 33.5833,
-    "long": 130.4,
-    "speed": 784000
-  },
-  {
-    "city": "Genova",
-    "country": "CO",
-    "lat": 1.6442,
-    "long": -77.0194,
-    "speed": 10000
-  },
-  {
-    "city": "Bradford",
-    "country": "GB",
-    "lat": 53.8,
-    "long": -1.75,
-    "speed": 333755
-  },
-  {
-    "city": "Sofia",
-    "country": "BG",
-    "lat": 42.7,
-    "long": 23.33,
-    "speed": 33148688
-  },
-  {
-    "city": "Kazan",
-    "country": "RU",
-    "lat": 55.7964,
-    "long": 49.1089,
-    "speed": 31100
-  },
-  {
-    "city": "Guangzhou",
-    "country": "CN",
-    "lat": 23.13,
-    "long": 113.26,
-    "speed": 374324
-  },
-  {
-    "city": "Ohio",
-    "country": "US",
-    "lat": 39.1413,
-    "long": -84.506,
-    "speed": 116000
-  },
-  {
-    "city": "Gothenburg",
-    "country": "SE",
-    "lat": 57.7075,
-    "long": 11.9675,
-    "speed": 632100
-  },
-  {
-    "city": "Ciudad de México",
-    "country": "MX",
-    "lat": 19.4333,
-    "long": -99.1333,
-    "speed": 72000
-  },
-  {
-    "city": "Stuttgart",
-    "country": "DE",
-    "lat": 48.7775,
-    "long": 9.18,
-    "speed": 797024
-  },
-  {
-    "city": "Ramallah",
-    "country": "XW",
-    "lat": 31.9,
-    "long": 35.2,
-    "speed": 68010
-  },
-  {
-    "city": "Brno",
-    "country": "CZ",
-    "lat": 49.1925,
-    "long": 16.6083,
-    "speed": 131000
-  },
-  {
-    "city": "Chiang Mai",
-    "country": "TH",
-    "lat": 18.7953,
-    "long": 98.9986,
-    "speed": 26000
-  },
-  {
-    "city": "Brookings",
-    "country": "US",
-    "lat": 44.3022,
-    "long": -96.7859,
-    "speed": 20000
-  },
-  {
-    "city": "Kharkiv",
-    "country": "UA",
-    "lat": 49.9925,
-    "long": 36.2311,
-    "speed": 22025888
-  },
-  {
-    "city": "Thessaloniki",
-    "country": "GR",
-    "lat": 40.6403,
-    "long": 22.9347,
-    "speed": 431148
-  },
-  {
-    "city": "Groningen",
-    "country": "NL",
-    "lat": 53.2167,
-    "long": 6.5667,
-    "speed": 84000
-  },
-  {
-    "city": "Waterloo",
-    "country": "CA",
-    "lat": 43.4667,
-    "long": -80.5167,
-    "speed": 5000
-  },
-  {
-    "city": "Lubumbashi",
-    "country": "CD",
-    "lat": -11.6647,
-    "long": 27.4794,
-    "speed": 65100
-  },
-  {
-    "city": "Umeå",
-    "country": "SE",
-    "lat": 63.825,
-    "long": 20.2639,
-    "speed": 21000
-  },
-  {
-    "city": "Seattle",
-    "country": "US",
-    "lat": 47.6211,
-    "long": -122.3244,
-    "speed": 25150474
-  },
-  {
-    "city": "Moscow",
-    "country": "RU",
-    "lat": 55.7558,
-    "long": 37.6178,
-    "speed": 45834001
-  },
-  {
-    "city": "Milwaukee",
-    "country": "US",
-    "lat": 43.0642,
-    "long": -87.9675,
-    "speed": 64100
-  },
-  {
-    "city": "Antananarivo",
-    "country": "MG",
-    "lat": -18.9333,
-    "long": 47.5167,
-    "speed": 6000
-  },
-  {
-    "city": "Ouagadougou",
-    "country": "BF",
-    "lat": 12.3686,
-    "long": -1.5275,
-    "speed": 147072
-  },
-  {
-    "city": "Rottweil",
-    "country": "DE",
-    "lat": 48.1681,
-    "long": 8.6247,
-    "speed": 11100
-  },
-  {
-    "city": "Krasnoyarsk",
-    "country": "RU",
-    "lat": 56.0089,
-    "long": 92.8719,
-    "speed": 338000
-  },
-  {
-    "city": "Manitoba",
-    "country": "CA",
-    "lat": 49.8844,
-    "long": -97.1464,
-    "speed": 290000
-  },
-  {
-    "city": "Blantyre",
-    "country": "MW",
-    "lat": -15.7861,
-    "long": 35.0058,
-    "speed": 46000
-  },
-  {
-    "city": "Kuwait City",
-    "country": "KW",
-    "lat": 29.3697,
-    "long": 47.9783,
-    "speed": 274000
-  },
-  {
-    "city": "Teresina",
-    "country": "BR",
-    "lat": -5.0949,
-    "long": -42.8042,
-    "speed": 326100
-  },
-  {
-    "city": "Barnaul",
-    "country": "RU",
-    "lat": 53.3333,
-    "long": 83.75,
-    "speed": 539000
-  },
-  {
-    "city": "Mombasa",
-    "country": "KE",
-    "lat": -4.05,
-    "long": 39.6667,
-    "speed": 796000
-  },
-  {
-    "city": "Lae",
-    "country": "PG",
-    "lat": -6.7303,
-    "long": 147.0008,
-    "speed": 21000
-  },
-  {
-    "city": "Palo Alto",
-    "country": "US",
-    "lat": 37.3905,
-    "long": -122.1468,
-    "speed": 2984500
-  },
-  {
-    "city": "Milan",
-    "country": "IT",
-    "lat": 45.4669,
-    "long": 9.19,
-    "speed": 14020720
-  },
-  {
-    "city": "Melbourne",
-    "country": "AU",
-    "lat": -37.8142,
-    "long": 144.9631,
-    "speed": 8309452
-  },
-  {
-    "city": "Tel Aviv-Yafo",
-    "country": "IL",
-    "lat": 32.08,
-    "long": 34.78,
-    "speed": 1524000
-  },
-  {
-    "city": "Tbilisi",
-    "country": "GE",
-    "lat": 41.7225,
-    "long": 44.7925,
-    "speed": 103000
-  },
-  {
-    "city": "N'Djamena",
-    "country": "TD",
-    "lat": 12.11,
-    "long": 15.05,
-    "speed": 92000
-  },
-  {
-    "city": "Vancouver",
-    "country": "CA",
-    "lat": 49.25,
-    "long": -123.1,
-    "speed": 2713600
-  },
-  {
-    "city": "Bishkek",
-    "country": "KG",
-    "lat": 42.8747,
-    "long": 74.6122,
-    "speed": 144024
-  },
-  {
-    "city": "Maceió",
-    "country": "BR",
-    "lat": -9.6658,
-    "long": -35.735,
-    "speed": 319020
-  },
-  {
-    "city": "Frankfurt",
-    "country": "DE",
-    "lat": 50.1106,
-    "long": 8.6822,
-    "speed": 142468591
-  },
-  {
-    "city": "Espoo",
-    "country": "FI",
-    "lat": 60.2056,
-    "long": 24.6556,
-    "speed": 1655000
-  },
-  {
-    "city": "Lisbon",
-    "country": "PT",
-    "lat": 38.7253,
-    "long": -9.15,
-    "speed": 2549672
-  },
-  {
-    "city": "Port-au-Prince",
-    "country": "HT",
-    "lat": 18.5333,
-    "long": -72.3333,
-    "speed": 4700
-  },
-  {
-    "city": "Surakarta",
-    "country": "ID",
-    "lat": -7.5667,
-    "long": 110.8167,
-    "speed": 93000
-  },
-  {
-    "city": "Rotterdam",
-    "country": "NL",
-    "lat": 51.9167,
-    "long": 4.5,
-    "speed": 25319300
-  },
-  {
-    "city": "Manchester",
-    "country": "GB",
-    "lat": 53.4794,
-    "long": -2.2453,
-    "speed": 4368300
-  },
-  {
-    "city": "Novokuznetsk",
-    "country": "RU",
-    "lat": 53.7667,
-    "long": 87.1333,
-    "speed": 23000
-  },
-  {
-    "city": "Hangzhou",
-    "country": "CN",
-    "lat": 30.25,
-    "long": 120.1675,
-    "speed": 1442050
-  },
-  {
-    "city": "Poznan",
-    "country": "PL",
-    "lat": 52.4083,
-    "long": 16.9336,
-    "speed": 1060010
-  },
-  {
-    "city": "Santo Domingo",
-    "country": "DO",
-    "lat": 18.4764,
-    "long": -69.8933,
-    "speed": 50000
-  },
-  {
-    "city": "Pittsburgh",
-    "country": "US",
-    "lat": 40.4397,
-    "long": -79.9763,
-    "speed": 1360000
-  },
-  {
-    "city": "Boa Vista",
-    "country": "BR",
-    "lat": 2.8194,
-    "long": -60.6714,
-    "speed": 109024
-  },
-  {
-    "city": "Arad",
-    "country": "RO",
-    "lat": 46.175,
-    "long": 21.3125,
-    "speed": 2475000
-  },
-  {
-    "city": "Florianópolis",
-    "country": "BR",
-    "lat": -27.6122,
-    "long": -48.4853,
-    "speed": 650712
-  },
-  {
-    "city": "Yangon",
-    "country": "MM",
-    "lat": 16.795,
-    "long": 96.16,
-    "speed": 434000
-  },
-  {
-    "city": "Denpasar",
-    "country": "ID",
-    "lat": -8.65,
-    "long": 115.2167,
-    "speed": 1252200
-  },
-  {
-    "city": "Zanzibar",
-    "country": "TZ",
-    "lat": -6.165,
-    "long": 39.199,
-    "speed": 6000
-  },
-  {
-    "city": "Bobo-Dioulasso",
-    "country": "BF",
-    "lat": 11.1833,
-    "long": -4.2833,
-    "speed": 52048
-  },
-  {
-    "city": "Bergen",
-    "country": "NO",
-    "lat": 60.3894,
-    "long": 5.33,
-    "speed": 22000
-  },
-  {
-    "city": "Lausanne",
-    "country": "CH",
-    "lat": 46.5198,
-    "long": 6.6335,
-    "speed": 112000
-  },
-  {
-    "city": "Princes Town",
-    "country": "TT",
-    "lat": 10.2667,
-    "long": -61.3833,
-    "speed": 43000
-  },
-  {
-    "city": "Douala",
-    "country": "CM",
-    "lat": 4.05,
-    "long": 9.7,
-    "speed": 41400
-  },
-  {
-    "city": "Riga",
-    "country": "LV",
-    "lat": 56.9489,
-    "long": 24.1064,
-    "speed": 2033024
-  },
-  {
-    "city": "Porto Alegre",
-    "country": "BR",
-    "lat": -30.0331,
-    "long": -51.23,
-    "speed": 4221310
-  },
-  {
-    "city": "Christchurch",
-    "country": "NZ",
-    "lat": -43.531,
-    "long": 172.6365,
-    "speed": 171000
-  },
-  {
-    "city": "Fort-de-France",
-    "country": "MQ",
-    "lat": 14.6,
-    "long": -61.0667,
-    "speed": 1100
-  },
-  {
-    "city": "João Pessoa",
-    "country": "BR",
-    "lat": -7.12,
-    "long": -34.88,
-    "speed": 268000
-  },
-  {
-    "city": "Klagenfurt",
-    "country": "AT",
-    "lat": 46.6167,
-    "long": 14.3,
-    "speed": 316000
-  },
-  {
-    "city": "Hanoi",
-    "country": "VN",
-    "lat": 21.0283,
-    "long": 105.8542,
-    "speed": 5000
-  },
-  {
-    "city": "Semey",
-    "country": "KZ",
-    "lat": 50.4333,
-    "long": 80.2667,
-    "speed": 45000
-  },
-  {
-    "city": "Vienna",
-    "country": "AT",
-    "lat": 48.2083,
-    "long": 16.3725,
-    "speed": 20157440
-  },
-  {
-    "city": "Bucharest",
-    "country": "RO",
-    "lat": 44.4325,
-    "long": 26.1039,
-    "speed": 4797500
-  },
-  {
-    "city": "Reno",
-    "country": "US",
-    "lat": 39.5497,
-    "long": -119.8483,
-    "speed": 29100
-  },
-  {
-    "city": "Sarajevo",
-    "country": "BA",
-    "lat": 43.8564,
-    "long": 18.4131,
-    "speed": 56000
-  },
-  {
-    "city": "Al ‘Aqabah",
-    "country": "JO",
-    "lat": 29.5319,
-    "long": 35.0056,
-    "speed": 192000
-  },
-  {
-    "city": "Nantes",
-    "country": "FR",
-    "lat": 47.2181,
-    "long": -1.5528,
-    "speed": 22000
-  },
-  {
-    "city": "Limassol",
-    "country": "CY",
-    "lat": 34.6747,
-    "long": 33.0442,
-    "speed": 11200
-  },
-  {
-    "city": "Sydney",
-    "country": "AU",
-    "lat": -33.8678,
-    "long": 151.21,
-    "speed": 21240830
-  },
-  {
-    "city": "Richmond",
-    "country": "US",
-    "lat": 37.5295,
-    "long": -77.4756,
-    "speed": 1233100
-  },
-  {
-    "city": "Phnom Penh",
-    "country": "KH",
-    "lat": 11.5694,
-    "long": 104.9211,
-    "speed": 398000
-  },
-  {
-    "city": "Campo Grande",
-    "country": "BR",
-    "lat": -20.4839,
-    "long": -54.615,
-    "speed": 226000
-  },
-  {
-    "city": "Auckland",
-    "country": "NZ",
-    "lat": -36.8406,
-    "long": 174.74,
-    "speed": 4606951
-  },
-  {
-    "city": "Tampere",
-    "country": "FI",
-    "lat": 61.4981,
-    "long": 23.76,
-    "speed": 148400
-  },
-  {
-    "city": "Samara",
-    "country": "RU",
-    "lat": 53.2028,
-    "long": 50.1408,
-    "speed": 21887388
-  },
-  {
-    "city": "Osaka",
-    "country": "JP",
-    "lat": 34.6939,
-    "long": 135.5022,
-    "speed": 24200000
-  },
-  {
-    "city": "Białystok",
-    "country": "PL",
-    "lat": 53.1353,
-    "long": 23.1456,
-    "speed": 21000
-  },
-  {
-    "city": "Marigot",
-    "country": "MF",
-    "lat": 18.0706,
-    "long": -63.0847,
-    "speed": 151000
-  },
-  {
-    "city": "Ulaanbaatar",
-    "country": "MN",
-    "lat": 47.9203,
-    "long": 106.9172,
-    "speed": 34000
-  },
-  {
-    "city": "Cotonou",
-    "country": "BJ",
-    "lat": 6.3667,
-    "long": 2.4333,
-    "speed": 3124
-  },
-  {
-    "city": "Łódź",
-    "country": "PL",
-    "lat": 51.7769,
-    "long": 19.4547,
-    "speed": 221000
-  },
-  {
-    "city": "Fremont",
-    "country": "US",
-    "lat": 37.5265,
-    "long": -121.9843,
-    "speed": 2334060
-  },
-  {
-    "city": "Shenzhen",
-    "country": "CN",
-    "lat": 22.535,
-    "long": 114.054,
-    "speed": 410000
+    "lat": 53.0833,
+    "long": 8.8,
+    "speed": 482040
   },
   {
     "city": "Foz do Iguaçu",
@@ -1834,6 +21,76 @@
     "speed": 256950
   },
   {
+    "city": "St. Petersburg",
+    "country": "US",
+    "lat": 27.7931,
+    "long": -82.6652,
+    "speed": 28976536
+  },
+  {
+    "city": "Surabaya",
+    "country": "ID",
+    "lat": -7.2458,
+    "long": 112.7378,
+    "speed": 1261224
+  },
+  {
+    "city": "Naha",
+    "country": "JP",
+    "lat": 26.2122,
+    "long": 127.6792,
+    "speed": 110000
+  },
+  {
+    "city": "Shanghai",
+    "country": "CN",
+    "lat": 31.1667,
+    "long": 121.4667,
+    "speed": 671030
+  },
+  {
+    "city": "Bishkek",
+    "country": "KG",
+    "lat": 42.8747,
+    "long": 74.6122,
+    "speed": 144024
+  },
+  {
+    "city": "Paris",
+    "country": "FR",
+    "lat": 48.8567,
+    "long": 2.3522,
+    "speed": 44779044
+  },
+  {
+    "city": "Helsinki",
+    "country": "FI",
+    "lat": 60.1708,
+    "long": 24.9375,
+    "speed": 27981288
+  },
+  {
+    "city": "Santiago",
+    "country": "CL",
+    "lat": -33.4372,
+    "long": -70.6506,
+    "speed": 8070100
+  },
+  {
+    "city": "Uruma",
+    "country": "JP",
+    "lat": 26.3792,
+    "long": 127.8575,
+    "speed": 110000
+  },
+  {
+    "city": "Pittsburgh",
+    "country": "US",
+    "lat": 40.4397,
+    "long": -79.9763,
+    "speed": 1360000
+  },
+  {
     "city": "Da Nang",
     "country": "VN",
     "lat": 16.0748,
@@ -1841,774 +98,18 @@
     "speed": 4000
   },
   {
-    "city": "Gent",
-    "country": "BE",
-    "lat": 51.0536,
-    "long": 3.7253,
-    "speed": 417000
-  },
-  {
-    "city": "Casablanca",
-    "country": "MA",
-    "lat": 33.5333,
-    "long": -7.5833,
-    "speed": 30000
-  },
-  {
-    "city": "Leipzig",
-    "country": "DE",
-    "lat": 51.34,
-    "long": 12.375,
-    "speed": 71100
-  },
-  {
-    "city": "Wetter (Ruhr)",
-    "country": "DE",
-    "lat": 51.3881,
-    "long": 7.395,
-    "speed": 44000
-  },
-  {
-    "city": "Zagreb",
-    "country": "HR",
-    "lat": 45.8167,
-    "long": 15.9833,
-    "speed": 786120
-  },
-  {
-    "city": "Ufa",
-    "country": "RU",
-    "lat": 54.7261,
-    "long": 55.9475,
-    "speed": 21713888
-  },
-  {
-    "city": "Luanda",
-    "country": "AO",
-    "lat": -8.8383,
-    "long": 13.2344,
-    "speed": 389050
-  },
-  {
-    "city": "Campina Grande",
-    "country": "BR",
-    "lat": -7.2306,
-    "long": -35.8811,
-    "speed": 429000
-  },
-  {
-    "city": "Düsseldorf",
-    "country": "DE",
-    "lat": 51.2333,
-    "long": 6.7833,
-    "speed": 27989200
-  },
-  {
-    "city": "Reykjavik",
-    "country": "IS",
-    "lat": 64.1467,
-    "long": -21.94,
-    "speed": 468000
-  },
-  {
-    "city": "Saint-Benoît",
-    "country": "RE",
-    "lat": -21.0339,
-    "long": 55.7128,
-    "speed": 9000
-  },
-  {
-    "city": "Liverpool",
-    "country": "GB",
-    "lat": 53.4075,
-    "long": -2.9919,
-    "speed": 84000
-  },
-  {
-    "city": "London",
-    "country": "GB",
-    "lat": 51.5072,
-    "long": -0.1275,
-    "speed": 78811186
-  },
-  {
-    "city": "Hong Kong",
-    "country": "HK",
-    "lat": 22.3,
-    "long": 114.2,
-    "speed": 33021218
-  },
-  {
-    "city": "Norfolk",
-    "country": "US",
-    "lat": 36.8945,
-    "long": -76.259,
-    "speed": 40000
-  },
-  {
-    "city": "Flagstaff",
-    "country": "US",
-    "lat": 35.1872,
-    "long": -111.6194,
-    "speed": 176000
-  },
-  {
-    "city": "West Coast",
-    "country": "GM",
-    "lat": 13.2667,
-    "long": -16.65,
-    "speed": 4051000
-  },
-  {
-    "city": "Delhi",
-    "country": "IN",
-    "lat": 28.61,
-    "long": 77.23,
-    "speed": 6975632
-  },
-  {
-    "city": "Lviv",
-    "country": "UA",
-    "lat": 49.8425,
-    "long": 24.0322,
-    "speed": 222000
-  },
-  {
-    "city": "Nonthaburi",
-    "country": "TH",
-    "lat": 13.8667,
-    "long": 100.5167,
-    "speed": 1142000
-  },
-  {
-    "city": "Manila",
-    "country": "PH",
-    "lat": 14.5958,
-    "long": 120.9772,
-    "speed": 2013050
-  },
-  {
-    "city": "Fès",
-    "country": "MA",
-    "lat": 34.0433,
-    "long": -5.0033,
-    "speed": 30000
-  },
-  {
-    "city": "Poznań",
-    "country": "PL",
-    "lat": 52.4083,
-    "long": 16.9336,
-    "speed": 21000
-  },
-  {
-    "city": "Edirne",
-    "country": "TR",
-    "lat": 41.6769,
-    "long": 26.5556,
-    "speed": 53000
-  },
-  {
-    "city": "Saint-Denis",
-    "country": "RE",
-    "lat": -20.8789,
-    "long": 55.4481,
-    "speed": 9000
-  },
-  {
-    "city": "Nicosia",
-    "country": "CY",
-    "lat": 35.1725,
-    "long": 33.365,
-    "speed": 100000
-  },
-  {
-    "city": "Eschen",
-    "country": "LI",
-    "lat": 47.2167,
-    "long": 9.5167,
-    "speed": 144500
-  },
-  {
-    "city": "Cuiabá",
-    "country": "BR",
-    "lat": -15.5958,
-    "long": -56.0969,
-    "speed": 225680
-  },
-  {
-    "city": "Pau",
-    "country": "FR",
-    "lat": 43.3,
-    "long": -0.37,
-    "speed": 21000
-  },
-  {
-    "city": "Pasig City",
-    "country": "PH",
-    "lat": 14.575,
-    "long": 121.0833,
-    "speed": 37000
-  },
-  {
-    "city": "Huancayo",
-    "country": "PE",
-    "lat": -12.0667,
-    "long": -75.2167,
-    "speed": 20000
-  },
-  {
-    "city": "Lyon",
-    "country": "FR",
-    "lat": 45.76,
-    "long": 4.84,
-    "speed": 2526840
-  },
-  {
-    "city": "Ulyanovsk",
-    "country": "RU",
-    "lat": 54.3167,
-    "long": 48.3667,
-    "speed": 13124
-  },
-  {
-    "city": "Riyadh",
-    "country": "SA",
-    "lat": 24.6333,
-    "long": 46.7167,
-    "speed": 1440000
-  },
-  {
-    "city": "Bolzano",
-    "country": "IT",
-    "lat": 46.4981,
-    "long": 11.3548,
-    "speed": 86000
-  },
-  {
-    "city": "New York",
-    "country": "US",
-    "lat": 40.6943,
-    "long": -73.9249,
-    "speed": 29933400
-  },
-  {
-    "city": "Chelyabinsk",
-    "country": "RU",
-    "lat": 55.15,
-    "long": 61.4,
-    "speed": 21713888
-  },
-  {
-    "city": "Enschede",
-    "country": "NL",
-    "lat": 52.2167,
-    "long": 6.9,
-    "speed": 87100
-  },
-  {
-    "city": "Yaoundé",
-    "country": "CM",
-    "lat": 3.8667,
-    "long": 11.5167,
-    "speed": 4000
-  },
-  {
-    "city": "Barranquilla",
+    "city": "Cali",
     "country": "CO",
-    "lat": 10.9833,
-    "long": -74.8019,
-    "speed": 1080000
-  },
-  {
-    "city": "Belém",
-    "country": "BR",
-    "lat": -1.4558,
-    "long": -48.5039,
-    "speed": 373034
-  },
-  {
-    "city": "Lille",
-    "country": "FR",
-    "lat": 50.6278,
-    "long": 3.0583,
-    "speed": 358200
-  },
-  {
-    "city": "Philadelphia",
-    "country": "US",
-    "lat": 40.0077,
-    "long": -75.1339,
-    "speed": 1121000
-  },
-  {
-    "city": "Paducah",
-    "country": "US",
-    "lat": 37.0711,
-    "long": -88.644,
-    "speed": 140000
-  },
-  {
-    "city": "Montpellier",
-    "country": "FR",
-    "lat": 43.6119,
-    "long": 3.8772,
-    "speed": 1000
-  },
-  {
-    "city": "Mandalay",
-    "country": "MM",
-    "lat": 21.9831,
-    "long": 96.0844,
-    "speed": 251000
-  },
-  {
-    "city": "Los Angeles",
-    "country": "US",
-    "lat": 34.1141,
-    "long": -118.4068,
-    "speed": 17871600
-  },
-  {
-    "city": "Indiana",
-    "country": "US",
-    "lat": 39.7771,
-    "long": -86.1458,
-    "speed": 382000
-  },
-  {
-    "city": "Khartoum",
-    "country": "SD",
-    "lat": 15.5006,
-    "long": 32.56,
-    "speed": 4000
-  },
-  {
-    "city": "Bandar Lampung",
-    "country": "ID",
-    "lat": -5.45,
-    "long": 105.2667,
-    "speed": 13000
-  },
-  {
-    "city": "Urasoe",
-    "country": "JP",
-    "lat": 26.2458,
-    "long": 127.7219,
-    "speed": 110000
-  },
-  {
-    "city": "San Antonio",
-    "country": "US",
-    "lat": 29.4632,
-    "long": -98.5238,
-    "speed": 601000
-  },
-  {
-    "city": "Akron",
-    "country": "US",
-    "lat": 41.0798,
-    "long": -81.5219,
-    "speed": 35000
-  },
-  {
-    "city": "Lugano",
-    "country": "CH",
-    "lat": 46.005,
-    "long": 8.9525,
-    "speed": 75000
-  },
-  {
-    "city": "Barcelona",
-    "country": "ES",
-    "lat": 41.3825,
-    "long": 2.1769,
-    "speed": 1404300
-  },
-  {
-    "city": "Leeds",
-    "country": "GB",
-    "lat": 53.8003,
-    "long": -1.5497,
-    "speed": 186100
-  },
-  {
-    "city": "Winnipeg",
-    "country": "CA",
-    "lat": 49.8844,
-    "long": -97.1464,
-    "speed": 366100
-  },
-  {
-    "city": "Karlsruhe",
-    "country": "DE",
-    "lat": 49.0092,
-    "long": 8.404,
-    "speed": 142000
-  },
-  {
-    "city": "Cusco",
-    "country": "PE",
-    "lat": -13.525,
-    "long": -71.9722,
-    "speed": 20000
-  },
-  {
-    "city": "Brazzaville",
-    "country": "CG",
-    "lat": -4.2694,
-    "long": 15.2714,
-    "speed": 35000
-  },
-  {
-    "city": "Ponta Grossa",
-    "country": "BR",
-    "lat": -25.0994,
-    "long": -50.1583,
-    "speed": 72000
-  },
-  {
-    "city": "Makassar",
-    "country": "ID",
-    "lat": -5.1619,
-    "long": 119.4362,
-    "speed": 983200
-  },
-  {
-    "city": "Chicago",
-    "country": "US",
-    "lat": 41.8375,
-    "long": -87.6866,
-    "speed": 22572100
-  },
-  {
-    "city": "Tirol",
-    "country": "AT",
-    "lat": 47.2683,
-    "long": 11.3933,
-    "speed": 47000
-  },
-  {
-    "city": "Montreal",
-    "country": "CA",
-    "lat": 45.5089,
-    "long": -73.5617,
-    "speed": 2870200
-  },
-  {
-    "city": "Arusha",
-    "country": "TZ",
-    "lat": -3.3667,
-    "long": 36.6833,
-    "speed": 31000
-  },
-  {
-    "city": "Dubai",
-    "country": "AE",
-    "lat": 25.2631,
-    "long": 55.2972,
-    "speed": 2582200
-  },
-  {
-    "city": "Tekirdag",
-    "country": "TR",
-    "lat": 40.9778,
-    "long": 27.5153,
-    "speed": 52000
-  },
-  {
-    "city": "Trondheim",
-    "country": "NO",
-    "lat": 63.4297,
-    "long": 10.3933,
+    "lat": 3.4206,
+    "long": -76.5222,
     "speed": 80000
   },
   {
-    "city": "Springfield",
-    "country": "US",
-    "lat": 42.1155,
-    "long": -72.5395,
-    "speed": 201000
-  },
-  {
-    "city": "Goma",
-    "country": "CD",
-    "lat": -1.6794,
-    "long": 29.2336,
-    "speed": 82100
-  },
-  {
-    "city": "Sankt Gallen",
-    "country": "CH",
-    "lat": 47.4242,
-    "long": 9.3708,
-    "speed": 439572
-  },
-  {
-    "city": "Oregon",
-    "country": "US",
-    "lat": 45.5371,
-    "long": -122.65,
-    "speed": 1000
-  },
-  {
-    "city": "Košice",
-    "country": "SK",
-    "lat": 48.7167,
-    "long": 21.25,
-    "speed": 3000
-  },
-  {
-    "city": "Yerevan",
-    "country": "AM",
-    "lat": 40.1814,
-    "long": 44.5144,
-    "speed": 116324
-  },
-  {
-    "city": "Dhaka",
-    "country": "BD",
-    "lat": 23.7639,
-    "long": 90.3889,
-    "speed": 1707624
-  },
-  {
-    "city": "São Joaquim",
-    "country": "BR",
-    "lat": -28.2939,
-    "long": -49.9319,
-    "speed": 20000
-  },
-  {
-    "city": "Brisbane",
-    "country": "AU",
-    "lat": -27.4678,
-    "long": 153.0281,
-    "speed": 3355104
-  },
-  {
-    "city": "Katowice",
-    "country": "PL",
-    "lat": 50.2667,
-    "long": 19.0167,
-    "speed": 4909514
-  },
-  {
-    "city": "Al Fujayrah",
-    "country": "AE",
-    "lat": 25.1223,
-    "long": 56.3342,
-    "speed": 364000
-  },
-  {
-    "city": "Bogota",
-    "country": "CO",
-    "lat": 4.7111,
-    "long": -74.0722,
-    "speed": 5651340
-  },
-  {
-    "city": "Texas",
-    "country": "US",
-    "lat": 32.7935,
-    "long": -96.7667,
-    "speed": 520000
-  },
-  {
-    "city": "Mbeya",
-    "country": "TZ",
-    "lat": -8.9,
-    "long": 33.45,
-    "speed": 2000
-  },
-  {
-    "city": "Dusseldorf",
-    "country": "DE",
-    "lat": 51.2333,
-    "long": 6.7833,
-    "speed": 4607949
-  },
-  {
-    "city": "Lusaka",
-    "country": "ZM",
-    "lat": -15.4167,
-    "long": 28.2833,
-    "speed": 2000
-  },
-  {
-    "city": "Nago",
-    "country": "JP",
-    "lat": 26.5917,
-    "long": 127.9775,
-    "speed": 110000
-  },
-  {
-    "city": "Charlotte",
-    "country": "US",
-    "lat": 35.2083,
-    "long": -80.8303,
-    "speed": 43000
-  },
-  {
-    "city": "Saint George",
-    "country": "VC",
-    "lat": 13.1578,
-    "long": -61.225,
-    "speed": 119000
-  },
-  {
-    "city": "Dodoma",
-    "country": "TZ",
-    "lat": -6.1731,
-    "long": 35.7419,
-    "speed": 9000
-  },
-  {
-    "city": "Yaroslavl",
-    "country": "RU",
-    "lat": 57.6167,
-    "long": 39.85,
-    "speed": 21000
-  },
-  {
-    "city": "Vilnius",
-    "country": "LT",
-    "lat": 54.6872,
-    "long": 25.28,
-    "speed": 1868000
-  },
-  {
-    "city": "Rostov",
-    "country": "RU",
-    "lat": 47.2333,
-    "long": 39.7,
-    "speed": 568000
-  },
-  {
-    "city": "Dnipro",
-    "country": "UA",
-    "lat": 48.4675,
-    "long": 35.04,
-    "speed": 40000
-  },
-  {
-    "city": "Jeddah",
-    "country": "SA",
-    "lat": 21.5433,
-    "long": 39.1728,
-    "speed": 1851500
-  },
-  {
-    "city": "Belo Horizonte",
-    "country": "BR",
-    "lat": -19.9167,
-    "long": -43.9333,
-    "speed": 836000
-  },
-  {
-    "city": "San Juan",
-    "country": "PR",
-    "lat": 18.3985,
-    "long": -66.061,
-    "speed": 571000
-  },
-  {
-    "city": "Eugene",
-    "country": "US",
-    "lat": 44.0564,
-    "long": -123.1174,
-    "speed": 96000
-  },
-  {
-    "city": "Cork",
-    "country": "IE",
-    "lat": 51.8972,
-    "long": -8.47,
-    "speed": 97000
-  },
-  {
-    "city": "Oulu",
-    "country": "FI",
-    "lat": 65.0142,
-    "long": 25.4719,
-    "speed": 83000
-  },
-  {
-    "city": "Hagåtña",
-    "country": "GU",
-    "lat": 13.4745,
-    "long": 144.7504,
-    "speed": 75000
-  },
-  {
-    "city": "Istanbul",
-    "country": "TR",
-    "lat": 41.0136,
-    "long": 28.955,
-    "speed": 2896100
-  },
-  {
-    "city": "Abidjan",
-    "country": "CI",
-    "lat": 5.3167,
-    "long": -4.0333,
-    "speed": 29000
-  },
-  {
-    "city": "Esbjerg",
-    "country": "DK",
-    "lat": 55.4833,
-    "long": 8.45,
-    "speed": 20000
-  },
-  {
-    "city": "Portland",
-    "country": "US",
-    "lat": 45.5371,
-    "long": -122.65,
-    "speed": 3153000
-  },
-  {
-    "city": "Quito",
-    "country": "EC",
-    "lat": -0.22,
-    "long": -78.5125,
-    "speed": 1024000
-  },
-  {
-    "city": "Ashland",
-    "country": "US",
-    "lat": 37.6942,
-    "long": -122.1159,
-    "speed": 276000
-  },
-  {
-    "city": "Tegucigalpa",
-    "country": "HN",
-    "lat": 14.1,
-    "long": -87.2167,
-    "speed": 5024
-  },
-  {
-    "city": "Paramaribo",
-    "country": "SR",
-    "lat": 5.8522,
-    "long": -55.2039,
-    "speed": 28000
-  },
-  {
-    "city": "Halifax",
-    "country": "CA",
-    "lat": 44.6475,
-    "long": -63.5906,
-    "speed": 99000
-  },
-  {
-    "city": "Brussels",
-    "country": "BE",
-    "lat": 50.8467,
-    "long": 4.3525,
-    "speed": 28302624
+    "city": "Constanta",
+    "country": "RO",
+    "lat": 44.1667,
+    "long": 28.6333,
+    "speed": 2476000
   },
   {
     "city": "Ljubljana",
@@ -2618,60 +119,382 @@
     "speed": 1102000
   },
   {
-    "city": "Adelaide",
-    "country": "AU",
-    "lat": -34.9275,
-    "long": 138.6,
-    "speed": 926100
+    "city": "Sacramento",
+    "country": "US",
+    "lat": 38.5677,
+    "long": -121.4685,
+    "speed": 42000
   },
   {
-    "city": "Mogilno",
-    "country": "PL",
-    "lat": 52.65,
-    "long": 17.95,
+    "city": "Conakry",
+    "country": "GN",
+    "lat": 9.5092,
+    "long": -13.7122,
+    "speed": 3100
+  },
+  {
+    "city": "Fargo",
+    "country": "US",
+    "lat": 46.8651,
+    "long": -96.8292,
+    "speed": 40000
+  },
+  {
+    "city": "Vilnius",
+    "country": "LT",
+    "lat": 54.6872,
+    "long": 25.28,
+    "speed": 1868000
+  },
+  {
+    "city": "Tunis",
+    "country": "TN",
+    "lat": 36.8064,
+    "long": 10.1817,
+    "speed": 4000
+  },
+  {
+    "city": "Libreville",
+    "country": "GA",
+    "lat": 0.3903,
+    "long": 9.4542,
+    "speed": 25000
+  },
+  {
+    "city": "Yaoundé",
+    "country": "CM",
+    "lat": 3.8667,
+    "long": 11.5167,
+    "speed": 4000
+  },
+  {
+    "city": "Maputo",
+    "country": "MZ",
+    "lat": -25.9667,
+    "long": 32.5833,
+    "speed": 93124
+  },
+  {
+    "city": "Abidjan",
+    "country": "CI",
+    "lat": 5.3167,
+    "long": -4.0333,
+    "speed": 29000
+  },
+  {
+    "city": "Brest",
+    "country": "FR",
+    "lat": 48.39,
+    "long": -4.49,
+    "speed": 2000
+  },
+  {
+    "city": "Paducah",
+    "country": "US",
+    "lat": 37.0711,
+    "long": -88.644,
+    "speed": 140000
+  },
+  {
+    "city": "Panama City",
+    "country": "PA",
+    "lat": 8.9833,
+    "long": -79.5167,
+    "speed": 286500
+  },
+  {
+    "city": "Lyon",
+    "country": "FR",
+    "lat": 45.76,
+    "long": 4.84,
+    "speed": 2546840
+  },
+  {
+    "city": "St. George",
+    "country": "US",
+    "lat": 37.0758,
+    "long": -113.5752,
+    "speed": 93000
+  },
+  {
+    "city": "Recife",
+    "country": "BR",
+    "lat": -8.05,
+    "long": -34.9,
+    "speed": 1013888
+  },
+  {
+    "city": "Beirut",
+    "country": "LB",
+    "lat": 33.8869,
+    "long": 35.5131,
+    "speed": 105620
+  },
+  {
+    "city": "Albany",
+    "country": "US",
+    "lat": 42.6664,
+    "long": -73.7987,
+    "speed": 30000
+  },
+  {
+    "city": "Taoyuan",
+    "country": "TW",
+    "lat": 24.965,
+    "long": 121.2168,
+    "speed": 153000
+  },
+  {
+    "city": "Birmingham",
+    "country": "GB",
+    "lat": 52.48,
+    "long": -1.9025,
+    "speed": 10000
+  },
+  {
+    "city": "Rio de Janeiro",
+    "country": "BR",
+    "lat": -22.9111,
+    "long": -43.2056,
+    "speed": 25219408
+  },
+  {
+    "city": "Denver",
+    "country": "US",
+    "lat": 39.762,
+    "long": -104.8758,
+    "speed": 6270000
+  },
+  {
+    "city": "Barnaul",
+    "country": "RU",
+    "lat": 53.3333,
+    "long": 83.75,
+    "speed": 539100
+  },
+  {
+    "city": "Valdivia",
+    "country": "CL",
+    "lat": -39.8139,
+    "long": -73.2458,
+    "speed": 61100
+  },
+  {
+    "city": "Reykjavik",
+    "country": "IS",
+    "lat": 64.1467,
+    "long": -21.94,
+    "speed": 468000
+  },
+  {
+    "city": "Innsbruck",
+    "country": "AT",
+    "lat": 47.2683,
+    "long": 11.3933,
+    "speed": 47000
+  },
+  {
+    "city": "Indiana",
+    "country": "US",
+    "lat": 39.7771,
+    "long": -86.1458,
+    "speed": 382000
+  },
+  {
+    "city": "Palembang",
+    "country": "ID",
+    "lat": -2.9861,
+    "long": 104.7556,
     "speed": 1000
   },
   {
-    "city": "Durban",
-    "country": "ZA",
-    "lat": -29.8833,
-    "long": 31.05,
-    "speed": 2305288
+    "city": "Sioux City",
+    "country": "US",
+    "lat": 42.4959,
+    "long": -96.3901,
+    "speed": 10000
   },
   {
-    "city": "Bangkok",
-    "country": "TH",
-    "lat": 13.7525,
-    "long": 100.4942,
-    "speed": 8511250
+    "city": "Reno",
+    "country": "US",
+    "lat": 39.5497,
+    "long": -119.8483,
+    "speed": 29100
   },
   {
-    "city": "Mwanza",
+    "city": "Tirol",
+    "country": "AT",
+    "lat": 47.2683,
+    "long": 11.3933,
+    "speed": 47000
+  },
+  {
+    "city": "Ulaanbaatar",
+    "country": "MN",
+    "lat": 47.9203,
+    "long": 106.9172,
+    "speed": 34000
+  },
+  {
+    "city": "Wuppertal",
+    "country": "DE",
+    "lat": 51.2667,
+    "long": 7.1833,
+    "speed": 3000
+  },
+  {
+    "city": "Zhuhai",
+    "country": "CN",
+    "lat": 22.2769,
+    "long": 113.5678,
+    "speed": 15100
+  },
+  {
+    "city": "Praia",
+    "country": "CV",
+    "lat": 14.918,
+    "long": -23.509,
+    "speed": 23100
+  },
+  {
+    "city": "Madison",
+    "country": "US",
+    "lat": 43.0822,
+    "long": -89.393,
+    "speed": 143500
+  },
+  {
+    "city": "Sundsvall",
+    "country": "SE",
+    "lat": 62.4,
+    "long": 17.3167,
+    "speed": 463000
+  },
+  {
+    "city": "Tbilisi",
+    "country": "GE",
+    "lat": 41.7225,
+    "long": 44.7925,
+    "speed": 103000
+  },
+  {
+    "city": "Brazzaville",
+    "country": "CG",
+    "lat": -4.2694,
+    "long": 15.2714,
+    "speed": 35000
+  },
+  {
+    "city": "San Pedro Sula",
+    "country": "HN",
+    "lat": 15.5,
+    "long": -88.0333,
+    "speed": 100000
+  },
+  {
+    "city": "Oslo",
+    "country": "NO",
+    "lat": 59.9133,
+    "long": 10.7389,
+    "speed": 2016000
+  },
+  {
+    "city": "Kano",
+    "country": "NG",
+    "lat": 12,
+    "long": 8.5167,
+    "speed": 445
+  },
+  {
+    "city": "Ramallah",
+    "country": "XW",
+    "lat": 31.9,
+    "long": 35.2,
+    "speed": 69010
+  },
+  {
+    "city": "San Juan",
+    "country": "PR",
+    "lat": 18.3985,
+    "long": -66.061,
+    "speed": 571000
+  },
+  {
+    "city": "Marigot",
+    "country": "MF",
+    "lat": 18.0706,
+    "long": -63.0847,
+    "speed": 151000
+  },
+  {
+    "city": "New Jersey",
+    "country": "US",
+    "lat": 40.2237,
+    "long": -74.7641,
+    "speed": 2148000
+  },
+  {
+    "city": "Arusha",
     "country": "TZ",
-    "lat": -2.5167,
-    "long": 32.9,
+    "lat": -3.3667,
+    "long": 36.6833,
+    "speed": 31000
+  },
+  {
+    "city": "Kuwait City",
+    "country": "KW",
+    "lat": 29.3697,
+    "long": 47.9783,
+    "speed": 274000
+  },
+  {
+    "city": "Trondheim",
+    "country": "NO",
+    "lat": 63.4297,
+    "long": 10.3933,
+    "speed": 80000
+  },
+  {
+    "city": "Nur-Sultan",
+    "country": "KZ",
+    "lat": 51.1472,
+    "long": 71.4222,
+    "speed": 146000
+  },
+  {
+    "city": "Okinawa",
+    "country": "JP",
+    "lat": 26.2122,
+    "long": 127.6792,
+    "speed": 220000
+  },
+  {
+    "city": "Targoviste",
+    "country": "RO",
+    "lat": 44.9244,
+    "long": 25.4572,
     "speed": 5000
   },
   {
-    "city": "Minsk",
-    "country": "BY",
-    "lat": 53.9,
-    "long": 27.5667,
-    "speed": 13000
+    "city": "Texas",
+    "country": "US",
+    "lat": 32.7935,
+    "long": -96.7667,
+    "speed": 520000
   },
   {
-    "city": "Seoul",
-    "country": "KR",
-    "lat": 37.56,
-    "long": 126.99,
-    "speed": 3850000
+    "city": "Saint-Denis",
+    "country": "RE",
+    "lat": -20.8789,
+    "long": 55.4481,
+    "speed": 9000
   },
   {
-    "city": "Dar es Salaam",
-    "country": "TZ",
-    "lat": -6.8161,
-    "long": 39.2803,
-    "speed": 150000
+    "city": "Manaus",
+    "country": "BR",
+    "lat": -3.1,
+    "long": -60.0167,
+    "speed": 454048
   },
   {
     "city": "Belgrade",
@@ -2688,67 +511,32 @@
     "speed": 507072
   },
   {
-    "city": "Cleveland",
+    "city": "Vancouver",
+    "country": "CA",
+    "lat": 49.25,
+    "long": -123.1,
+    "speed": 2723600
+  },
+  {
+    "city": "Montgomery",
     "country": "US",
-    "lat": 41.4764,
-    "long": -81.6805,
-    "speed": 81000
+    "lat": 32.3482,
+    "long": -86.2668,
+    "speed": 358000
   },
   {
-    "city": "Mérida",
-    "country": "MX",
-    "lat": 20.97,
-    "long": -89.62,
-    "speed": 79000
+    "city": "Brisbane",
+    "country": "AU",
+    "lat": -27.4678,
+    "long": 153.0281,
+    "speed": 3395104
   },
   {
-    "city": "Lulea",
-    "country": "SE",
-    "lat": 65.5844,
-    "long": 22.1539,
-    "speed": 113000
-  },
-  {
-    "city": "São Paulo",
-    "country": "BR",
-    "lat": -23.55,
-    "long": -46.6333,
-    "speed": 112984462
-  },
-  {
-    "city": "Surabaya",
-    "country": "ID",
-    "lat": -7.2458,
-    "long": 112.7378,
-    "speed": 1248224
-  },
-  {
-    "city": "Prague",
-    "country": "CZ",
-    "lat": 50.0875,
-    "long": 14.4214,
-    "speed": 22927240
-  },
-  {
-    "city": "Johor Bahru",
-    "country": "MY",
-    "lat": 1.4556,
-    "long": 103.7611,
-    "speed": 167100
-  },
-  {
-    "city": "Bali",
-    "country": "ID",
-    "lat": -8.65,
-    "long": 115.2167,
-    "speed": 135000
-  },
-  {
-    "city": "Raleigh",
+    "city": "Reston",
     "country": "US",
-    "lat": 35.8324,
-    "long": -78.6429,
-    "speed": 40000
+    "lat": 38.9497,
+    "long": -77.3461,
+    "speed": 1009000
   },
   {
     "city": "Oklahoma City",
@@ -2758,258 +546,6 @@
     "speed": 345000
   },
   {
-    "city": "Naples",
-    "country": "IT",
-    "lat": 40.8333,
-    "long": 14.25,
-    "speed": 33000
-  },
-  {
-    "city": "Phoenix",
-    "country": "US",
-    "lat": 33.5722,
-    "long": -112.0892,
-    "speed": 2843200
-  },
-  {
-    "city": "Austin",
-    "country": "US",
-    "lat": 30.3005,
-    "long": -97.7522,
-    "speed": 101000
-  },
-  {
-    "city": "Rouen",
-    "country": "FR",
-    "lat": 49.4428,
-    "long": 1.0886,
-    "speed": 1000
-  },
-  {
-    "city": "Clermont-Ferrand",
-    "country": "FR",
-    "lat": 45.7831,
-    "long": 3.0824,
-    "speed": 76000
-  },
-  {
-    "city": "Meppel",
-    "country": "NL",
-    "lat": 52.7,
-    "long": 6.1833,
-    "speed": 181100
-  },
-  {
-    "city": "Piura",
-    "country": "PE",
-    "lat": -5.2,
-    "long": -80.6333,
-    "speed": 20000
-  },
-  {
-    "city": "Port-Vila",
-    "country": "VU",
-    "lat": -17.7333,
-    "long": 168.3167,
-    "speed": 4000
-  },
-  {
-    "city": "Bremen",
-    "country": "DE",
-    "lat": 53.0833,
-    "long": 8.8,
-    "speed": 482040
-  },
-  {
-    "city": "Fargo",
-    "country": "US",
-    "lat": 46.8651,
-    "long": -96.8292,
-    "speed": 40000
-  },
-  {
-    "city": "Tainan",
-    "country": "TW",
-    "lat": 22.9833,
-    "long": 120.1833,
-    "speed": 90000
-  },
-  {
-    "city": "Male",
-    "country": "MV",
-    "lat": 4.1753,
-    "long": 73.5089,
-    "speed": 100000
-  },
-  {
-    "city": "Cluj-Napoca",
-    "country": "RO",
-    "lat": 46.7667,
-    "long": 23.5833,
-    "speed": 2475000
-  },
-  {
-    "city": "Willemstad",
-    "country": "CW",
-    "lat": 12.108,
-    "long": -68.935,
-    "speed": 56000
-  },
-  {
-    "city": "Port Louis",
-    "country": "MU",
-    "lat": -20.1644,
-    "long": 57.5042,
-    "speed": 38000
-  },
-  {
-    "city": "Stavropol",
-    "country": "RU",
-    "lat": 45.05,
-    "long": 41.9833,
-    "speed": 1000
-  },
-  {
-    "city": "Gävle",
-    "country": "SE",
-    "lat": 60.6747,
-    "long": 17.1417,
-    "speed": 15000
-  },
-  {
-    "city": "Criciúma",
-    "country": "BR",
-    "lat": -28.6775,
-    "long": -49.3697,
-    "speed": 30000
-  },
-  {
-    "city": "Basseterre",
-    "country": "KN",
-    "lat": 17.3,
-    "long": -62.7333,
-    "speed": 15000
-  },
-  {
-    "city": "Chennai",
-    "country": "IN",
-    "lat": 13.0825,
-    "long": 80.275,
-    "speed": 3666136
-  },
-  {
-    "city": "Craiova",
-    "country": "RO",
-    "lat": 44.3333,
-    "long": 23.8167,
-    "speed": 2475000
-  },
-  {
-    "city": "Águas Santas",
-    "country": "PT",
-    "lat": 41.209,
-    "long": -8.589,
-    "speed": 3000
-  },
-  {
-    "city": "Rennes",
-    "country": "FR",
-    "lat": 48.1147,
-    "long": -1.6794,
-    "speed": 43000
-  },
-  {
-    "city": "Bogotá",
-    "country": "CO",
-    "lat": 4.7111,
-    "long": -74.0722,
-    "speed": 1000
-  },
-  {
-    "city": "Mountain View",
-    "country": "US",
-    "lat": 37.4001,
-    "long": -122.0796,
-    "speed": 22000
-  },
-  {
-    "city": "Chaguanas",
-    "country": "TT",
-    "lat": 10.5167,
-    "long": -61.4,
-    "speed": 19124
-  },
-  {
-    "city": "Accra",
-    "country": "GH",
-    "lat": 5.55,
-    "long": -0.2,
-    "speed": 171024
-  },
-  {
-    "city": "Stavanger",
-    "country": "NO",
-    "lat": 58.97,
-    "long": 5.7314,
-    "speed": 120000
-  },
-  {
-    "city": "Oslo",
-    "country": "NO",
-    "lat": 59.9133,
-    "long": 10.7389,
-    "speed": 2016000
-  },
-  {
-    "city": "Khmelnytskyi",
-    "country": "UA",
-    "lat": 49.4167,
-    "long": 27,
-    "speed": 42000
-  },
-  {
-    "city": "Wuhan",
-    "country": "CN",
-    "lat": 30.5872,
-    "long": 114.2881,
-    "speed": 12100
-  },
-  {
-    "city": "Medan",
-    "country": "ID",
-    "lat": 3.5894,
-    "long": 98.6739,
-    "speed": 2000
-  },
-  {
-    "city": "Tehran",
-    "country": "IR",
-    "lat": 35.6892,
-    "long": 51.3889,
-    "speed": 50000
-  },
-  {
-    "city": "Honolulu",
-    "country": "US",
-    "lat": 21.3294,
-    "long": -157.846,
-    "speed": 551200
-  },
-  {
-    "city": "Stein bei Nürnberg",
-    "country": "DE",
-    "lat": 49.4167,
-    "long": 11.0167,
-    "speed": 231100
-  },
-  {
-    "city": "Santiago",
-    "country": "CL",
-    "lat": -33.4372,
-    "long": -70.6506,
-    "speed": 8080100
-  },
-  {
     "city": "Semarang",
     "country": "ID",
     "lat": -6.9667,
@@ -3017,781 +553,67 @@
     "speed": 8000
   },
   {
-    "city": "Rivne",
-    "country": "UA",
-    "lat": 50.6192,
-    "long": 26.2519,
-    "speed": 21000
+    "city": "Newcastle",
+    "country": "GB",
+    "lat": 54.98,
+    "long": -1.61,
+    "speed": 73000
   },
   {
-    "city": "Jakarta",
-    "country": "ID",
-    "lat": -6.175,
-    "long": 106.8275,
-    "speed": 18515768
-  },
-  {
-    "city": "Innsbruck",
-    "country": "AT",
-    "lat": 47.2683,
-    "long": 11.3933,
-    "speed": 47000
-  },
-  {
-    "city": "Trujillo",
-    "country": "PE",
-    "lat": -8.112,
-    "long": -79.0288,
-    "speed": 50000
-  },
-  {
-    "city": "Nouméa",
-    "country": "NC",
-    "lat": -22.2758,
-    "long": 166.458,
-    "speed": 53000
-  },
-  {
-    "city": "Port Elizabeth",
-    "country": "ZA",
-    "lat": -33.9581,
-    "long": 25.6,
-    "speed": 111000
-  },
-  {
-    "city": "Quezon City",
-    "country": "PH",
-    "lat": 14.63,
-    "long": 121.03,
-    "speed": 3100
-  },
-  {
-    "city": "Natal",
-    "country": "BR",
-    "lat": -6.9838,
-    "long": -60.2699,
-    "speed": 303240
-  },
-  {
-    "city": "Concepcion",
+    "city": "Osorno",
     "country": "CL",
-    "lat": -36.8282,
-    "long": -73.0514,
-    "speed": 36000
-  },
-  {
-    "city": "Varna",
-    "country": "BG",
-    "lat": 43.2167,
-    "long": 27.9167,
-    "speed": 72000
-  },
-  {
-    "city": "Goiânia",
-    "country": "BR",
-    "lat": -16.6667,
-    "long": -49.25,
-    "speed": 335020
-  },
-  {
-    "city": "Saskatoon",
-    "country": "CA",
-    "lat": 52.1333,
-    "long": -106.6833,
-    "speed": 164000
-  },
-  {
-    "city": "Abuja",
-    "country": "NG",
-    "lat": 9.0667,
-    "long": 7.4833,
-    "speed": 5200
-  },
-  {
-    "city": "Rijeka",
-    "country": "HR",
-    "lat": 45.3272,
-    "long": 14.4411,
-    "speed": 40000
-  },
-  {
-    "city": "Skopje",
-    "country": "MK",
-    "lat": 41.9961,
-    "long": 21.4317,
-    "speed": 64048
-  },
-  {
-    "city": "Opole",
-    "country": "PL",
-    "lat": 50.6667,
-    "long": 17.9333,
-    "speed": 21000
-  },
-  {
-    "city": "Pekanbaru",
-    "country": "ID",
-    "lat": 0.5092,
-    "long": 101.4453,
-    "speed": 320100
-  },
-  {
-    "city": "Bari",
-    "country": "IT",
-    "lat": 41.1253,
-    "long": 16.8667,
-    "speed": 118000
-  },
-  {
-    "city": "Warsaw",
-    "country": "PL",
-    "lat": 52.23,
-    "long": 21.0111,
-    "speed": 25051030
-  },
-  {
-    "city": "Cape Town",
-    "country": "ZA",
-    "lat": -33.9253,
-    "long": 18.4239,
-    "speed": 8091562
-  },
-  {
-    "city": "Dortmund",
-    "country": "DE",
-    "lat": 51.5167,
-    "long": 7.4667,
-    "speed": 552000
-  },
-  {
-    "city": "Nur-Sultan",
-    "country": "KZ",
-    "lat": 51.1472,
-    "long": 71.4222,
-    "speed": 146000
-  },
-  {
-    "city": "Santa Maria",
-    "country": "BR",
-    "lat": -29.6833,
-    "long": -53.8,
-    "speed": 85000
-  },
-  {
-    "city": "Shanghai",
-    "country": "CN",
-    "lat": 31.1667,
-    "long": 121.4667,
-    "speed": 671030
-  },
-  {
-    "city": "Makati City",
-    "country": "PH",
-    "lat": 14.5567,
-    "long": 121.0214,
-    "speed": 221100
-  },
-  {
-    "city": "Tashkent",
-    "country": "UZ",
-    "lat": 41.3111,
-    "long": 69.2797,
-    "speed": 345240
-  },
-  {
-    "city": "Gavle",
-    "country": "SE",
-    "lat": 60.6747,
-    "long": 17.1417,
-    "speed": 431000
-  },
-  {
-    "city": "Singapore",
-    "country": "SG",
-    "lat": 1.3,
-    "long": 103.8,
-    "speed": 54531250
-  },
-  {
-    "city": "Mumbai",
-    "country": "IN",
-    "lat": 19.0761,
-    "long": 72.8775,
-    "speed": 15615112
-  },
-  {
-    "city": "Cayenne",
-    "country": "GF",
-    "lat": 4.933,
-    "long": -52.33,
-    "speed": 300
-  },
-  {
-    "city": "Albuquerque",
-    "country": "US",
-    "lat": 35.1054,
-    "long": -106.6465,
-    "speed": 31000
-  },
-  {
-    "city": "Braila",
-    "country": "RO",
-    "lat": 45.2692,
-    "long": 27.9575,
-    "speed": 70000
-  },
-  {
-    "city": "Miami",
-    "country": "US",
-    "lat": 25.784,
-    "long": -80.2101,
-    "speed": 19294310
-  },
-  {
-    "city": "Cascavel",
-    "country": "BR",
-    "lat": -24.9556,
-    "long": -53.4553,
-    "speed": 199000
-  },
-  {
-    "city": "Bogor",
-    "country": "ID",
-    "lat": -6.5966,
-    "long": 106.7972,
-    "speed": 22000
-  },
-  {
-    "city": "San Pedro Sula",
-    "country": "HN",
-    "lat": 15.5,
-    "long": -88.0333,
-    "speed": 100000
-  },
-  {
-    "city": "Luxembourg",
-    "country": "LU",
-    "lat": 49.6117,
-    "long": 6.1319,
-    "speed": 27293250
-  },
-  {
-    "city": "Campos",
-    "country": "BR",
-    "lat": -21.7539,
-    "long": -41.3239,
-    "speed": 48000
-  },
-  {
-    "city": "Yogyakarta",
-    "country": "ID",
-    "lat": -7.8014,
-    "long": 110.3644,
-    "speed": 478914
-  },
-  {
-    "city": "Malang",
-    "country": "ID",
-    "lat": -7.98,
-    "long": 112.62,
-    "speed": 102000
-  },
-  {
-    "city": "Wrocław",
-    "country": "PL",
-    "lat": 51.11,
-    "long": 17.0325,
-    "speed": 5148514
-  },
-  {
-    "city": "Athens",
-    "country": "GR",
-    "lat": 37.9842,
-    "long": 23.7281,
-    "speed": 3541652
-  },
-  {
-    "city": "Caxias do Sul",
-    "country": "BR",
-    "lat": -29.1667,
-    "long": -51.1833,
-    "speed": 94000
-  },
-  {
-    "city": "Davenport",
-    "country": "US",
-    "lat": 41.5565,
-    "long": -90.6053,
-    "speed": 985000
-  },
-  {
-    "city": "Mexico City",
-    "country": "MX",
-    "lat": 19.4333,
-    "long": -99.1333,
-    "speed": 81000
-  },
-  {
-    "city": "Fortaleza",
-    "country": "BR",
-    "lat": -3.7275,
-    "long": -38.5275,
-    "speed": 20371064
-  },
-  {
-    "city": "Columbus",
-    "country": "US",
-    "lat": 39.9862,
-    "long": -82.9855,
-    "speed": 1107000
-  },
-  {
-    "city": "Kigali",
-    "country": "RW",
-    "lat": -1.9536,
-    "long": 30.0606,
-    "speed": 48110
-  },
-  {
-    "city": "Targoviste",
-    "country": "RO",
-    "lat": 44.9244,
-    "long": 25.4572,
-    "speed": 5000
-  },
-  {
-    "city": "San Jose",
-    "country": "CR",
-    "lat": 9.9325,
-    "long": -84.08,
-    "speed": 641000
-  },
-  {
-    "city": "São Luís",
-    "country": "BR",
-    "lat": -2.5283,
-    "long": -44.3044,
-    "speed": 356000
-  },
-  {
-    "city": "Kinshasa",
-    "country": "CD",
-    "lat": -4.325,
-    "long": 15.3222,
-    "speed": 1208000
-  },
-  {
-    "city": "Presov",
-    "country": "SK",
-    "lat": 49.0017,
-    "long": 21.2394,
-    "speed": 7000
-  },
-  {
-    "city": "Nairobi",
-    "country": "KE",
-    "lat": -1.2864,
-    "long": 36.8172,
-    "speed": 1057224
-  },
-  {
-    "city": "Lajeado",
-    "country": "BR",
-    "lat": -29.4669,
-    "long": -51.9608,
-    "speed": 248000
-  },
-  {
-    "city": "Naha",
-    "country": "JP",
-    "lat": 26.2122,
-    "long": 127.6792,
-    "speed": 110000
-  },
-  {
-    "city": "Hasselt",
-    "country": "BE",
-    "lat": 50.9305,
-    "long": 5.3385,
-    "speed": 417000
-  },
-  {
-    "city": "Rio de Janeiro",
-    "country": "BR",
-    "lat": -22.9111,
-    "long": -43.2056,
-    "speed": 25109408
-  },
-  {
-    "city": "Medellin",
-    "country": "CO",
-    "lat": 6.2308,
-    "long": -75.5906,
-    "speed": 1050000
-  },
-  {
-    "city": "Chisinau",
-    "country": "MD",
-    "lat": 47.0228,
-    "long": 28.8353,
-    "speed": 256500
-  },
-  {
-    "city": "La Paz",
-    "country": "BO",
-    "lat": -16.5,
-    "long": -68.15,
-    "speed": 223000
-  },
-  {
-    "city": "Dallas",
-    "country": "US",
-    "lat": 32.7935,
-    "long": -96.7667,
-    "speed": 20497100
-  },
-  {
-    "city": "Manama",
-    "country": "BH",
-    "lat": 26.225,
-    "long": 50.5775,
-    "speed": 1560000
-  },
-  {
-    "city": "Palembang",
-    "country": "ID",
-    "lat": -2.9861,
-    "long": 104.7556,
+    "lat": -40.5725,
+    "long": -73.1353,
     "speed": 1000
   },
   {
-    "city": "Curitiba",
-    "country": "BR",
-    "lat": -25.4297,
-    "long": -49.2711,
-    "speed": 4576072
+    "city": "Shenzhen",
+    "country": "CN",
+    "lat": 22.535,
+    "long": 114.054,
+    "speed": 410000
   },
   {
-    "city": "Calgary",
-    "country": "CA",
-    "lat": 51.05,
-    "long": -114.0667,
-    "speed": 1348200
-  },
-  {
-    "city": "Houston",
-    "country": "US",
-    "lat": 29.786,
-    "long": -95.3885,
-    "speed": 1127000
-  },
-  {
-    "city": "Elche",
-    "country": "ES",
-    "lat": 38.2669,
-    "long": -0.6983,
-    "speed": 1530300
-  },
-  {
-    "city": "Grenoble",
-    "country": "FR",
-    "lat": 45.1715,
-    "long": 5.7224,
-    "speed": 1208740
-  },
-  {
-    "city": "Wuppertal",
-    "country": "DE",
-    "lat": 51.2667,
-    "long": 7.1833,
-    "speed": 3000
-  },
-  {
-    "city": "St. George",
-    "country": "US",
-    "lat": 37.0758,
-    "long": -113.5752,
-    "speed": 93000
-  },
-  {
-    "city": "Bandung",
+    "city": "Serang",
     "country": "ID",
-    "lat": -6.912,
-    "long": 107.6097,
-    "speed": 144100
+    "lat": -6.12,
+    "long": 106.1503,
+    "speed": 1000
   },
   {
-    "city": "Washington",
-    "country": "US",
-    "lat": 38.9047,
-    "long": -77.0163,
-    "speed": 1169000
+    "city": "Barcelona",
+    "country": "ES",
+    "lat": 41.3825,
+    "long": 2.1769,
+    "speed": 1444300
   },
   {
-    "city": "Djibouti",
-    "country": "DJ",
-    "lat": 11.5883,
-    "long": 43.145,
-    "speed": 155002
-  },
-  {
-    "city": "San Lorenzo",
-    "country": "PY",
-    "lat": -25.34,
-    "long": -57.52,
-    "speed": 84360
-  },
-  {
-    "city": "Moncton",
-    "country": "CA",
-    "lat": 46.1328,
-    "long": -64.7714,
-    "speed": 46000
-  },
-  {
-    "city": "Libreville",
-    "country": "GA",
-    "lat": 0.3903,
-    "long": 9.4542,
-    "speed": 25000
-  },
-  {
-    "city": "Malmo",
-    "country": "SE",
-    "lat": 55.6058,
-    "long": 13.0358,
-    "speed": 3398300
-  },
-  {
-    "city": "Gatineau",
-    "country": "CA",
-    "lat": 45.4833,
-    "long": -75.65,
-    "speed": 121000
-  },
-  {
-    "city": "İstanbul",
-    "country": "TR",
-    "lat": 41.0136,
-    "long": 28.955,
-    "speed": 1503000
-  },
-  {
-    "city": "Panama City",
-    "country": "PA",
-    "lat": 8.9833,
-    "long": -79.5167,
-    "speed": 246500
-  },
-  {
-    "city": "Amsterdam",
-    "country": "NL",
-    "lat": 52.3728,
-    "long": 4.8936,
-    "speed": 124480187
-  },
-  {
-    "city": "Tallinn",
-    "country": "EE",
-    "lat": 59.4372,
-    "long": 24.7453,
-    "speed": 2140300
-  },
-  {
-    "city": "Boston",
-    "country": "US",
-    "lat": 42.3188,
-    "long": -71.0852,
-    "speed": 4478924
-  },
-  {
-    "city": "Cardiff",
-    "country": "GB",
-    "lat": 51.4817,
-    "long": -3.1792,
-    "speed": 107000
-  },
-  {
-    "city": "Bucaramanga",
-    "country": "CO",
-    "lat": 7.1333,
-    "long": -73,
-    "speed": 40000
-  },
-  {
-    "city": "Antwerp",
-    "country": "BE",
-    "lat": 51.2178,
-    "long": 4.4003,
-    "speed": 25561300
-  },
-  {
-    "city": "Turin",
-    "country": "IT",
-    "lat": 45.0792,
-    "long": 7.6761,
-    "speed": 1014000
-  },
-  {
-    "city": "Johannesburg",
-    "country": "ZA",
-    "lat": -26.2044,
-    "long": 28.0456,
-    "speed": 20360962
-  },
-  {
-    "city": "Indianapolis",
-    "country": "US",
-    "lat": 39.7771,
-    "long": -86.1458,
-    "speed": 382000
-  },
-  {
-    "city": "Saint John",
-    "country": "CA",
-    "lat": 45.2806,
-    "long": -66.0761,
-    "speed": 40000
-  },
-  {
-    "city": "Malmö",
-    "country": "SE",
-    "lat": 55.6058,
-    "long": 13.0358,
-    "speed": 85000
-  },
-  {
-    "city": "Simferopol",
-    "country": "UA",
-    "lat": 44.9484,
-    "long": 34.1,
-    "speed": 270000
-  },
-  {
-    "city": "Temuco",
-    "country": "CL",
-    "lat": -38.7333,
-    "long": -72.6667,
-    "speed": 5000
-  },
-  {
-    "city": "Lima",
-    "country": "PE",
-    "lat": -12.06,
-    "long": -77.0375,
-    "speed": 3221000
-  },
-  {
-    "city": "Saarbrücken",
-    "country": "DE",
-    "lat": 49.2333,
-    "long": 7,
-    "speed": 10000
-  },
-  {
-    "city": "Praia",
-    "country": "CV",
-    "lat": 14.918,
-    "long": -23.509,
-    "speed": 23100
-  },
-  {
-    "city": "Hobart",
-    "country": "AU",
-    "lat": -42.8806,
-    "long": 147.325,
-    "speed": 151100
-  },
-  {
-    "city": "Amaravati",
-    "country": "IN",
-    "lat": 16.5131,
-    "long": 80.5165,
-    "speed": 66048
-  },
-  {
-    "city": "Bujumbura",
-    "country": "BI",
-    "lat": -3.3833,
-    "long": 29.3667,
-    "speed": 27000
-  },
-  {
-    "city": "Taoyuan",
-    "country": "TW",
-    "lat": 24.965,
-    "long": 121.2168,
-    "speed": 153000
-  },
-  {
-    "city": "Ghaziabad",
-    "country": "IN",
-    "lat": 28.67,
-    "long": 77.42,
-    "speed": 10000
-  },
-  {
-    "city": "Taipei",
-    "country": "TW",
-    "lat": 25.0375,
-    "long": 121.5625,
-    "speed": 3052774
-  },
-  {
-    "city": "Windhoek",
-    "country": "NA",
-    "lat": -22.57,
-    "long": 17.0836,
-    "speed": 23000
-  },
-  {
-    "city": "Queretaro",
-    "country": "MX",
-    "lat": 20.5875,
-    "long": -100.3928,
-    "speed": 570000
-  },
-  {
-    "city": "Ivano-Frankivsk",
-    "country": "UA",
-    "lat": 48.9228,
-    "long": 24.7106,
+    "city": "Krakow",
+    "country": "PL",
+    "lat": 50.0614,
+    "long": 19.9372,
     "speed": 83000
   },
   {
-    "city": "Doha",
-    "country": "QA",
-    "lat": 25.2867,
-    "long": 51.5333,
-    "speed": 112000
+    "city": "Brno",
+    "country": "CZ",
+    "lat": 49.1925,
+    "long": 16.6083,
+    "speed": 131000
   },
   {
-    "city": "Spokane",
+    "city": "Waterloo",
+    "country": "CA",
+    "lat": 43.4667,
+    "long": -80.5167,
+    "speed": 5000
+  },
+  {
+    "city": "Buffalo",
     "country": "US",
-    "lat": 47.6671,
-    "long": -117.433,
-    "speed": 290000
-  },
-  {
-    "city": "Vladivostok",
-    "country": "RU",
-    "lat": 43.1333,
-    "long": 131.9,
-    "speed": 45100
-  },
-  {
-    "city": "Duluth",
-    "country": "US",
-    "lat": 46.7756,
-    "long": -92.1393,
-    "speed": 11000
-  },
-  {
-    "city": "Philipsburg",
-    "country": "SX",
-    "lat": 18.0237,
-    "long": -63.0458,
-    "speed": 14000
+    "lat": 42.9018,
+    "long": -78.8487,
+    "speed": 12000
   },
   {
     "city": "Maringá",
@@ -3801,11 +623,1397 @@
     "speed": 345502
   },
   {
-    "city": "Bratislava",
+    "city": "Dhaka",
+    "country": "BD",
+    "lat": 23.7639,
+    "long": 90.3889,
+    "speed": 1727624
+  },
+  {
+    "city": "Princes Town",
+    "country": "TT",
+    "lat": 10.2667,
+    "long": -61.3833,
+    "speed": 43000
+  },
+  {
+    "city": "Cleveland",
+    "country": "US",
+    "lat": 41.4764,
+    "long": -81.6805,
+    "speed": 81000
+  },
+  {
+    "city": "Bolzano",
+    "country": "IT",
+    "lat": 46.4981,
+    "long": 11.3548,
+    "speed": 86000
+  },
+  {
+    "city": "Düsseldorf",
+    "country": "DE",
+    "lat": 51.2333,
+    "long": 6.7833,
+    "speed": 28091100
+  },
+  {
+    "city": "Adelaide",
+    "country": "AU",
+    "lat": -34.9275,
+    "long": 138.6,
+    "speed": 916100
+  },
+  {
+    "city": "Bucaramanga",
+    "country": "CO",
+    "lat": 7.1333,
+    "long": -73,
+    "speed": 40000
+  },
+  {
+    "city": "Spokane",
+    "country": "US",
+    "lat": 47.6671,
+    "long": -117.433,
+    "speed": 290000
+  },
+  {
+    "city": "Kremenchuk",
+    "country": "UA",
+    "lat": 49.0631,
+    "long": 33.4039,
+    "speed": 160000
+  },
+  {
+    "city": "Winnipeg",
+    "country": "CA",
+    "lat": 49.8844,
+    "long": -97.1464,
+    "speed": 366100
+  },
+  {
+    "city": "Rennes",
+    "country": "FR",
+    "lat": 48.1147,
+    "long": -1.6794,
+    "speed": 43000
+  },
+  {
+    "city": "Ivano-Frankivsk",
+    "country": "UA",
+    "lat": 48.9228,
+    "long": 24.7106,
+    "speed": 83000
+  },
+  {
+    "city": "Makati City",
+    "country": "PH",
+    "lat": 14.5567,
+    "long": 121.0214,
+    "speed": 221100
+  },
+  {
+    "city": "Limassol",
+    "country": "CY",
+    "lat": 34.6747,
+    "long": 33.0442,
+    "speed": 11200
+  },
+  {
+    "city": "Lugano",
+    "country": "CH",
+    "lat": 46.005,
+    "long": 8.9525,
+    "speed": 75000
+  },
+  {
+    "city": "San Jose",
+    "country": "US",
+    "lat": 37.3012,
+    "long": -121.848,
+    "speed": 10074124
+  },
+  {
+    "city": "Dubai",
+    "country": "AE",
+    "lat": 25.2631,
+    "long": 55.2972,
+    "speed": 2581200
+  },
+  {
+    "city": "Sankt Gallen",
+    "country": "CH",
+    "lat": 47.4242,
+    "long": 9.3708,
+    "speed": 442572
+  },
+  {
+    "city": "Windhoek",
+    "country": "NA",
+    "lat": -22.57,
+    "long": 17.0836,
+    "speed": 23000
+  },
+  {
+    "city": "Pomezia",
+    "country": "IT",
+    "lat": 41.6693,
+    "long": 12.5021,
+    "speed": 126000
+  },
+  {
+    "city": "Billings",
+    "country": "US",
+    "lat": 45.7891,
+    "long": -108.5526,
+    "speed": 100
+  },
+  {
+    "city": "Casablanca",
+    "country": "MA",
+    "lat": 33.5333,
+    "long": -7.5833,
+    "speed": 30000
+  },
+  {
+    "city": "Luxembourg",
+    "country": "LU",
+    "lat": 49.6117,
+    "long": 6.1319,
+    "speed": 27395150
+  },
+  {
+    "city": "London",
+    "country": "GB",
+    "lat": 51.5072,
+    "long": -0.1275,
+    "speed": 78963086
+  },
+  {
+    "city": "Leuven",
+    "country": "BE",
+    "lat": 50.8833,
+    "long": 4.7,
+    "speed": 417000
+  },
+  {
+    "city": "Białystok",
+    "country": "PL",
+    "lat": 53.1353,
+    "long": 23.1456,
+    "speed": 21000
+  },
+  {
+    "city": "Tekirdag",
+    "country": "TR",
+    "lat": 40.9778,
+    "long": 27.5153,
+    "speed": 52000
+  },
+  {
+    "city": "Toulouse",
+    "country": "FR",
+    "lat": 43.6045,
+    "long": 1.444,
+    "speed": 60200
+  },
+  {
+    "city": "Lajeado",
+    "country": "BR",
+    "lat": -29.4669,
+    "long": -51.9608,
+    "speed": 248000
+  },
+  {
+    "city": "Phnom Penh",
+    "country": "KH",
+    "lat": 11.5694,
+    "long": 104.9211,
+    "speed": 398000
+  },
+  {
+    "city": "Arequipa",
+    "country": "PE",
+    "lat": -16.4,
+    "long": -71.5333,
+    "speed": 170000
+  },
+  {
+    "city": "Paramaribo",
+    "country": "SR",
+    "lat": 5.8522,
+    "long": -55.2039,
+    "speed": 28000
+  },
+  {
+    "city": "Medellin",
+    "country": "CO",
+    "lat": 6.2308,
+    "long": -75.5906,
+    "speed": 1050000
+  },
+  {
+    "city": "Milan",
+    "country": "IT",
+    "lat": 45.4669,
+    "long": 9.19,
+    "speed": 14020720
+  },
+  {
+    "city": "Delhi",
+    "country": "IN",
+    "lat": 28.61,
+    "long": 77.23,
+    "speed": 6969132
+  },
+  {
+    "city": "Irkutsk",
+    "country": "RU",
+    "lat": 52.2833,
+    "long": 104.2833,
+    "speed": 201000
+  },
+  {
+    "city": "Moscow",
+    "country": "RU",
+    "lat": 55.7558,
+    "long": 37.6178,
+    "speed": 45904001
+  },
+  {
+    "city": "Cotonou",
+    "country": "BJ",
+    "lat": 6.3667,
+    "long": 2.4333,
+    "speed": 3124
+  },
+  {
+    "city": "Salt Lake City",
+    "country": "US",
+    "lat": 40.7776,
+    "long": -111.9311,
+    "speed": 1857000
+  },
+  {
+    "city": "Chiang Mai",
+    "country": "TH",
+    "lat": 18.7953,
+    "long": 98.9986,
+    "speed": 26000
+  },
+  {
+    "city": "Madrid",
+    "country": "ES",
+    "lat": 40.4169,
+    "long": -3.7033,
+    "speed": 15109524
+  },
+  {
+    "city": "Iasi",
+    "country": "RO",
+    "lat": 47.1622,
+    "long": 27.5889,
+    "speed": 2476000
+  },
+  {
+    "city": "Road Town",
+    "country": "VG",
+    "lat": 18.4167,
+    "long": -64.6167,
+    "speed": 6000
+  },
+  {
+    "city": "Boa Vista",
+    "country": "BR",
+    "lat": 2.8194,
+    "long": -60.6714,
+    "speed": 109024
+  },
+  {
+    "city": "Richmond",
+    "country": "US",
+    "lat": 37.5295,
+    "long": -77.4756,
+    "speed": 1233100
+  },
+  {
+    "city": "Minsk",
+    "country": "BY",
+    "lat": 53.9,
+    "long": 27.5667,
+    "speed": 13000
+  },
+  {
+    "city": "Stuttgart",
+    "country": "DE",
+    "lat": 48.7775,
+    "long": 9.18,
+    "speed": 797024
+  },
+  {
+    "city": "Belém",
+    "country": "BR",
+    "lat": -1.4558,
+    "long": -48.5039,
+    "speed": 373034
+  },
+  {
+    "city": "Campos",
+    "country": "BR",
+    "lat": -21.7539,
+    "long": -41.3239,
+    "speed": 48000
+  },
+  {
+    "city": "Wuhan",
+    "country": "CN",
+    "lat": 30.5872,
+    "long": 114.2881,
+    "speed": 11100
+  },
+  {
+    "city": "Tampa",
+    "country": "US",
+    "lat": 27.9945,
+    "long": -82.4447,
+    "speed": 143000
+  },
+  {
+    "city": "Zagreb",
+    "country": "HR",
+    "lat": 45.8167,
+    "long": 15.9833,
+    "speed": 786120
+  },
+  {
+    "city": "Goma",
+    "country": "CD",
+    "lat": -1.6794,
+    "long": 29.2336,
+    "speed": 82100
+  },
+  {
+    "city": "Kansas",
+    "country": "US",
+    "lat": 37.6895,
+    "long": -97.3443,
+    "speed": 68000
+  },
+  {
+    "city": "Samara",
+    "country": "RU",
+    "lat": 53.2028,
+    "long": 50.1408,
+    "speed": 21967388
+  },
+  {
+    "city": "Durban",
+    "country": "ZA",
+    "lat": -29.8833,
+    "long": 31.05,
+    "speed": 2305288
+  },
+  {
+    "city": "Columbus",
+    "country": "US",
+    "lat": 39.9862,
+    "long": -82.9855,
+    "speed": 1107000
+  },
+  {
+    "city": "Rotterdam",
+    "country": "NL",
+    "lat": 51.9167,
+    "long": 4.5,
+    "speed": 25421200
+  },
+  {
+    "city": "Lusaka",
+    "country": "ZM",
+    "lat": -15.4167,
+    "long": 28.2833,
+    "speed": 2000
+  },
+  {
+    "city": "São Joaquim",
+    "country": "BR",
+    "lat": -28.2939,
+    "long": -49.9319,
+    "speed": 20000
+  },
+  {
+    "city": "Genova",
+    "country": "CO",
+    "lat": 1.6442,
+    "long": -77.0194,
+    "speed": 10000
+  },
+  {
+    "city": "Saint-Benoît",
+    "country": "RE",
+    "lat": -21.0339,
+    "long": 55.7128,
+    "speed": 9000
+  },
+  {
+    "city": "Szczecin",
+    "country": "PL",
+    "lat": 53.4325,
+    "long": 14.5481,
+    "speed": 21000
+  },
+  {
+    "city": "Edmonton",
+    "country": "CA",
+    "lat": 53.5344,
+    "long": -113.4903,
+    "speed": 74000
+  },
+  {
+    "city": "Thessaloniki",
+    "country": "GR",
+    "lat": 40.6403,
+    "long": 22.9347,
+    "speed": 431148
+  },
+  {
+    "city": "Phoenix",
+    "country": "US",
+    "lat": 33.5722,
+    "long": -112.0892,
+    "speed": 2933200
+  },
+  {
+    "city": "Suceava",
+    "country": "RO",
+    "lat": 47.6514,
+    "long": 26.2556,
+    "speed": 2476000
+  },
+  {
+    "city": "Nicosia",
+    "country": "CY",
+    "lat": 35.1725,
+    "long": 33.365,
+    "speed": 100000
+  },
+  {
+    "city": "Ciudad de México",
+    "country": "MX",
+    "lat": 19.4333,
+    "long": -99.1333,
+    "speed": 72000
+  },
+  {
+    "city": "Zanzibar",
+    "country": "TZ",
+    "lat": -6.165,
+    "long": 39.199,
+    "speed": 6000
+  },
+  {
+    "city": "Portland",
+    "country": "US",
+    "lat": 45.5371,
+    "long": -122.65,
+    "speed": 3153000
+  },
+  {
+    "city": "Tampere",
+    "country": "FI",
+    "lat": 61.4981,
+    "long": 23.76,
+    "speed": 148400
+  },
+  {
+    "city": "Saarbrücken",
+    "country": "DE",
+    "lat": 49.2333,
+    "long": 7,
+    "speed": 10000
+  },
+  {
+    "city": "Presov",
     "country": "SK",
-    "lat": 48.1439,
-    "long": 17.1097,
-    "speed": 16868240
+    "lat": 49.0017,
+    "long": 21.2394,
+    "speed": 7000
+  },
+  {
+    "city": "Manila",
+    "country": "PH",
+    "lat": 14.5958,
+    "long": 120.9772,
+    "speed": 2341050
+  },
+  {
+    "city": "Lviv",
+    "country": "UA",
+    "lat": 49.8425,
+    "long": 24.0322,
+    "speed": 222000
+  },
+  {
+    "city": "Queretaro",
+    "country": "MX",
+    "lat": 20.5875,
+    "long": -100.3928,
+    "speed": 570000
+  },
+  {
+    "city": "Hanoi",
+    "country": "VN",
+    "lat": 21.0283,
+    "long": 105.8542,
+    "speed": 5000
+  },
+  {
+    "city": "Elche",
+    "country": "ES",
+    "lat": 38.2669,
+    "long": -0.6983,
+    "speed": 1530300
+  },
+  {
+    "city": "Simferopol",
+    "country": "UA",
+    "lat": 44.9484,
+    "long": 34.1,
+    "speed": 270000
+  },
+  {
+    "city": "Djibouti",
+    "country": "DJ",
+    "lat": 11.5883,
+    "long": 43.145,
+    "speed": 155002
+  },
+  {
+    "city": "Tallinn",
+    "country": "EE",
+    "lat": 59.4372,
+    "long": 24.7453,
+    "speed": 2140300
+  },
+  {
+    "city": "Washington",
+    "country": "US",
+    "lat": 38.9047,
+    "long": -77.0163,
+    "speed": 1169000
+  },
+  {
+    "city": "Novokuznetsk",
+    "country": "RU",
+    "lat": 53.7667,
+    "long": 87.1333,
+    "speed": 23000
+  },
+  {
+    "city": "Al ‘Aqabah",
+    "country": "JO",
+    "lat": 29.5319,
+    "long": 35.0056,
+    "speed": 192000
+  },
+  {
+    "city": "Antwerp",
+    "country": "BE",
+    "lat": 51.2178,
+    "long": 4.4003,
+    "speed": 25663200
+  },
+  {
+    "city": "Osaka",
+    "country": "JP",
+    "lat": 34.6939,
+    "long": 135.5022,
+    "speed": 24600000
+  },
+  {
+    "city": "Springfield",
+    "country": "US",
+    "lat": 42.1155,
+    "long": -72.5395,
+    "speed": 201000
+  },
+  {
+    "city": "Kapolei",
+    "country": "US",
+    "lat": 21.3399,
+    "long": -158.0677,
+    "speed": 43000
+  },
+  {
+    "city": "Concepcion",
+    "country": "CL",
+    "lat": -36.8282,
+    "long": -73.0514,
+    "speed": 36000
+  },
+  {
+    "city": "Hagåtña",
+    "country": "GU",
+    "lat": 13.4745,
+    "long": 144.7504,
+    "speed": 75000
+  },
+  {
+    "city": "Turin",
+    "country": "IT",
+    "lat": 45.0792,
+    "long": 7.6761,
+    "speed": 1014000
+  },
+  {
+    "city": "Stavanger",
+    "country": "NO",
+    "lat": 58.97,
+    "long": 5.7314,
+    "speed": 120000
+  },
+  {
+    "city": "Bandung",
+    "country": "ID",
+    "lat": -6.912,
+    "long": 107.6097,
+    "speed": 144100
+  },
+  {
+    "city": "Maina",
+    "country": "GU",
+    "lat": 13.4692,
+    "long": 144.7332,
+    "speed": 10000
+  },
+  {
+    "city": "Denpasar",
+    "country": "ID",
+    "lat": -8.65,
+    "long": 115.2167,
+    "speed": 1266200
+  },
+  {
+    "city": "Hangzhou",
+    "country": "CN",
+    "lat": 30.25,
+    "long": 120.1675,
+    "speed": 1442050
+  },
+  {
+    "city": "Raleigh",
+    "country": "US",
+    "lat": 35.8324,
+    "long": -78.6429,
+    "speed": 40000
+  },
+  {
+    "city": "Aracaju",
+    "country": "BR",
+    "lat": -10.9167,
+    "long": -37.05,
+    "speed": 216000
+  },
+  {
+    "city": "Leipzig",
+    "country": "DE",
+    "lat": 51.34,
+    "long": 12.375,
+    "speed": 71100
+  },
+  {
+    "city": "Łódź",
+    "country": "PL",
+    "lat": 51.7769,
+    "long": 19.4547,
+    "speed": 221000
+  },
+  {
+    "city": "Opole",
+    "country": "PL",
+    "lat": 50.6667,
+    "long": 17.9333,
+    "speed": 21000
+  },
+  {
+    "city": "Mount Hagen",
+    "country": "PG",
+    "lat": -5.86,
+    "long": 144.24,
+    "speed": 30000
+  },
+  {
+    "city": "Munich",
+    "country": "DE",
+    "lat": 48.1375,
+    "long": 11.575,
+    "speed": 3795610
+  },
+  {
+    "city": "Tegucigalpa",
+    "country": "HN",
+    "lat": 14.1,
+    "long": -87.2167,
+    "speed": 5024
+  },
+  {
+    "city": "Manama",
+    "country": "BH",
+    "lat": 26.225,
+    "long": 50.5775,
+    "speed": 1560000
+  },
+  {
+    "city": "Ouagadougou",
+    "country": "BF",
+    "lat": 12.3686,
+    "long": -1.5275,
+    "speed": 147072
+  },
+  {
+    "city": "Auckland",
+    "country": "NZ",
+    "lat": -36.8406,
+    "long": 174.74,
+    "speed": 4646951
+  },
+  {
+    "city": "Temuco",
+    "country": "CL",
+    "lat": -38.7333,
+    "long": -72.6667,
+    "speed": 5000
+  },
+  {
+    "city": "Ho Chi Minh City",
+    "country": "VN",
+    "lat": 10.7756,
+    "long": 106.7019,
+    "speed": 3000
+  },
+  {
+    "city": "Piura",
+    "country": "PE",
+    "lat": -5.2,
+    "long": -80.6333,
+    "speed": 20000
+  },
+  {
+    "city": "Bend",
+    "country": "US",
+    "lat": 44.0563,
+    "long": -121.3095,
+    "speed": 63000
+  },
+  {
+    "city": "Nago",
+    "country": "JP",
+    "lat": 26.5917,
+    "long": 127.9775,
+    "speed": 110000
+  },
+  {
+    "city": "Bekasi",
+    "country": "ID",
+    "lat": -6.2349,
+    "long": 106.9923,
+    "speed": 377000
+  },
+  {
+    "city": "Prague",
+    "country": "CZ",
+    "lat": 50.0875,
+    "long": 14.4214,
+    "speed": 22927240
+  },
+  {
+    "city": "Valencia",
+    "country": "ES",
+    "lat": 39.47,
+    "long": -0.3764,
+    "speed": 64024
+  },
+  {
+    "city": "Mexico City",
+    "country": "MX",
+    "lat": 19.4333,
+    "long": -99.1333,
+    "speed": 121000
+  },
+  {
+    "city": "Muscat",
+    "country": "OM",
+    "lat": 23.6139,
+    "long": 58.5922,
+    "speed": 380000
+  },
+  {
+    "city": "Norfolk",
+    "country": "US",
+    "lat": 36.8945,
+    "long": -76.259,
+    "speed": 40000
+  },
+  {
+    "city": "Quezon City",
+    "country": "PH",
+    "lat": 14.63,
+    "long": 121.03,
+    "speed": 3100
+  },
+  {
+    "city": "Sofia",
+    "country": "BG",
+    "lat": 42.7,
+    "long": 23.33,
+    "speed": 33228688
+  },
+  {
+    "city": "Hafnarfjörður",
+    "country": "IS",
+    "lat": 64.02,
+    "long": -21.97,
+    "speed": 27000
+  },
+  {
+    "city": "João Pessoa",
+    "country": "BR",
+    "lat": -7.12,
+    "long": -34.88,
+    "speed": 268000
+  },
+  {
+    "city": "Teresina",
+    "country": "BR",
+    "lat": -5.0949,
+    "long": -42.8042,
+    "speed": 326100
+  },
+  {
+    "city": "Saint-Barthélemy-d’Anjou",
+    "country": "FR",
+    "lat": 47.4675,
+    "long": -0.495,
+    "speed": 100000
+  },
+  {
+    "city": "San Francisco",
+    "country": "US",
+    "lat": 37.7558,
+    "long": -122.4449,
+    "speed": 13486300
+  },
+  {
+    "city": "Rostov",
+    "country": "RU",
+    "lat": 47.2333,
+    "long": 39.7,
+    "speed": 568000
+  },
+  {
+    "city": "Varna",
+    "country": "BG",
+    "lat": 43.2167,
+    "long": 27.9167,
+    "speed": 72000
+  },
+  {
+    "city": "Brussels",
+    "country": "BE",
+    "lat": 50.8467,
+    "long": 4.3525,
+    "speed": 28403524
+  },
+  {
+    "city": "Podgorica",
+    "country": "ME",
+    "lat": 42.4413,
+    "long": 19.2629,
+    "speed": 11000
+  },
+  {
+    "city": "Donetsk",
+    "country": "UA",
+    "lat": 48.0028,
+    "long": 37.8053,
+    "speed": 11000
+  },
+  {
+    "city": "Niigata",
+    "country": "JP",
+    "lat": 37.9161,
+    "long": 139.0364,
+    "speed": 3000
+  },
+  {
+    "city": "San Antonio",
+    "country": "US",
+    "lat": 29.4632,
+    "long": -98.5238,
+    "speed": 601000
+  },
+  {
+    "city": "Stockholm",
+    "country": "SE",
+    "lat": 59.3294,
+    "long": 18.0686,
+    "speed": 44047888
+  },
+  {
+    "city": "Košice",
+    "country": "SK",
+    "lat": 48.7167,
+    "long": 21.25,
+    "speed": 3000
+  },
+  {
+    "city": "Kolkata",
+    "country": "IN",
+    "lat": 22.5675,
+    "long": 88.37,
+    "speed": 1301820
+  },
+  {
+    "city": "Lima",
+    "country": "PE",
+    "lat": -12.06,
+    "long": -77.0375,
+    "speed": 3261000
+  },
+  {
+    "city": "La Paz",
+    "country": "BO",
+    "lat": -16.5,
+    "long": -68.15,
+    "speed": 223000
+  },
+  {
+    "city": "Bandar Seri Begawan",
+    "country": "BN",
+    "lat": 4.8903,
+    "long": 114.9422,
+    "speed": 62000
+  },
+  {
+    "city": "Hamburg",
+    "country": "DE",
+    "lat": 53.55,
+    "long": 10,
+    "speed": 3644000
+  },
+  {
+    "city": "Fort-de-France",
+    "country": "MQ",
+    "lat": 14.6,
+    "long": -61.0667,
+    "speed": 1100
+  },
+  {
+    "city": "Yogyakarta",
+    "country": "ID",
+    "lat": -7.8014,
+    "long": 110.3644,
+    "speed": 479914
+  },
+  {
+    "city": "São Luís",
+    "country": "BR",
+    "lat": -2.5283,
+    "long": -44.3044,
+    "speed": 356000
+  },
+  {
+    "city": "Buenos Aires",
+    "country": "AR",
+    "lat": -34.5997,
+    "long": -58.3819,
+    "speed": 8622484
+  },
+  {
+    "city": "Lulea",
+    "country": "SE",
+    "lat": 65.5844,
+    "long": 22.1539,
+    "speed": 113000
+  },
+  {
+    "city": "Las Vegas",
+    "country": "US",
+    "lat": 36.2333,
+    "long": -115.2654,
+    "speed": 253600
+  },
+  {
+    "city": "Barranquilla",
+    "country": "CO",
+    "lat": 10.9833,
+    "long": -74.8019,
+    "speed": 1080000
+  },
+  {
+    "city": "Omaha",
+    "country": "US",
+    "lat": 41.2627,
+    "long": -96.0529,
+    "speed": 1722000
+  },
+  {
+    "city": "Halifax",
+    "country": "CA",
+    "lat": 44.6475,
+    "long": -63.5906,
+    "speed": 99000
+  },
+  {
+    "city": "Geneva",
+    "country": "CH",
+    "lat": 46.2017,
+    "long": 6.1469,
+    "speed": 1842300
+  },
+  {
+    "city": "Naples",
+    "country": "IT",
+    "lat": 40.8333,
+    "long": 14.25,
+    "speed": 33000
+  },
+  {
+    "city": "Fryslân",
+    "country": "NL",
+    "lat": 53.2,
+    "long": 5.7833,
+    "speed": 2310000
+  },
+  {
+    "city": "Pasig City",
+    "country": "PH",
+    "lat": 14.575,
+    "long": 121.0833,
+    "speed": 37000
+  },
+  {
+    "city": "Boston",
+    "country": "US",
+    "lat": 42.3188,
+    "long": -71.0852,
+    "speed": 4478924
+  },
+  {
+    "city": "Detroit",
+    "country": "US",
+    "lat": 42.3834,
+    "long": -83.1024,
+    "speed": 4363000
+  },
+  {
+    "city": "Mombasa",
+    "country": "KE",
+    "lat": -4.05,
+    "long": 39.6667,
+    "speed": 796000
+  },
+  {
+    "city": "Blumenau",
+    "country": "BR",
+    "lat": -26.9333,
+    "long": -49.05,
+    "speed": 12500
+  },
+  {
+    "city": "Rome",
+    "country": "IT",
+    "lat": 41.8931,
+    "long": 12.4828,
+    "speed": 3345564
+  },
+  {
+    "city": "Tel Aviv-Yafo",
+    "country": "IL",
+    "lat": 32.08,
+    "long": 34.78,
+    "speed": 1524000
+  },
+  {
+    "city": "Meppel",
+    "country": "NL",
+    "lat": 52.7,
+    "long": 6.1833,
+    "speed": 181100
+  },
+  {
+    "city": "Kinshasa",
+    "country": "CD",
+    "lat": -4.325,
+    "long": 15.3222,
+    "speed": 1208000
+  },
+  {
+    "city": "Umeå",
+    "country": "SE",
+    "lat": 63.825,
+    "long": 20.2639,
+    "speed": 21000
+  },
+  {
+    "city": "Bogor",
+    "country": "ID",
+    "lat": -6.5966,
+    "long": 106.7972,
+    "speed": 22000
+  },
+  {
+    "city": "N'Djamena",
+    "country": "TD",
+    "lat": 12.11,
+    "long": 15.05,
+    "speed": 92000
+  },
+  {
+    "city": "Yorkshire",
+    "country": "US",
+    "lat": 38.7882,
+    "long": -77.4496,
+    "speed": 186100
+  },
+  {
+    "city": "St. Louis",
+    "country": "US",
+    "lat": 38.6359,
+    "long": -90.2451,
+    "speed": 1239010
+  },
+  {
+    "city": "Kathmandu",
+    "country": "NP",
+    "lat": 27.7172,
+    "long": 85.324,
+    "speed": 246400
+  },
+  {
+    "city": "Jawa Tengah",
+    "country": "ID",
+    "lat": -6.9667,
+    "long": 110.4167,
+    "speed": 63000
+  },
+  {
+    "city": "Accra",
+    "country": "GH",
+    "lat": 5.55,
+    "long": -0.2,
+    "speed": 211024
+  },
+  {
+    "city": "Nouméa",
+    "country": "NC",
+    "lat": -22.2758,
+    "long": 166.458,
+    "speed": 53000
+  },
+  {
+    "city": "Ashburn",
+    "country": "US",
+    "lat": 39.0277,
+    "long": -77.4714,
+    "speed": 21296100
+  },
+  {
+    "city": "Arad",
+    "country": "RO",
+    "lat": 46.175,
+    "long": 21.3125,
+    "speed": 2476000
+  },
+  {
+    "city": "Massachusetts",
+    "country": "US",
+    "lat": 42.3188,
+    "long": -71.0852,
+    "speed": 2145000
+  },
+  {
+    "city": "Philipsburg",
+    "country": "SX",
+    "lat": 18.0237,
+    "long": -63.0458,
+    "speed": 14000
+  },
+  {
+    "city": "Cuiabá",
+    "country": "BR",
+    "lat": -15.5958,
+    "long": -56.0969,
+    "speed": 225680
+  },
+  {
+    "city": "Indianapolis",
+    "country": "US",
+    "lat": 39.7771,
+    "long": -86.1458,
+    "speed": 382000
+  },
+  {
+    "city": "Saint George",
+    "country": "VC",
+    "lat": 13.1578,
+    "long": -61.225,
+    "speed": 119000
+  },
+  {
+    "city": "Mbeya",
+    "country": "TZ",
+    "lat": -8.9,
+    "long": 33.45,
+    "speed": 2000
+  },
+  {
+    "city": "Enschede",
+    "country": "NL",
+    "lat": 52.2167,
+    "long": 6.9,
+    "speed": 87100
+  },
+  {
+    "city": "Wrocław",
+    "country": "PL",
+    "lat": 51.11,
+    "long": 17.0325,
+    "speed": 5158514
+  },
+  {
+    "city": "Tehran",
+    "country": "IR",
+    "lat": 35.6892,
+    "long": 51.3889,
+    "speed": 50000
+  },
+  {
+    "city": "Surakarta",
+    "country": "ID",
+    "lat": -7.5667,
+    "long": 110.8167,
+    "speed": 93000
+  },
+  {
+    "city": "Doha",
+    "country": "QA",
+    "lat": 25.2867,
+    "long": 51.5333,
+    "speed": 112000
+  },
+  {
+    "city": "Bali",
+    "country": "ID",
+    "lat": -8.65,
+    "long": 115.2167,
+    "speed": 135000
+  },
+  {
+    "city": "Montpellier",
+    "country": "FR",
+    "lat": 43.6119,
+    "long": 3.8772,
+    "speed": 1000
+  },
+  {
+    "city": "Gothenburg",
+    "country": "SE",
+    "lat": 57.7075,
+    "long": 11.9675,
+    "speed": 632100
+  },
+  {
+    "city": "Palermo",
+    "country": "IT",
+    "lat": 38.1157,
+    "long": 13.3613,
+    "speed": 389200
+  },
+  {
+    "city": "Amsterdam",
+    "country": "NL",
+    "lat": 52.3728,
+    "long": 4.8936,
+    "speed": 125028087
+  },
+  {
+    "city": "Ufa",
+    "country": "RU",
+    "lat": 54.7261,
+    "long": 55.9475,
+    "speed": 21793888
+  },
+  {
+    "city": "San Lorenzo",
+    "country": "PY",
+    "lat": -25.34,
+    "long": -57.52,
+    "speed": 84360
+  },
+  {
+    "city": "Santo Domingo",
+    "country": "DO",
+    "lat": 18.4764,
+    "long": -69.8933,
+    "speed": 50000
+  },
+  {
+    "city": "Nantes",
+    "country": "FR",
+    "lat": 47.2181,
+    "long": -1.5528,
+    "speed": 22000
+  },
+  {
+    "city": "Lisbon",
+    "country": "PT",
+    "lat": 38.7253,
+    "long": -9.15,
+    "speed": 2549672
+  },
+  {
+    "city": "Mogilno",
+    "country": "PL",
+    "lat": 52.65,
+    "long": 17.95,
+    "speed": 1000
+  },
+  {
+    "city": "Honolulu",
+    "country": "US",
+    "lat": 21.3294,
+    "long": -157.846,
+    "speed": 551200
+  },
+  {
+    "city": "Timisoara",
+    "country": "RO",
+    "lat": 45.7597,
+    "long": 21.23,
+    "speed": 2476000
+  },
+  {
+    "city": "Leeds",
+    "country": "GB",
+    "lat": 53.8003,
+    "long": -1.5497,
+    "speed": 186100
+  },
+  {
+    "city": "Belo Horizonte",
+    "country": "BR",
+    "lat": -19.9167,
+    "long": -43.9333,
+    "speed": 846000
+  },
+  {
+    "city": "Edinburgh",
+    "country": "GB",
+    "lat": 55.9533,
+    "long": -3.1892,
+    "speed": 356200
   },
   {
     "city": "Piacenza",
@@ -3815,11 +2023,1145 @@
     "speed": 93000
   },
   {
-    "city": "Valdivia",
-    "country": "CL",
-    "lat": -39.8139,
-    "long": -73.2458,
-    "speed": 21100
+    "city": "Warsaw",
+    "country": "PL",
+    "lat": 52.23,
+    "long": 21.0111,
+    "speed": 25060030
+  },
+  {
+    "city": "Chennai",
+    "country": "IN",
+    "lat": 13.0825,
+    "long": 80.275,
+    "speed": 3637136
+  },
+  {
+    "city": "Basseterre",
+    "country": "KN",
+    "lat": 17.3,
+    "long": -62.7333,
+    "speed": 15000
+  },
+  {
+    "city": "Mbabane",
+    "country": "SZ",
+    "lat": -26.3208,
+    "long": 31.1617,
+    "speed": 100
+  },
+  {
+    "city": "Suva",
+    "country": "FJ",
+    "lat": -18.1416,
+    "long": 178.4419,
+    "speed": 130000
+  },
+  {
+    "city": "Brookings",
+    "country": "US",
+    "lat": 44.3022,
+    "long": -96.7859,
+    "speed": 20000
+  },
+  {
+    "city": "Port Elizabeth",
+    "country": "ZA",
+    "lat": -33.9581,
+    "long": 25.6,
+    "speed": 111000
+  },
+  {
+    "city": "Chisinau",
+    "country": "MD",
+    "lat": 47.0228,
+    "long": 28.8353,
+    "speed": 256500
+  },
+  {
+    "city": "Abuja",
+    "country": "NG",
+    "lat": 9.0667,
+    "long": 7.4833,
+    "speed": 5200
+  },
+  {
+    "city": "Chelyabinsk",
+    "country": "RU",
+    "lat": 55.15,
+    "long": 61.4,
+    "speed": 21793888
+  },
+  {
+    "city": "Nizhniy Novgorod",
+    "country": "RU",
+    "lat": 56.3269,
+    "long": 44.0075,
+    "speed": 10000
+  },
+  {
+    "city": "West Coast",
+    "country": "GM",
+    "lat": 13.2667,
+    "long": -16.65,
+    "speed": 4051000
+  },
+  {
+    "city": "Perth",
+    "country": "AU",
+    "lat": -31.9559,
+    "long": 115.8606,
+    "speed": 4156928
+  },
+  {
+    "city": "Kigali",
+    "country": "RW",
+    "lat": -1.9536,
+    "long": 30.0606,
+    "speed": 48110
+  },
+  {
+    "city": "Ashland",
+    "country": "US",
+    "lat": 37.6942,
+    "long": -122.1159,
+    "speed": 276000
+  },
+  {
+    "city": "Malang",
+    "country": "ID",
+    "lat": -7.98,
+    "long": 112.62,
+    "speed": 102000
+  },
+  {
+    "city": "Trujillo",
+    "country": "PE",
+    "lat": -8.112,
+    "long": -79.0288,
+    "speed": 50000
+  },
+  {
+    "city": "Kansas City",
+    "country": "US",
+    "lat": 39.1238,
+    "long": -94.5541,
+    "speed": 5038024
+  },
+  {
+    "city": "Mumbai",
+    "country": "IN",
+    "lat": 19.0761,
+    "long": 72.8775,
+    "speed": 15636088
+  },
+  {
+    "city": "San José",
+    "country": "CR",
+    "lat": 9.9325,
+    "long": -84.08,
+    "speed": 2000
+  },
+  {
+    "city": "Rio Branco",
+    "country": "BR",
+    "lat": -9.9747,
+    "long": -67.81,
+    "speed": 14000
+  },
+  {
+    "city": "Vienna",
+    "country": "AT",
+    "lat": 48.2083,
+    "long": 16.3725,
+    "speed": 20157440
+  },
+  {
+    "city": "Istanbul",
+    "country": "TR",
+    "lat": 41.0136,
+    "long": 28.955,
+    "speed": 2896100
+  },
+  {
+    "city": "Bergen",
+    "country": "NO",
+    "lat": 60.3894,
+    "long": 5.33,
+    "speed": 22000
+  },
+  {
+    "city": "Malmo",
+    "country": "SE",
+    "lat": 55.6058,
+    "long": 13.0358,
+    "speed": 3398300
+  },
+  {
+    "city": "Lomé",
+    "country": "TG",
+    "lat": 6.1319,
+    "long": 1.2228,
+    "speed": 7000
+  },
+  {
+    "city": "Pau",
+    "country": "FR",
+    "lat": 43.3,
+    "long": -0.37,
+    "speed": 21000
+  },
+  {
+    "city": "Braila",
+    "country": "RO",
+    "lat": 45.2692,
+    "long": 27.9575,
+    "speed": 70000
+  },
+  {
+    "city": "Berlin",
+    "country": "DE",
+    "lat": 52.52,
+    "long": 13.405,
+    "speed": 32114300
+  },
+  {
+    "city": "Lagos",
+    "country": "NG",
+    "lat": 6.455,
+    "long": 3.3841,
+    "speed": 1908432
+  },
+  {
+    "city": "Davenport",
+    "country": "US",
+    "lat": 41.5565,
+    "long": -90.6053,
+    "speed": 985000
+  },
+  {
+    "city": "Male",
+    "country": "MV",
+    "lat": 4.1753,
+    "long": 73.5089,
+    "speed": 100000
+  },
+  {
+    "city": "Kazan",
+    "country": "RU",
+    "lat": 55.7964,
+    "long": 49.1089,
+    "speed": 31100
+  },
+  {
+    "city": "Gent",
+    "country": "BE",
+    "lat": 51.0536,
+    "long": 3.7253,
+    "speed": 417000
+  },
+  {
+    "city": "Lille",
+    "country": "FR",
+    "lat": 50.6278,
+    "long": 3.0583,
+    "speed": 358200
+  },
+  {
+    "city": "Bangkok",
+    "country": "TH",
+    "lat": 13.7525,
+    "long": 100.4942,
+    "speed": 8511250
+  },
+  {
+    "city": "Philadelphia",
+    "country": "US",
+    "lat": 40.0077,
+    "long": -75.1339,
+    "speed": 1121000
+  },
+  {
+    "city": "Thimphu",
+    "country": "BT",
+    "lat": 27.4722,
+    "long": 89.6361,
+    "speed": 48000
+  },
+  {
+    "city": "Mérida",
+    "country": "MX",
+    "lat": 20.97,
+    "long": -89.62,
+    "speed": 79000
+  },
+  {
+    "city": "Sao Paulo",
+    "country": "BR",
+    "lat": -23.55,
+    "long": -46.6333,
+    "speed": 40000
+  },
+  {
+    "city": "Vitória",
+    "country": "BR",
+    "lat": -20.2889,
+    "long": -40.3083,
+    "speed": 643240
+  },
+  {
+    "city": "Al Fujayrah",
+    "country": "AE",
+    "lat": 25.1223,
+    "long": 56.3342,
+    "speed": 364000
+  },
+  {
+    "city": "Dortmund",
+    "country": "DE",
+    "lat": 51.5167,
+    "long": 7.4667,
+    "speed": 552000
+  },
+  {
+    "city": "Cardiff",
+    "country": "GB",
+    "lat": 51.4817,
+    "long": -3.1792,
+    "speed": 107000
+  },
+  {
+    "city": "Minneapolis",
+    "country": "US",
+    "lat": 44.9635,
+    "long": -93.2678,
+    "speed": 8060000
+  },
+  {
+    "city": "Dodoma",
+    "country": "TZ",
+    "lat": -6.1731,
+    "long": 35.7419,
+    "speed": 9000
+  },
+  {
+    "city": "Vaduz",
+    "country": "LI",
+    "lat": 47.141,
+    "long": 9.521,
+    "speed": 132300
+  },
+  {
+    "city": "Yaroslavl",
+    "country": "RU",
+    "lat": 57.6167,
+    "long": 39.85,
+    "speed": 21000
+  },
+  {
+    "city": "Chicago",
+    "country": "US",
+    "lat": 41.8375,
+    "long": -87.6866,
+    "speed": 22592100
+  },
+  {
+    "city": "Florence",
+    "country": "IT",
+    "lat": 43.7714,
+    "long": 11.2542,
+    "speed": 14534
+  },
+  {
+    "city": "Londrina",
+    "country": "BR",
+    "lat": -23.31,
+    "long": -51.1628,
+    "speed": 436400
+  },
+  {
+    "city": "Cusco",
+    "country": "PE",
+    "lat": -13.525,
+    "long": -71.9722,
+    "speed": 20000
+  },
+  {
+    "city": "Bogotá",
+    "country": "CO",
+    "lat": 4.7111,
+    "long": -74.0722,
+    "speed": 41000
+  },
+  {
+    "city": "Bucharest",
+    "country": "RO",
+    "lat": 44.4325,
+    "long": 26.1039,
+    "speed": 4798400
+  },
+  {
+    "city": "Salvador",
+    "country": "BR",
+    "lat": -12.9747,
+    "long": -38.4767,
+    "speed": 1765384
+  },
+  {
+    "city": "Fremont",
+    "country": "US",
+    "lat": 37.5265,
+    "long": -121.9843,
+    "speed": 2386060
+  },
+  {
+    "city": "Guatemala",
+    "country": "GT",
+    "lat": 14.6099,
+    "long": -90.5252,
+    "speed": 311000
+  },
+  {
+    "city": "Beijing",
+    "country": "CN",
+    "lat": 39.904,
+    "long": 116.4075,
+    "speed": 1622000
+  },
+  {
+    "city": "Cascavel",
+    "country": "BR",
+    "lat": -24.9556,
+    "long": -53.4553,
+    "speed": 199000
+  },
+  {
+    "city": "Ulyanovsk",
+    "country": "RU",
+    "lat": 54.3167,
+    "long": 48.3667,
+    "speed": 13124
+  },
+  {
+    "city": "Rouen",
+    "country": "FR",
+    "lat": 49.4428,
+    "long": 1.0886,
+    "speed": 1000
+  },
+  {
+    "city": "Maceió",
+    "country": "BR",
+    "lat": -9.6658,
+    "long": -35.735,
+    "speed": 319020
+  },
+  {
+    "city": "Edirne",
+    "country": "TR",
+    "lat": 41.6769,
+    "long": 26.5556,
+    "speed": 53000
+  },
+  {
+    "city": "Miami",
+    "country": "US",
+    "lat": 25.784,
+    "long": -80.2101,
+    "speed": 19443310
+  },
+  {
+    "city": "Padova",
+    "country": "IT",
+    "lat": 45.4064,
+    "long": 11.8778,
+    "speed": 526000
+  },
+  {
+    "city": "Sandefjord",
+    "country": "NO",
+    "lat": 59.1306,
+    "long": 10.2167,
+    "speed": 76000
+  },
+  {
+    "city": "Antananarivo",
+    "country": "MG",
+    "lat": -18.9333,
+    "long": 47.5167,
+    "speed": 6000
+  },
+  {
+    "city": "Santa Maria",
+    "country": "BR",
+    "lat": -29.6833,
+    "long": -53.8,
+    "speed": 85000
+  },
+  {
+    "city": "Hasselt",
+    "country": "BE",
+    "lat": 50.9305,
+    "long": 5.3385,
+    "speed": 417000
+  },
+  {
+    "city": "Orlando",
+    "country": "US",
+    "lat": 28.4773,
+    "long": -81.337,
+    "speed": 62000
+  },
+  {
+    "city": "Hong Kong",
+    "country": "HK",
+    "lat": 22.3,
+    "long": 114.2,
+    "speed": 33428218
+  },
+  {
+    "city": "Eugene",
+    "country": "US",
+    "lat": 44.0564,
+    "long": -123.1174,
+    "speed": 96000
+  },
+  {
+    "city": "Kristiansand",
+    "country": "NO",
+    "lat": 58.1472,
+    "long": 7.9972,
+    "speed": 20000
+  },
+  {
+    "city": "Athens",
+    "country": "GR",
+    "lat": 37.9842,
+    "long": 23.7281,
+    "speed": 3541652
+  },
+  {
+    "city": "McAllen",
+    "country": "US",
+    "lat": 26.2252,
+    "long": -98.2467,
+    "speed": 920000
+  },
+  {
+    "city": "Gävle",
+    "country": "SE",
+    "lat": 60.6747,
+    "long": 17.1417,
+    "speed": 15000
+  },
+  {
+    "city": "Nonthaburi",
+    "country": "TH",
+    "lat": 13.8667,
+    "long": 100.5167,
+    "speed": 1142000
+  },
+  {
+    "city": "Wetter (Ruhr)",
+    "country": "DE",
+    "lat": 51.3881,
+    "long": 7.395,
+    "speed": 44000
+  },
+  {
+    "city": "İstanbul",
+    "country": "TR",
+    "lat": 41.0136,
+    "long": 28.955,
+    "speed": 1503000
+  },
+  {
+    "city": "Seoul",
+    "country": "KR",
+    "lat": 37.56,
+    "long": 126.99,
+    "speed": 3850000
+  },
+  {
+    "city": "Poznan",
+    "country": "PL",
+    "lat": 52.4083,
+    "long": 16.9336,
+    "speed": 1060010
+  },
+  {
+    "city": "Amaravati",
+    "country": "IN",
+    "lat": 16.5131,
+    "long": 80.5165,
+    "speed": 66048
+  },
+  {
+    "city": "Darwin",
+    "country": "AU",
+    "lat": -12.4381,
+    "long": 130.8411,
+    "speed": 61000
+  },
+  {
+    "city": "Dallas",
+    "country": "US",
+    "lat": 32.7935,
+    "long": -96.7667,
+    "speed": 21117100
+  },
+  {
+    "city": "Urasoe",
+    "country": "JP",
+    "lat": 26.2458,
+    "long": 127.7219,
+    "speed": 110000
+  },
+  {
+    "city": "Jacksonville",
+    "country": "US",
+    "lat": 30.3322,
+    "long": -81.6749,
+    "speed": 163000
+  },
+  {
+    "city": "Khmelnytskyi",
+    "country": "UA",
+    "lat": 49.4167,
+    "long": 27,
+    "speed": 42000
+  },
+  {
+    "city": "Akron",
+    "country": "US",
+    "lat": 41.0798,
+    "long": -81.5219,
+    "speed": 35000
+  },
+  {
+    "city": "Palo Alto",
+    "country": "US",
+    "lat": 37.3905,
+    "long": -122.1468,
+    "speed": 2984500
+  },
+  {
+    "city": "Grenoble",
+    "country": "FR",
+    "lat": 45.1715,
+    "long": 5.7224,
+    "speed": 1208740
+  },
+  {
+    "city": "Saskatoon",
+    "country": "CA",
+    "lat": 52.1333,
+    "long": -106.6833,
+    "speed": 164000
+  },
+  {
+    "city": "Carolina",
+    "country": "PR",
+    "lat": 18.4054,
+    "long": -65.9792,
+    "speed": 241000
+  },
+  {
+    "city": "Mandalay",
+    "country": "MM",
+    "lat": 21.9831,
+    "long": 96.0844,
+    "speed": 351000
+  },
+  {
+    "city": "Brasília",
+    "country": "BR",
+    "lat": -15.7939,
+    "long": -47.8828,
+    "speed": 1926052
+  },
+  {
+    "city": "Cayenne",
+    "country": "GF",
+    "lat": 4.933,
+    "long": -52.33,
+    "speed": 300
+  },
+  {
+    "city": "Khartoum",
+    "country": "SD",
+    "lat": 15.5006,
+    "long": 32.56,
+    "speed": 4000
+  },
+  {
+    "city": "Poznań",
+    "country": "PL",
+    "lat": 52.4083,
+    "long": 16.9336,
+    "speed": 21000
+  },
+  {
+    "city": "Guangzhou",
+    "country": "CN",
+    "lat": 23.13,
+    "long": 113.26,
+    "speed": 374324
+  },
+  {
+    "city": "Guntur",
+    "country": "IN",
+    "lat": 16.3008,
+    "long": 80.4428,
+    "speed": 10000
+  },
+  {
+    "city": "Bradford",
+    "country": "GB",
+    "lat": 53.8,
+    "long": -1.75,
+    "speed": 333755
+  },
+  {
+    "city": "Huancayo",
+    "country": "PE",
+    "lat": -12.0667,
+    "long": -75.2167,
+    "speed": 20000
+  },
+  {
+    "city": "Bratislava",
+    "country": "SK",
+    "lat": 48.1439,
+    "long": 17.1097,
+    "speed": 16868240
+  },
+  {
+    "city": "Odessa",
+    "country": "US",
+    "lat": 31.8801,
+    "long": -102.3448,
+    "speed": 22104888
+  },
+  {
+    "city": "Querétaro",
+    "country": "MX",
+    "lat": 20.5875,
+    "long": -100.3928,
+    "speed": 30000
+  },
+  {
+    "city": "Ghaziabad",
+    "country": "IN",
+    "lat": 28.67,
+    "long": 77.42,
+    "speed": 10000
+  },
+  {
+    "city": "Bogota",
+    "country": "CO",
+    "lat": 4.7111,
+    "long": -74.0722,
+    "speed": 5651340
+  },
+  {
+    "city": "Port Moresby",
+    "country": "PG",
+    "lat": -9.4789,
+    "long": 147.1494,
+    "speed": 84024
+  },
+  {
+    "city": "Milwaukee",
+    "country": "US",
+    "lat": 43.0642,
+    "long": -87.9675,
+    "speed": 64100
+  },
+  {
+    "city": "Quito",
+    "country": "EC",
+    "lat": -0.22,
+    "long": -78.5125,
+    "speed": 1064000
+  },
+  {
+    "city": "Oregon",
+    "country": "US",
+    "lat": 45.5371,
+    "long": -122.65,
+    "speed": 1000
+  },
+  {
+    "city": "Krasnoyarsk",
+    "country": "RU",
+    "lat": 56.0089,
+    "long": 92.8719,
+    "speed": 338100
+  },
+  {
+    "city": "Cape Town",
+    "country": "ZA",
+    "lat": -33.9253,
+    "long": 18.4239,
+    "speed": 8101562
+  },
+  {
+    "city": "Criciúma",
+    "country": "BR",
+    "lat": -28.6775,
+    "long": -49.3697,
+    "speed": 30000
+  },
+  {
+    "city": "Houston",
+    "country": "US",
+    "lat": 29.786,
+    "long": -95.3885,
+    "speed": 1167000
+  },
+  {
+    "city": "Lausanne",
+    "country": "CH",
+    "lat": 46.5198,
+    "long": 6.6335,
+    "speed": 112000
+  },
+  {
+    "city": "Tirana",
+    "country": "AL",
+    "lat": 41.3289,
+    "long": 19.8178,
+    "speed": 88000
+  },
+  {
+    "city": "Johor Bahru",
+    "country": "MY",
+    "lat": 1.4556,
+    "long": 103.7611,
+    "speed": 167100
+  },
+  {
+    "city": "Cebu",
+    "country": "PH",
+    "lat": 10.32,
+    "long": 123.75,
+    "speed": 70000
+  },
+  {
+    "city": "Des Moines",
+    "country": "US",
+    "lat": 41.5725,
+    "long": -93.6105,
+    "speed": 60000
+  },
+  {
+    "city": "Zurich",
+    "country": "CH",
+    "lat": 47.3744,
+    "long": 8.5411,
+    "speed": 7400300
+  },
+  {
+    "city": "Yekaterinburg",
+    "country": "RU",
+    "lat": 56.8356,
+    "long": 60.6128,
+    "speed": 22721032
+  },
+  {
+    "city": "Lubumbashi",
+    "country": "CD",
+    "lat": -11.6647,
+    "long": 27.4794,
+    "speed": 65100
+  },
+  {
+    "city": "Sarajevo",
+    "country": "BA",
+    "lat": 43.8564,
+    "long": 18.4131,
+    "speed": 56000
+  },
+  {
+    "city": "Cairo",
+    "country": "EG",
+    "lat": 30.0444,
+    "long": 31.2358,
+    "speed": 452400
+  },
+  {
+    "city": "Craiova",
+    "country": "RO",
+    "lat": 44.3333,
+    "long": 23.8167,
+    "speed": 2476000
+  },
+  {
+    "city": "Esbjerg",
+    "country": "DK",
+    "lat": 55.4833,
+    "long": 8.45,
+    "speed": 20000
+  },
+  {
+    "city": "Jakarta",
+    "country": "ID",
+    "lat": -6.175,
+    "long": 106.8275,
+    "speed": 18881868
+  },
+  {
+    "city": "Florianópolis",
+    "country": "BR",
+    "lat": -27.6122,
+    "long": -48.4853,
+    "speed": 660712
+  },
+  {
+    "city": "Eschen",
+    "country": "LI",
+    "lat": 47.2167,
+    "long": 9.5167,
+    "speed": 144500
+  },
+  {
+    "city": "Yangon",
+    "country": "MM",
+    "lat": 16.795,
+    "long": 96.16,
+    "speed": 534000
+  },
+  {
+    "city": "Bujumbura",
+    "country": "BI",
+    "lat": -3.3833,
+    "long": 29.3667,
+    "speed": 27000
+  },
+  {
+    "city": "Singapore",
+    "country": "SG",
+    "lat": 1.3,
+    "long": 103.8,
+    "speed": 54860250
+  },
+  {
+    "city": "Cluj-Napoca",
+    "country": "RO",
+    "lat": 46.7667,
+    "long": 23.5833,
+    "speed": 2476000
+  },
+  {
+    "city": "Rivne",
+    "country": "UA",
+    "lat": 50.6192,
+    "long": 26.2519,
+    "speed": 21000
+  },
+  {
+    "city": "Florida",
+    "country": "US",
+    "lat": 25.784,
+    "long": -80.2101,
+    "speed": 32000
+  },
+  {
+    "city": "Groningen",
+    "country": "NL",
+    "lat": 53.2167,
+    "long": 6.5667,
+    "speed": 84000
+  },
+  {
+    "city": "Chiclayo",
+    "country": "PE",
+    "lat": -6.763,
+    "long": -79.8366,
+    "speed": 170000
+  },
+  {
+    "city": "Kabul",
+    "country": "AF",
+    "lat": 34.5253,
+    "long": 69.1783,
+    "speed": 45024
+  },
+  {
+    "city": "Bangalore",
+    "country": "IN",
+    "lat": 12.9789,
+    "long": 77.5917,
+    "speed": 576100
+  },
+  {
+    "city": "Novosibirsk",
+    "country": "RU",
+    "lat": 55.0333,
+    "long": 82.9167,
+    "speed": 23073238
+  },
+  {
+    "city": "Krasnodar",
+    "country": "RU",
+    "lat": 45.0333,
+    "long": 38.9667,
+    "speed": 241450
+  },
+  {
+    "city": "Gatineau",
+    "country": "CA",
+    "lat": 45.4833,
+    "long": -75.65,
+    "speed": 121000
+  },
+  {
+    "city": "Kuala Lumpur",
+    "country": "MY",
+    "lat": 3.1478,
+    "long": 101.6953,
+    "speed": 4361175
+  },
+  {
+    "city": "Vladivostok",
+    "country": "RU",
+    "lat": 43.1333,
+    "long": 131.9,
+    "speed": 45100
+  },
+  {
+    "city": "Johannesburg",
+    "country": "ZA",
+    "lat": -26.2044,
+    "long": 28.0456,
+    "speed": 21090962
+  },
+  {
+    "city": "Montreal",
+    "country": "CA",
+    "lat": 45.5089,
+    "long": -73.5617,
+    "speed": 2870200
+  },
+  {
+    "city": "Seattle",
+    "country": "US",
+    "lat": 47.6211,
+    "long": -122.3244,
+    "speed": 25192474
+  },
+  {
+    "city": "Atlanta",
+    "country": "US",
+    "lat": 33.7628,
+    "long": -84.422,
+    "speed": 16493100
+  },
+  {
+    "city": "Willemstad",
+    "country": "CW",
+    "lat": 12.108,
+    "long": -68.935,
+    "speed": 56000
+  },
+  {
+    "city": "Blantyre",
+    "country": "MW",
+    "lat": -15.7861,
+    "long": 35.0058,
+    "speed": 46000
+  },
+  {
+    "city": "San Jose",
+    "country": "CR",
+    "lat": 9.9325,
+    "long": -84.08,
+    "speed": 641000
+  },
+  {
+    "city": "Dronten",
+    "country": "NL",
+    "lat": 52.5167,
+    "long": 5.7167,
+    "speed": 6876800
+  },
+  {
+    "city": "Campinas",
+    "country": "BR",
+    "lat": -22.9058,
+    "long": -47.0608,
+    "speed": 624024
+  },
+  {
+    "city": "Luanda",
+    "country": "AO",
+    "lat": -8.8383,
+    "long": 13.2344,
+    "speed": 389050
+  },
+  {
+    "city": "Port-Vila",
+    "country": "VU",
+    "lat": -17.7333,
+    "long": 168.3167,
+    "speed": 4000
+  },
+  {
+    "city": "Lahore",
+    "country": "PK",
+    "lat": 31.5497,
+    "long": 74.3436,
+    "speed": 20000
+  },
+  {
+    "city": "Fortaleza",
+    "country": "BR",
+    "lat": -3.7275,
+    "long": -38.5275,
+    "speed": 20511064
+  },
+  {
+    "city": "Fès",
+    "country": "MA",
+    "lat": 34.0433,
+    "long": -5.0033,
+    "speed": 30000
+  },
+  {
+    "city": "Stein bei Nürnberg",
+    "country": "DE",
+    "lat": 49.4167,
+    "long": 11.0167,
+    "speed": 231100
+  },
+  {
+    "city": "Serekunda",
+    "country": "GM",
+    "lat": 13.4333,
+    "long": -16.6667,
+    "speed": 10000
+  },
+  {
+    "city": "Duluth",
+    "country": "US",
+    "lat": 46.7756,
+    "long": -92.1393,
+    "speed": 11000
+  },
+  {
+    "city": "Tainan",
+    "country": "TW",
+    "lat": 22.9833,
+    "long": 120.1833,
+    "speed": 90000
+  },
+  {
+    "city": "Bologna",
+    "country": "IT",
+    "lat": 44.4939,
+    "long": 11.3428,
+    "speed": 283000
   },
   {
     "city": "Strasbourg",
@@ -3829,18 +3171,60 @@
     "speed": 67200
   },
   {
-    "city": "Stockholm",
-    "country": "SE",
-    "lat": 59.3294,
-    "long": 18.0686,
-    "speed": 43967888
+    "city": "Saint John",
+    "country": "CA",
+    "lat": 45.2806,
+    "long": -66.0761,
+    "speed": 40000
   },
   {
-    "city": "Kyiv",
-    "country": "UA",
-    "lat": 50.45,
-    "long": 30.5233,
-    "speed": 45666136
+    "city": "Bandar Lampung",
+    "country": "ID",
+    "lat": -5.45,
+    "long": 105.2667,
+    "speed": 13000
+  },
+  {
+    "city": "Manchester",
+    "country": "GB",
+    "lat": 53.4794,
+    "long": -2.2453,
+    "speed": 4368300
+  },
+  {
+    "city": "Port Louis",
+    "country": "MU",
+    "lat": -20.1644,
+    "long": 57.5042,
+    "speed": 38000
+  },
+  {
+    "city": "Ohio",
+    "country": "US",
+    "lat": 39.1413,
+    "long": -84.506,
+    "speed": 116000
+  },
+  {
+    "city": "Riga",
+    "country": "LV",
+    "lat": 56.9489,
+    "long": 24.1064,
+    "speed": 2033024
+  },
+  {
+    "city": "Porto Alegre",
+    "country": "BR",
+    "lat": -30.0331,
+    "long": -51.23,
+    "speed": 4231310
+  },
+  {
+    "city": "Cork",
+    "country": "IE",
+    "lat": 51.8972,
+    "long": -8.47,
+    "speed": 97000
   },
   {
     "city": "Rzeszow",
@@ -3850,10 +3234,633 @@
     "speed": 102000
   },
   {
-    "city": "Uruma",
+    "city": "Indore",
+    "country": "IN",
+    "lat": 22.7167,
+    "long": 75.8472,
+    "speed": 42000
+  },
+  {
+    "city": "Canberra",
+    "country": "AU",
+    "lat": -35.2931,
+    "long": 149.1269,
+    "speed": 151200
+  },
+  {
+    "city": "Salzburg",
+    "country": "AT",
+    "lat": 47.8,
+    "long": 13.045,
+    "speed": 135000
+  },
+  {
+    "city": "Stavropol",
+    "country": "RU",
+    "lat": 45.05,
+    "long": 41.9833,
+    "speed": 1000
+  },
+  {
+    "city": "Bobo-Dioulasso",
+    "country": "BF",
+    "lat": 11.1833,
+    "long": -4.2833,
+    "speed": 52048
+  },
+  {
+    "city": "Rottweil",
+    "country": "DE",
+    "lat": 48.1681,
+    "long": 8.6247,
+    "speed": 11100
+  },
+  {
+    "city": "Marseille",
+    "country": "FR",
+    "lat": 43.2964,
+    "long": 5.37,
+    "speed": 32437524
+  },
+  {
+    "city": "Guayaquil",
+    "country": "EC",
+    "lat": -2.19,
+    "long": -79.8875,
+    "speed": 225000
+  },
+  {
+    "city": "Yerevan",
+    "country": "AM",
+    "lat": 40.1814,
+    "long": 44.5144,
+    "speed": 116324
+  },
+  {
+    "city": "Rijeka",
+    "country": "HR",
+    "lat": 45.3272,
+    "long": 14.4411,
+    "speed": 40000
+  },
+  {
+    "city": "Taipei",
+    "country": "TW",
+    "lat": 25.0375,
+    "long": 121.5625,
+    "speed": 3136024
+  },
+  {
+    "city": "Christchurch",
+    "country": "NZ",
+    "lat": -43.531,
+    "long": 172.6365,
+    "speed": 171000
+  },
+  {
+    "city": "Águas Santas",
+    "country": "PT",
+    "lat": 41.209,
+    "long": -8.589,
+    "speed": 3000
+  },
+  {
+    "city": "Nairobi",
+    "country": "KE",
+    "lat": -1.2864,
+    "long": 36.8172,
+    "speed": 1057224
+  },
+  {
+    "city": "Tromsø",
+    "country": "NO",
+    "lat": 69.6828,
+    "long": 18.9428,
+    "speed": 3000
+  },
+  {
+    "city": "Dnipro",
+    "country": "UA",
+    "lat": 48.4675,
+    "long": 35.04,
+    "speed": 40000
+  },
+  {
+    "city": "Espoo",
+    "country": "FI",
+    "lat": 60.2056,
+    "long": 24.6556,
+    "speed": 1655000
+  },
+  {
+    "city": "Klagenfurt",
+    "country": "AT",
+    "lat": 46.6167,
+    "long": 14.3,
+    "speed": 316000
+  },
+  {
+    "city": "Dublin",
+    "country": "IE",
+    "lat": 53.35,
+    "long": -6.2603,
+    "speed": 6253100
+  },
+  {
+    "city": "Malmö",
+    "country": "SE",
+    "lat": 55.6058,
+    "long": 13.0358,
+    "speed": 85000
+  },
+  {
+    "city": "Omsk",
+    "country": "RU",
+    "lat": 54.9667,
+    "long": 73.3833,
+    "speed": 30000
+  },
+  {
+    "city": "Campina Grande",
+    "country": "BR",
+    "lat": -7.2306,
+    "long": -35.8811,
+    "speed": 429000
+  },
+  {
+    "city": "Clermont-Ferrand",
+    "country": "FR",
+    "lat": 45.7831,
+    "long": 3.0824,
+    "speed": 76000
+  },
+  {
+    "city": "Liverpool",
+    "country": "GB",
+    "lat": 53.4075,
+    "long": -2.9919,
+    "speed": 84000
+  },
+  {
+    "city": "New York",
+    "country": "US",
+    "lat": 40.6943,
+    "long": -73.9249,
+    "speed": 30033400
+  },
+  {
+    "city": "Tokyo",
     "country": "JP",
-    "lat": 26.3792,
-    "long": 127.8575,
-    "speed": 110000
+    "lat": 35.6897,
+    "long": 139.6922,
+    "speed": 64730620
+  },
+  {
+    "city": "Campo Grande",
+    "country": "BR",
+    "lat": -20.4839,
+    "long": -54.615,
+    "speed": 226000
+  },
+  {
+    "city": "Semey",
+    "country": "KZ",
+    "lat": 50.4333,
+    "long": 80.2667,
+    "speed": 45000
+  },
+  {
+    "city": "Copenhagen",
+    "country": "DK",
+    "lat": 55.6761,
+    "long": 12.5683,
+    "speed": 29421600
+  },
+  {
+    "city": "Oulu",
+    "country": "FI",
+    "lat": 65.0142,
+    "long": 25.4719,
+    "speed": 83000
+  },
+  {
+    "city": "Tashkent",
+    "country": "UZ",
+    "lat": 41.3111,
+    "long": 69.2797,
+    "speed": 345240
+  },
+  {
+    "city": "Bamako",
+    "country": "ML",
+    "lat": 12.6458,
+    "long": -7.9922,
+    "speed": 5024
+  },
+  {
+    "city": "Gavle",
+    "country": "SE",
+    "lat": 60.6747,
+    "long": 17.1417,
+    "speed": 431000
+  },
+  {
+    "city": "Flagstaff",
+    "country": "US",
+    "lat": 35.1872,
+    "long": -111.6194,
+    "speed": 176000
+  },
+  {
+    "city": "Arica",
+    "country": "CL",
+    "lat": -18.4667,
+    "long": -70.3167,
+    "speed": 16000
+  },
+  {
+    "city": "Skopje",
+    "country": "MK",
+    "lat": 41.9961,
+    "long": 21.4317,
+    "speed": 64048
+  },
+  {
+    "city": "Baltimore",
+    "country": "US",
+    "lat": 39.3051,
+    "long": -76.6144,
+    "speed": 112000
+  },
+  {
+    "city": "Natal",
+    "country": "BR",
+    "lat": -6.9838,
+    "long": -60.2699,
+    "speed": 303240
+  },
+  {
+    "city": "Caxias do Sul",
+    "country": "BR",
+    "lat": -29.1667,
+    "long": -51.1833,
+    "speed": 94000
+  },
+  {
+    "city": "Mwanza",
+    "country": "TZ",
+    "lat": -2.5167,
+    "long": 32.9,
+    "speed": 5000
+  },
+  {
+    "city": "Douala",
+    "country": "CM",
+    "lat": 4.05,
+    "long": 9.7,
+    "speed": 41400
+  },
+  {
+    "city": "Wellington",
+    "country": "NZ",
+    "lat": -41.2889,
+    "long": 174.7772,
+    "speed": 287604
+  },
+  {
+    "city": "Port-au-Prince",
+    "country": "HT",
+    "lat": 18.5333,
+    "long": -72.3333,
+    "speed": 4700
+  },
+  {
+    "city": "Karlsruhe",
+    "country": "DE",
+    "lat": 49.0092,
+    "long": 8.404,
+    "speed": 142000
+  },
+  {
+    "city": "Frauenfeld",
+    "country": "CH",
+    "lat": 47.55,
+    "long": 8.9,
+    "speed": 147200
+  },
+  {
+    "city": "Galway",
+    "country": "IE",
+    "lat": 53.2719,
+    "long": -9.0489,
+    "speed": 20000
+  },
+  {
+    "city": "São Paulo",
+    "country": "BR",
+    "lat": -23.55,
+    "long": -46.6333,
+    "speed": 113394462
+  },
+  {
+    "city": "Palmerston North",
+    "country": "NZ",
+    "lat": -40.355,
+    "long": 175.6117,
+    "speed": 100
+  },
+  {
+    "city": "São José do Rio Preto",
+    "country": "BR",
+    "lat": -22.1508,
+    "long": -42.9239,
+    "speed": 201000
+  },
+  {
+    "city": "Zaporizhzhia",
+    "country": "UA",
+    "lat": 47.85,
+    "long": 35.1175,
+    "speed": 20000
+  },
+  {
+    "city": "Sydney",
+    "country": "AU",
+    "lat": -33.8678,
+    "long": 151.21,
+    "speed": 21280630
+  },
+  {
+    "city": "Kyiv",
+    "country": "UA",
+    "lat": 50.45,
+    "long": 30.5233,
+    "speed": 45475136
+  },
+  {
+    "city": "Kherson",
+    "country": "UA",
+    "lat": 46.6425,
+    "long": 32.625,
+    "speed": 40000
+  },
+  {
+    "city": "Jeddah",
+    "country": "SA",
+    "lat": 21.5433,
+    "long": 39.1728,
+    "speed": 1851500
+  },
+  {
+    "city": "Goiânia",
+    "country": "BR",
+    "lat": -16.6667,
+    "long": -49.25,
+    "speed": 335020
+  },
+  {
+    "city": "Calgary",
+    "country": "CA",
+    "lat": 51.05,
+    "long": -114.0667,
+    "speed": 1348200
+  },
+  {
+    "city": "Fukuoka",
+    "country": "JP",
+    "lat": 33.5833,
+    "long": 130.4,
+    "speed": 884000
+  },
+  {
+    "city": "Los Angeles",
+    "country": "US",
+    "lat": 34.1141,
+    "long": -118.4068,
+    "speed": 17881600
+  },
+  {
+    "city": "Kharkiv",
+    "country": "UA",
+    "lat": 49.9925,
+    "long": 36.2311,
+    "speed": 22105888
+  },
+  {
+    "city": "The Hague",
+    "country": "NL",
+    "lat": 52.08,
+    "long": 4.31,
+    "speed": 1124000
+  },
+  {
+    "city": "Charlotte",
+    "country": "US",
+    "lat": 35.2083,
+    "long": -80.8303,
+    "speed": 43000
+  },
+  {
+    "city": "Albuquerque",
+    "country": "US",
+    "lat": 35.1054,
+    "long": -106.6465,
+    "speed": 31000
+  },
+  {
+    "city": "Lae",
+    "country": "PG",
+    "lat": -6.7303,
+    "long": 147.0008,
+    "speed": 21000
+  },
+  {
+    "city": "Bari",
+    "country": "IT",
+    "lat": 41.1253,
+    "long": 16.8667,
+    "speed": 118000
+  },
+  {
+    "city": "Graz",
+    "country": "AT",
+    "lat": 47.0708,
+    "long": 15.4386,
+    "speed": 33000
+  },
+  {
+    "city": "Dar es Salaam",
+    "country": "TZ",
+    "lat": -6.8161,
+    "long": 39.2803,
+    "speed": 150000
+  },
+  {
+    "city": "Austin",
+    "country": "US",
+    "lat": 30.3005,
+    "long": -97.7522,
+    "speed": 101000
+  },
+  {
+    "city": "Chaguanas",
+    "country": "TT",
+    "lat": 10.5167,
+    "long": -61.4,
+    "speed": 19124
+  },
+  {
+    "city": "Tacna",
+    "country": "PE",
+    "lat": -18.0147,
+    "long": -70.2489,
+    "speed": 20000
+  },
+  {
+    "city": "Budapest",
+    "country": "HU",
+    "lat": 47.4925,
+    "long": 19.0514,
+    "speed": 4276500
+  },
+  {
+    "city": "Toronto",
+    "country": "CA",
+    "lat": 43.7417,
+    "long": -79.3733,
+    "speed": 11619900
+  },
+  {
+    "city": "Pekanbaru",
+    "country": "ID",
+    "lat": 0.5092,
+    "long": 101.4453,
+    "speed": 330100
+  },
+  {
+    "city": "Palmas",
+    "country": "BR",
+    "lat": -10.1844,
+    "long": -48.3336,
+    "speed": 134000
+  },
+  {
+    "city": "Münster",
+    "country": "DE",
+    "lat": 51.9625,
+    "long": 7.6256,
+    "speed": 87100
+  },
+  {
+    "city": "Moncton",
+    "country": "CA",
+    "lat": 46.1328,
+    "long": -64.7714,
+    "speed": 46000
+  },
+  {
+    "city": "Melbourne",
+    "country": "AU",
+    "lat": -37.8142,
+    "long": 144.9631,
+    "speed": 8349452
+  },
+  {
+    "city": "Makassar",
+    "country": "ID",
+    "lat": -5.1619,
+    "long": 119.4362,
+    "speed": 995200
+  },
+  {
+    "city": "Medan",
+    "country": "ID",
+    "lat": 3.5894,
+    "long": 98.6739,
+    "speed": 2000
+  },
+  {
+    "city": "Kampala",
+    "country": "UG",
+    "lat": 0.3136,
+    "long": 32.5811,
+    "speed": 112148
+  },
+  {
+    "city": "Curitiba",
+    "country": "BR",
+    "lat": -25.4297,
+    "long": -49.2711,
+    "speed": 4606072
+  },
+  {
+    "city": "Frankfurt",
+    "country": "DE",
+    "lat": 50.1106,
+    "long": 8.6822,
+    "speed": 142720491
+  },
+  {
+    "city": "Umea",
+    "country": "SE",
+    "lat": 63.825,
+    "long": 20.2639,
+    "speed": 11000
+  },
+  {
+    "city": "Manitoba",
+    "country": "CA",
+    "lat": 49.8844,
+    "long": -97.1464,
+    "speed": 290000
+  },
+  {
+    "city": "Nashville",
+    "country": "US",
+    "lat": 36.1715,
+    "long": -86.7842,
+    "speed": 51000
+  },
+  {
+    "city": "Ponta Grossa",
+    "country": "BR",
+    "lat": -25.0994,
+    "long": -50.1583,
+    "speed": 72000
+  },
+  {
+    "city": "Dusseldorf",
+    "country": "DE",
+    "lat": 51.2333,
+    "long": 6.7833,
+    "speed": 4638949
+  },
+  {
+    "city": "Katowice",
+    "country": "PL",
+    "lat": 50.2667,
+    "long": 19.0167,
+    "speed": 4919514
+  },
+  {
+    "city": "Riyadh",
+    "country": "SA",
+    "lat": 24.6333,
+    "long": 46.7167,
+    "speed": 1440000
+  },
+  {
+    "city": "Mountain View",
+    "country": "US",
+    "lat": 37.4001,
+    "long": -122.0796,
+    "speed": 22000
+  },
+  {
+    "city": "Hobart",
+    "country": "AU",
+    "lat": -42.8806,
+    "long": 147.325,
+    "speed": 151100
   }
 ]

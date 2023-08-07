@@ -23,12 +23,12 @@ type DataSpec struct {
 
 var (
 	DataMap = []DataSpec{
-		// {
-		// 	Filename: "facilities.json",
-		// 	Loader: func(api *peeringdb.API) (interface{}, error) {
-		// 		return api.GetAllFacilities()
-		// 	},
-		// },
+		{
+			Filename: "facilities.json",
+			Loader: func(api *peeringdb.API) (interface{}, error) {
+				return api.GetAllFacilities()
+			},
+		},
 		// {
 		// 	Filename: "ix-facilities.json",
 		// 	Loader: func(api *peeringdb.API) (interface{}, error) {
@@ -199,11 +199,6 @@ func main() {
 		log.Fatalf("error when calculating network speeds: %s", err)
 	}
 
-	err = exportCityCoordinates(geoDB)
-	if err != nil {
-		log.Fatalf("error when calculating network speeds: %s", err)
-	}
-
 	err = exportCitySpeeds(citySpeeds, geoDB)
 	if err != nil {
 		log.Fatalf("error when calculating network speeds: %s", err)
@@ -241,28 +236,7 @@ func exportCitySpeeds(citySpeeds map[Location]int64, geoDB *GeoDatabase) error {
 	return os.WriteFile(filepath.Join(OutputPath, "city-speeds.json"), file, 0644)
 }
 
-func exportCityCoordinates(geoDB *GeoDatabase) error {
-	results := []Location{}
-	// TODO: expose geoDB.cityCoords through a public func
-	for loc, coord := range geoDB.cityCoords {
-		results = append(results, Location{
-			City:    loc.City,
-			Country: loc.Country,
-			Lat:     coord.Lat,
-			Long:    coord.Long,
-		})
-	}
-
-	file, err := json.MarshalIndent(results, "", "  ")
-	if err != nil {
-		return err
-	}
-
-	return os.WriteFile(filepath.Join(OutputPath, "locations.json"), file, 0644)
-}
-
 func calculateNetworkSpeedForLocations(geoDB *GeoDatabase) (map[Location]int64, error) {
-	// Make map of internet exchange IDs to their location
 	ixData, err := os.ReadFile(filepath.Join(PeeringDataPath, "ix.json"))
 	if err != nil {
 		return nil, err
