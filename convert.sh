@@ -11,7 +11,10 @@ convert -format png output/geo-mercator.svg -crop 1800x1600+3500+1800 output/geo
 convert -format png -resize 4096x output/geo-mercator.svg output/geo-mercator-small.png
 convert -format png -resize 4096x output/nocountrylines_geo-mercator.svg output/nocountrylines_geo-mercator-small.png
 
+convert -format webp -resize 4096x -background None output/transparent_geo-mercator.svg output/transparent_geo-mercator-small.webp
+
 mogrify -format png ./output/*.svg
+mogrify -format webp ./output/*.svg
 convert output/geo-mercator.svg \
 	-verbose -strip -auto-orient \
 	-colorspace sRGB \

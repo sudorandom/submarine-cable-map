@@ -1,6 +1,5 @@
 import _ from 'lodash';
-import {scaleSequential, scalePow, interpolateYlOrRd} from 'd3';
-import geoJson from 'world-geojson'
+import {scaleSequential, scalePow, extent, min, max} from 'd3';
 import D3Node from 'd3-node';
 import fs from 'fs';
 import {geoConicConformal, geoConicEqualArea, geoNaturalEarth1, geoMercator, geoPath} from 'd3-geo'
@@ -23,6 +22,7 @@ const loadCableGeoData = _.memoize(function (n) {
             continue
         }
 
+        feature.properties.rfs_year = cable.rfs_year
         cableGeoFilteredFeatures.push(feature)
         count++
 
@@ -81,10 +81,12 @@ function buildImage(projection, opts) {
           height = opts.height
     const svg = d3n.createSVG(width, height).append('g')
 
-    svg.append("rect")
-        .attr("width", "100%")
-        .attr("height", "100%")
-        .attr("fill", opts.backgroundColor);
+    if (!opts.transparent) {
+        svg.append("rect")
+            .attr("width", "100%")
+            .attr("height", "100%")
+            .attr("fill", opts.backgroundColor);
+    }
 
     var gfg = projection
         .scale(width / 2.02 / Math.PI)
@@ -92,14 +94,58 @@ function buildImage(projection, opts) {
         .center([0, 40])
         .translate([width / 2, height / 2]);
 
-    svg.append('script')
-        .attr('type', 'text/javascript')
-        .text(`<script type="text/javascript"><![CDATA[
-        function displayName(name) {
-            // document.getElementById('fiber-name').firstChild.data = name;
-            console.log(name);
-        }
-    ]]></script>`)
+    if (opts.animate) {
+        svg.append('style')
+            .text(`.svg-title {
+                color: `+opts.countryBackgroundColor+`;
+                font-size: 5em;
+                font-family: monospace, monospace;
+            }
+            
+            .cable-lines {
+                display: none;
+            }`)
+    }
+
+    // Drawing Cables
+    const cableData = loadCableGeoData()
+
+    const cableDataWithYear = cableData.cableGeoFeatures.filter((cable) => cable.properties.rfs_year != null);
+    const minYear = min(cableDataWithYear, function(cable) {return cable.properties.rfs_year; });
+    const maxYear = max(cableDataWithYear, function(cable) {return cable.properties.rfs_year; });
+
+    console.log("Number of Cables: "+ cableData.count)
+    console.log("Number of Planned Cables: "+ cableData.futureCount)
+    console.log("Length of all cables: "+ cableData.lengthKm)
+    console.log("Years "+ minYear + " to " + maxYear)
+
+    if (opts.animate) {
+        svg.append('script')
+            .attr('type', 'text/javascript')
+            .text(`<script type="text/javascript"><![CDATA[
+            const setYear = function (year) { 
+                var cables = document.querySelectorAll(".rfs-"+year); 
+                for (var i = 0; i < cables.length; i++) {
+                    var str = cables[i].style.display = "block"
+                }
+
+                const s = "Internet Exchanges and Submarine Cables (" + year + ")"
+                document.getElementById("svg-title").innerHTML = s
+            }
+
+            async function main() {
+                const StartingYear = `+minYear+`;
+                const EndingYear = `+maxYear+`;
+
+                for (let i = StartingYear; i <= EndingYear; i++) { 
+                    await new Promise(r => setTimeout(r, 1000));
+                    setYear(i);
+                }
+            }
+
+            main()
+        ]]></script>`)
+    }
 
     if (opts.showCountryLines) {
         // Drawing the country boundaries
@@ -110,6 +156,7 @@ function buildImage(projection, opts) {
             .data(worldMap.features)
             .enter()
             .append("path")
+            .attr("class", "country-lines")
             .attr("fill", opts.countryBackgroundColor)
             .attr("d", geoPath().projection(gfg))
             .style("stroke", opts.backgroundColor)
@@ -119,22 +166,16 @@ function buildImage(projection, opts) {
     const colorScale = scaleSequential(opts.InternetExchangeColorScale)
         .domain([0, 1000000]); // Set the domain of the color scale based on the available bandwidth
 
-    // Drawing Cables
-    const cableData = loadCableGeoData()
-    console.log("Number of Cables: "+ cableData.count)
-    console.log("Number of Planned Cables: "+ cableData.futureCount)
-    console.log("Length of all cables: "+ cableData.lengthKm)
     svg.append("g")
         .selectAll("path")
         .data(cableData.cableGeoFeatures)
         .enter()
         .append("path")
+        .attr("class", function(d) { return "cable-lines rfs-" + d.properties.rfs_year })
         .attr("d", geoPath().projection(gfg))
         .attr("fill", "none")
-        // .attr("stroke", function(d) { return d.properties.color; })
         .attr("stroke", function(d) { return opts.CableColor; })
-        .style("stroke-width", 2)
-        .attr("onmouseover", function(d) { return "displayName(`" + d.properties.name + "`)"; });
+        .style("stroke-width", 2);
 
     // Drawing Landings
     const landingPointData = loadLandingGeoData()
@@ -143,27 +184,42 @@ function buildImage(projection, opts) {
         .data(landingPointData.landingPointFeatures)
         .enter()
         .append("path")
+        .attr("class", "landings")
         .attr("d", geoPath().projection(gfg).pointRadius(function(d) { return 0.3; }))
         .attr("fill", opts.LandingPointColor)
         .attr("stroke", function(d) { return "#eee"; })
-        .style("stroke-width", 1)
-        .attr("onmouseover", function(d) { return `displayName('${d.properties.name}')`;});
+        .style("stroke-width", 1);
 
     let citySpeedsData = fs.readFileSync('./data/city-speeds.json');
     let citySpeeds = JSON.parse(citySpeedsData);
     const sizeScale = scalePow([0, 100000000], [10, 20])
 
+    // Dray Cities that have an IX, sized/colored by bandwidth
     svg.append("g")
         .selectAll("circle")
         .data(citySpeeds)
         .enter()
         .append("circle")
+        .attr("class", "cities")
         .attr("cx", d => gfg([d.long, d.lat])[0])
         .attr("cy", d => gfg([d.long, d.lat])[1])
         .attr("r", d => Math.floor(sizeScale(d.speed)))
         .attr("fill", d => colorScale(d.speed))
         .attr("stroke", opts.InternetExchangeCircleColor)
         .attr("stroke-width", 1);
+
+    if (opts.animate) {
+        // Title
+        svg.append("text")
+            .attr("id", "svg-title")
+            .attr("class", "svg-title")
+            .attr("x", "75%")
+            .attr("y", "5%")
+            .attr("fill", opts.countryBackgroundColor)
+            .attr("dominant-baseline", "middle")
+            .attr("text-anchor", "middle")
+            .text("");
+    }
 
     const outFile = opts.outputPrefix + "geo-mercator.svg"
     console.log('writing output to ' + outFile);
@@ -173,23 +229,42 @@ function buildImage(projection, opts) {
 }
 
 
+// buildImage(geoMercator(), {
+//     width: 5600,
+//     height: 4000,
+//     transparent: false,
+//     animate: false,
+//     showCountryLines: true,
+//     backgroundColor: "#9ddbff",
+//     countryBackgroundColor: "#fefded",
+//     outputPrefix: "output/light_",
+//     // From https://design.gitlab.com/data-visualization/color
+//     InternetExchangeColorScale: ["#e9ebff", "#e99b60"],
+//     CableColor: "#555",
+//     LandingPointColor: "#555",
+//     InternetExchangeCircleColor: "black",
+// })
 buildImage(geoMercator(), {
     width: 5600,
     height: 4000,
-    showCountryLines: true,
-    backgroundColor: "#9ddbff",
-    countryBackgroundColor: "#fefded",
-    outputPrefix: "output/light_",
-    // From https://design.gitlab.com/data-visualization/color
-    InternetExchangeColorScale: ["#e9ebff", "#e99b60"],
-    CableColor: "#555",
+    transparent: true,
+    animate: false,
+    showCountryLines: false,
+    backgroundColor: "#333",
+    countryBackgroundColor: "#888",
+    outputPrefix: "output/transparent_",
+    // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
+    InternetExchangeColorScale: ["#577590", "#4D908E"],
+    CableColor: "#577590",
     LandingPointColor: "#555",
-    InternetExchangeCircleColor: "black",
+    InternetExchangeCircleColor: "white",
 })
 
 buildImage(geoMercator(), {
     width: 5600,
     height: 4000,
+    transparent: false,
+    animate: false,
     showCountryLines: true,
     backgroundColor: "#333",
     countryBackgroundColor: "#888",
@@ -204,6 +279,8 @@ buildImage(geoMercator(), {
 buildImage(geoMercator(), {
     width: 5600,
     height: 4000,
+    transparent: false,
+    animate: false,
     showCountryLines: false,
     backgroundColor: "#333",
     countryBackgroundColor: "#888",
