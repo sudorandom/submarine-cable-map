@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import {scaleSequential, scalePow, extent, min, max} from 'd3';
 import D3Node from 'd3-node';
+import path from 'path';
 import fs from 'fs';
-import {geoConicConformal, geoConicEqualArea, geoNaturalEarth1, geoMercator, geoPath} from 'd3-geo'
+import {geoMercator, geoPath} from 'd3-geo'
 
 const loadCableGeoData = _.memoize(function (n) { 
     let count = 0
@@ -81,6 +82,13 @@ function buildImage(projection, opts) {
           height = opts.height
     const svg = d3n.createSVG(width, height).append('g')
 
+    if (!opts.cableFilter) {
+        console.log("using default cableFilter")
+        opts.cableFilter = (cable) => cable.properties.rfs_year != null
+    } else {
+        console.log("using custom cableFilter", opts.cableFilter)
+    }
+
     if (!opts.transparent) {
         svg.append("rect")
             .attr("width", "100%")
@@ -110,9 +118,9 @@ function buildImage(projection, opts) {
     // Drawing Cables
     const cableData = loadCableGeoData()
 
-    const cableDataWithYear = cableData.cableGeoFeatures.filter((cable) => cable.properties.rfs_year != null);
-    const minYear = min(cableDataWithYear, function(cable) {return cable.properties.rfs_year; });
-    const maxYear = max(cableDataWithYear, function(cable) {return cable.properties.rfs_year; });
+    const cableDataFiltered = cableData.cableGeoFeatures.filter(opts.cableFilter);
+    const minYear = min(cableDataFiltered, function(cable) {return cable.properties.rfs_year; });
+    const maxYear = max(cableDataFiltered, function(cable) {return cable.properties.rfs_year; });
 
     console.log("Number of Cables: "+ cableData.count)
     console.log("Number of Planned Cables: "+ cableData.futureCount)
@@ -129,7 +137,7 @@ function buildImage(projection, opts) {
                     var str = cables[i].style.display = "block"
                 }
 
-                const s = "Internet Exchanges and Submarine Cables (" + year + ")"
+                const s = year
                 document.getElementById("svg-title").innerHTML = s
             }
 
@@ -168,7 +176,7 @@ function buildImage(projection, opts) {
 
     svg.append("g")
         .selectAll("path")
-        .data(cableData.cableGeoFeatures)
+        .data(cableDataFiltered)
         .enter()
         .append("path")
         .attr("class", function(d) { return "cable-lines rfs-" + d.properties.rfs_year })
@@ -177,52 +185,59 @@ function buildImage(projection, opts) {
         .attr("stroke", function(d) { return opts.CableColor; })
         .style("stroke-width", 2);
 
-    // Drawing Landings
-    const landingPointData = loadLandingGeoData()
-    svg.append("g")
-        .selectAll("path")
-        .data(landingPointData.landingPointFeatures)
-        .enter()
-        .append("path")
-        .attr("class", "landings")
-        .attr("d", geoPath().projection(gfg).pointRadius(function(d) { return 0.3; }))
-        .attr("fill", opts.LandingPointColor)
-        .attr("stroke", function(d) { return "#eee"; })
-        .style("stroke-width", 1);
+    if (opts.showLandingPoints) {
+        // Drawing Landings
+        const landingPointData = loadLandingGeoData()
+        svg.append("g")
+            .selectAll("path")
+            .data(landingPointData.landingPointFeatures)
+            .enter()
+            .append("path")
+            .attr("class", function(d) { return "landings rfs-" + d.properties.rfs_year })
+            .attr("d", geoPath().projection(gfg).pointRadius(function(d) { return 0.3; }))
+            .attr("fill", opts.LandingPointColor)
+            .attr("stroke", function(d) { return "#eee"; })
+            .style("stroke-width", 1);
+    
+        let citySpeedsData = fs.readFileSync('./data/city-speeds.json');
+        let citySpeeds = JSON.parse(citySpeedsData);
+        const sizeScale = scalePow([0, 100000000], [10, 20])
+    
+        // Dray Cities that have an IX, sized/colored by bandwidth
+        svg.append("g")
+            .selectAll("circle")
+            .data(citySpeeds)
+            .enter()
+            .append("circle")
+            .attr("class", "cities")
+            .attr("cx", d => gfg([d.long, d.lat])[0])
+            .attr("cy", d => gfg([d.long, d.lat])[1])
+            .attr("r", d => Math.floor(sizeScale(d.speed)))
+            .attr("fill", d => colorScale(d.speed))
+            .attr("stroke", opts.InternetExchangeCircleColor)
+            .attr("stroke-width", 1);
+    }
 
-    let citySpeedsData = fs.readFileSync('./data/city-speeds.json');
-    let citySpeeds = JSON.parse(citySpeedsData);
-    const sizeScale = scalePow([0, 100000000], [10, 20])
-
-    // Dray Cities that have an IX, sized/colored by bandwidth
-    svg.append("g")
-        .selectAll("circle")
-        .data(citySpeeds)
-        .enter()
-        .append("circle")
-        .attr("class", "cities")
-        .attr("cx", d => gfg([d.long, d.lat])[0])
-        .attr("cy", d => gfg([d.long, d.lat])[1])
-        .attr("r", d => Math.floor(sizeScale(d.speed)))
-        .attr("fill", d => colorScale(d.speed))
-        .attr("stroke", opts.InternetExchangeCircleColor)
-        .attr("stroke-width", 1);
-
-    if (opts.animate) {
+    if (opts.animate || opts.title) {
         // Title
         svg.append("text")
             .attr("id", "svg-title")
             .attr("class", "svg-title")
-            .attr("x", "75%")
-            .attr("y", "5%")
+            .attr("x", "5%")
+            .attr("y", "10%")
+            .attr("font-size", "120")
+            .attr("font-weight", "bold")
             .attr("fill", opts.countryBackgroundColor)
-            .attr("dominant-baseline", "middle")
-            .attr("text-anchor", "middle")
-            .text("");
+            .attr("stroke", opts.countryBackgroundColor)
+            .attr("text-anchor", "left")
+            .attr("style", `font-family: monospace, monospace;`)
+            .text(opts.title || "");
     }
 
     const outFile = opts.outputPrefix + "geo-mercator.svg"
+    const dirName = path.dirname(outFile)
     console.log('writing output to ' + outFile);
+    fs.mkdirSync(dirName, { recursive: true });
     fs.writeFile(outFile, d3n.svgString(), function (err) {
       if (err) return console.log(err);
     })
@@ -233,7 +248,7 @@ function buildImage(projection, opts) {
 //     width: 5600,
 //     height: 4000,
 //     transparent: false,
-//     animate: false,
+//     animate: true,
 //     showCountryLines: true,
 //     backgroundColor: "#9ddbff",
 //     countryBackgroundColor: "#fefded",
@@ -244,11 +259,12 @@ function buildImage(projection, opts) {
 //     LandingPointColor: "#555",
 //     InternetExchangeCircleColor: "black",
 // })
+
 buildImage(geoMercator(), {
     width: 5600,
     height: 4000,
     transparent: true,
-    animate: false,
+    animate: true,
     showCountryLines: false,
     backgroundColor: "#333",
     countryBackgroundColor: "#888",
@@ -291,3 +307,41 @@ buildImage(geoMercator(), {
     LandingPointColor: "#555",
     InternetExchangeCircleColor: "white",
 })
+
+buildImage(geoMercator(), {
+    width: 5600,
+    height: 4000,
+    transparent: false,
+    animate: true,
+    showLandingPoints: false,
+    showCountryLines: true,
+    backgroundColor: "#333",
+    countryBackgroundColor: "#888",
+    outputPrefix: `output/animated_`,
+    // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
+    InternetExchangeColorScale: ["#577590", "#4D908E"],
+    CableColor: "#577590",
+    LandingPointColor: "#555",
+    InternetExchangeCircleColor: "white",
+})
+
+for (let year = 1990; year <= new Date().getFullYear(); year++) { 
+    buildImage(geoMercator(), {
+        width: 5600,
+        height: 4000,
+        transparent: false,
+        animate: false,
+        showLandingPoints: false,
+        showCountryLines: false,
+        backgroundColor: "#333",
+        countryBackgroundColor: "#888",
+        title: `${year}`,
+        outputPrefix: `output/tmp/parts/${year}_`,
+        cableFilter: (cable) => cable.properties.rfs_year != null && cable.properties.rfs_year <= year,
+        // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
+        InternetExchangeColorScale: ["#577590", "#4D908E"],
+        CableColor: "#577590",
+        LandingPointColor: "#555",
+        InternetExchangeCircleColor: "white",
+    })
+}

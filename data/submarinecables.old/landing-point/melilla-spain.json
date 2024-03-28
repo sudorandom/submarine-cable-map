@@ -1,0 +1,1 @@
+{"id":"melilla-spain","name":"Melilla, Spain","country":"Spain","cables":[{"id":"almera-melilla-alme","name":"Almería-Melilla (ALME)","rfs_year":1990,"is_planned":false},{"id":"roquetas-melilla-cam","name":"Roquetas-Melilla (CAM)","rfs_year":2014,"is_planned":false}],"landing_points":["almera-spain","melilla-spain","roquetas-de-mar-spain"]}

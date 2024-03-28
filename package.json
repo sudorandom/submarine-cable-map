@@ -4,12 +4,12 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build": "npm run clean && npm run build:map && npm run build:convert",
-    "download": "curl https://www.submarinecablemap.com/api/v3/cable/cable-geo.json > data/cable-geo.json",
+    "build": "npm run clean && npm run build:submarinecables && npm run build:peeringdb && npm run build:map && npm run build:convert",
+    "build:submarinecables": "go run cmd/load-submarine-cable-data/*.go",
+    "build:peeringdb": "go run cmd/load-peering-data/*.go",
     "build:map": "node map.js",
-    "build:chord": "node chord.js",
     "build:convert": "./convert.sh",
-    "clean": "rm -f output/*"
+    "clean": "rm -rf output/*"
   },
   "dependencies": {
     "d3": "^7.3.0",
@@ -17,6 +17,7 @@
     "d3-node": "^3.0.0",
     "jsdom": "^19.0.0",
     "lodash": "^4.17.21",
+    "timecut": "^0.3.3",
     "world-geojson": "^3.0"
   }
 }

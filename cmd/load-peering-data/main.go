@@ -330,6 +330,9 @@ func getLocationsForIX(geoDB *GeoDatabase, ix peeringdb.InternetExchange) []Loca
 }
 
 func loadData(api *peeringdb.API) error {
+	if err := os.MkdirAll(PeeringDataPath, 0700); err != nil {
+		return err
+	}
 	for _, dataSpec := range DataMap {
 		filePath := filepath.Join(PeeringDataPath, dataSpec.Filename)
 		if _, err := os.Stat(filePath); err == nil {

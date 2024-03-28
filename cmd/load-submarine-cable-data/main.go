@@ -65,7 +65,7 @@ func loadAndWriteJSON(url string) ([]byte, error) {
 		return os.ReadFile(filePath)
 	}
 
-	log.Printf("Downloading %s since it's cached from %s", filePath, url)
+	log.Printf("Downloading %s since it's not cached from %s", filePath, url)
 	resp, err := http.Get(url)
 	if err != nil {
 		log.Fatalf("error: %s", err)
