@@ -325,6 +325,23 @@ buildImage(geoMercator(), {
     InternetExchangeCircleColor: "white",
 })
 
+buildImage(geoMercator(), {
+    width: 5600,
+    height: 4000,
+    transparent: false,
+    animate: true,
+    showLandingPoints: false,
+    showCountryLines: false,
+    backgroundColor: "#333",
+    countryBackgroundColor: "#888",
+    outputPrefix: `output/animated_nocountrylines_`,
+    // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
+    InternetExchangeColorScale: ["#577590", "#4D908E"],
+    CableColor: "#577590",
+    LandingPointColor: "#555",
+    InternetExchangeCircleColor: "white",
+})
+
 for (let year = 1990; year <= new Date().getFullYear(); year++) { 
     buildImage(geoMercator(), {
         width: 5600,

@@ -6,7 +6,7 @@ set -ex
 convert -delay 100 -loop 0 -dispose previous $(find output/tmp/parts/*.svg | sort) output/geo-mercator.gif
 rm -rf output/tmp
 
-# Make mp4
+# Make mp4s
 ./node_modules/timecut/cli.js \
 	--screenshot-type=png \
 	--fps 1 \
@@ -15,6 +15,15 @@ rm -rf output/tmp
 	-V 5600,4000 \
 	--output=output/geo-mercator.mp4 \
 	output/animated_geo-mercator.svg
+
+./node_modules/timecut/cli.js \
+	--screenshot-type=png \
+	--fps 1 \
+	--frames=40 \
+	--start-delay=1 \
+	-V 5600,4000 \
+	--output=output/nocountrylines_geo-mercator.mp4 \
+	output/animated_nocountrylines_geo-mercator.svg
 
 convert -format png output/geo-mercator.svg -crop 1200x1000+800+1600 output/geo-mercator-na.png
 convert -format png output/geo-mercator.svg -crop 1200x1000+2300+1300 output/geo-mercator-eu.png
