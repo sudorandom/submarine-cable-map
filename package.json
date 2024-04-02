@@ -9,6 +9,7 @@
     "build:peeringdb": "go run cmd/load-peering-data/*.go",
     "build:map": "node map.js",
     "build:convert": "./convert.sh",
+    "build:video": "./video.sh",
     "clean": "rm -rf output/*"
   },
   "dependencies": {

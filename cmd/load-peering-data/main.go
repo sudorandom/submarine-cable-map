@@ -3,9 +3,11 @@ package main
 import (
 	"encoding/csv"
 	"encoding/json"
+	"fmt"
 	"log"
 	"os"
 	"path/filepath"
+	"sort"
 	"strconv"
 	"strings"
 
@@ -174,11 +176,19 @@ type Location struct {
 }
 
 type CitySpeedWithCoordinates struct {
-	City    string  `json:"city"`
-	Country string  `json:"country"`
-	Lat     float64 `json:"lat"`
-	Long    float64 `json:"long"`
-	Speed   int64   `json:"speed"`
+	ID         string            `json:"id"`
+	City       string            `json:"city"`
+	Country    string            `json:"country"`
+	Lat        float64           `json:"lat"`
+	Long       float64           `json:"long"`
+	Speed      int64             `json:"speed"`
+	SpeedYears map[int]SpeedYear `json:"speedYears"`
+}
+
+type SpeedYear struct {
+	Year       int   `json:"year"`
+	AddedSpeed int64 `json:"added_speed"`
+	Total      int64 `json:"total"`
 }
 
 func main() {
@@ -205,9 +215,9 @@ func main() {
 	}
 }
 
-func exportCitySpeeds(citySpeeds map[Location]int64, geoDB *GeoDatabase) error {
+func exportCitySpeeds(citySpeeds map[Location]map[int]int64, geoDB *GeoDatabase) error {
 	results := make([]CitySpeedWithCoordinates, 0, len(citySpeeds))
-	for loc, speed := range citySpeeds {
+	for loc, speedYears := range citySpeeds {
 		city := strings.TrimSpace(loc.City)
 		if city == "" {
 			continue
@@ -219,12 +229,39 @@ func exportCitySpeeds(citySpeeds map[Location]int64, geoDB *GeoDatabase) error {
 			continue
 		}
 
+		sortedSpeedYears := []SpeedYear{}
+		for year, speedAdded := range speedYears {
+			sortedSpeedYears = append(sortedSpeedYears, SpeedYear{
+				Year:       year,
+				AddedSpeed: speedAdded,
+				Total:      0, // calculated a little later
+			})
+		}
+		sort.Slice(sortedSpeedYears, func(i, j int) bool {
+			return sortedSpeedYears[i].Year <= sortedSpeedYears[j].Year
+		})
+		var total int64
+		for i, speedYear := range sortedSpeedYears {
+			total += speedYear.AddedSpeed
+			sortedSpeedYears[i].Total += total
+		}
+
+		speedYears := map[int]SpeedYear{}
+		for _, speedYear := range sortedSpeedYears {
+			speedYears[speedYear.Year] = speedYear
+		}
+
+		id := fmt.Sprintf("%s-%s", loc.Country, loc.City)
+		id = strings.ToLower(id)
+		id = strings.ReplaceAll(id, " ", "-")
 		results = append(results, CitySpeedWithCoordinates{
-			City:    city,
-			Country: loc.Country,
-			Lat:     location.Lat,
-			Long:    location.Long,
-			Speed:   speed,
+			ID:         id,
+			City:       city,
+			Country:    loc.Country,
+			Lat:        location.Lat,
+			Long:       location.Long,
+			Speed:      total,
+			SpeedYears: speedYears,
 		})
 	}
 
@@ -236,7 +273,7 @@ func exportCitySpeeds(citySpeeds map[Location]int64, geoDB *GeoDatabase) error {
 	return os.WriteFile(filepath.Join(OutputPath, "city-speeds.json"), file, 0644)
 }
 
-func calculateNetworkSpeedForLocations(geoDB *GeoDatabase) (map[Location]int64, error) {
+func calculateNetworkSpeedForLocations(geoDB *GeoDatabase) (map[Location]map[int]int64, error) {
 	ixData, err := os.ReadFile(filepath.Join(PeeringDataPath, "ix.json"))
 	if err != nil {
 		return nil, err
@@ -253,7 +290,7 @@ func calculateNetworkSpeedForLocations(geoDB *GeoDatabase) (map[Location]int64, 
 		ixLocations[ix.ID] = getLocationsForIX(geoDB, ix)
 	}
 
-	citySpeeds := map[Location]int64{}
+	citySpeeds := map[Location]map[int]int64{}
 	lanData, err := os.ReadFile(filepath.Join(PeeringDataPath, "network-ix-lans.json"))
 	if err != nil {
 		return nil, err
@@ -283,7 +320,12 @@ func calculateNetworkSpeedForLocations(geoDB *GeoDatabase) (map[Location]int64, 
 			if location.City == "" {
 				continue
 			}
-			citySpeeds[location] += int64(lan.Speed)
+			speedYears, ok := citySpeeds[location]
+			if !ok {
+				speedYears = map[int]int64{}
+				citySpeeds[location] = speedYears
+			}
+			speedYears[lan.Created.Year()] += int64(lan.Speed)
 		}
 	}
 
