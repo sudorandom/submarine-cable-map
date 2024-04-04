@@ -16,8 +16,10 @@
     "d3": "^7.3.0",
     "d3-geo": "^3.0.1",
     "d3-node": "^3.0.0",
+    "humanize": "^0.0.9",
     "jsdom": "^19.0.0",
     "lodash": "^4.17.21",
+    "pretty-bytes": "^6.1.1",
     "timecut": "^0.3.3",
     "world-geojson": "^3.0"
   }
