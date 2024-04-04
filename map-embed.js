@@ -56,9 +56,13 @@ async function main() {
     }
     await new Promise(r => setTimeout(r, 1090*8));
 
-    // // Clear all text
+    // Clear all text
     const textElems = document.querySelectorAll("text")
     textElems.forEach((elem) => { elem.setAttribute("visibility", "hidden") })
+
+    // Adjust cable line width so it looks cleaner when zoomed
+    const cableLines = document.querySelectorAll(".cable-lines")
+    cableLines.forEach((elem) => { elem.style.strokeWidth = "1" })
 
     // North America
     document.querySelectorAll("svg")[0].setAttribute("viewBox", "800 1400 1200 1200")
@@ -86,6 +90,7 @@ async function main() {
 
     // Re-show all text
     textElems.forEach((elem) => { elem.setAttribute("visibility", "visible") })
+    cableLines.forEach((elem) => { elem.style.strokeWidth = "2" })
 
     // Overall View
     document.querySelectorAll("svg")[0].setAttribute("viewBox", "0 0 5600 4000")
