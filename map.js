@@ -191,7 +191,7 @@ function buildImage(projection, opts) {
 
         let citySpeedsData = fs.readFileSync('./data/city-speeds.json');
         let citySpeeds = JSON.parse(citySpeedsData);
-        const sizeScale = scalePow([0, 100000000], [10, 20])
+        const sizeScale = scalePow([0, 150000000], [8, 25])
 
         const yearlyCitySpeeds = _(citySpeeds)
             .reduce(function (result, city) {
@@ -210,6 +210,7 @@ function buildImage(projection, opts) {
                         country: city.country,
                         total: yearSpeed.total,
                         total_str: prettyBytes(yearSpeed.total * 1000 * 1000, { bits: true }),
+                        added_str: prettyBytes(yearSpeed.added_speed * 1000 * 1000, { bits: true }),
                     })
                 })
                 return result;
@@ -246,9 +247,9 @@ function buildImage(projection, opts) {
         ]]></script>`)
     }
 
-    const leftSideOfControls = parseInt(width * 0.05);
-
     if (opts.showControls) {
+        const leftSideOfControls = parseInt(width * 0.05);
+
         // Begining
         svg.append("g")
             .append("path")

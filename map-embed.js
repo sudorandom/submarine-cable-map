@@ -44,7 +44,7 @@ const setYear = function (year) {
     if (topCities) {
         document.getElementById("top-peering-title").innerHTML = `Top peering cities in ${year}`
         topCities.forEach((city, idx) => {
-            document.getElementById(`top-peering-${idx}`).innerHTML = `${city.city}, ${city.country}: <tspan class="emphasized active">${city.total_str}</tspan>`
+            document.getElementById(`top-peering-${idx}`).innerHTML = `${city.city}, ${city.country}: <tspan class="emphasized">${city.total_str}</tspan> <tspan class="emphasized active">(+${city.added_str})</tspan>`
         })
     }
 }
@@ -52,7 +52,9 @@ const setYear = function (year) {
 async function main() {
     for (let i = minYear; i <= maxYear; i++) { 
         setYear(i);
-        await new Promise(r => setTimeout(r, 1090*2));
+        if (i >= 2010) {
+            await new Promise(r => setTimeout(r, 1090*2));
+        }
     }
     await new Promise(r => setTimeout(r, 1090*8));
 
@@ -77,7 +79,7 @@ async function main() {
     await new Promise(r => setTimeout(r, 1090*4));
 
     // South America
-    document.querySelectorAll("svg")[0].setAttribute("viewBox", "1400 2400 1050 1400")
+    document.querySelectorAll("svg")[0].setAttribute("viewBox", "1400 2200 1050 1400")
     await new Promise(r => setTimeout(r, 1090*4));
 
     // Middle East and Asia
