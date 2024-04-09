@@ -11,6 +11,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/biter777/countries"
 	"github.com/gmazoyer/peeringdb"
 )
 
@@ -179,6 +180,7 @@ type CitySpeedWithCoordinates struct {
 	ID         string            `json:"id"`
 	City       string            `json:"city"`
 	Country    string            `json:"country"`
+	Region     string            `json:"region"`
 	Lat        float64           `json:"lat"`
 	Long       float64           `json:"long"`
 	Speed      int64             `json:"speed"`
@@ -254,10 +256,12 @@ func exportCitySpeeds(citySpeeds map[Location]map[int]int64, geoDB *GeoDatabase)
 		id := fmt.Sprintf("%s-%s", loc.Country, loc.City)
 		id = strings.ToLower(id)
 		id = strings.ReplaceAll(id, " ", "-")
+		country := countries.ByName(location.Country)
 		results = append(results, CitySpeedWithCoordinates{
 			ID:         id,
 			City:       city,
 			Country:    loc.Country,
+			Region:     country.Region().String(),
 			Lat:        location.Lat,
 			Long:       location.Long,
 			Speed:      total,

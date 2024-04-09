@@ -1,3 +1,5 @@
+github.com/biter777/countries v1.7.4 h1:590JZkxrv+/JBTAw2GHULx9l7vUZxz2HWMZ9HkruiOc=
+github.com/biter777/countries v1.7.4/go.mod h1:1HSpZ526mYqKJcpT5Ti1kcGQ0L0SrXWIaptUWjFfv2E=
 github.com/gmazoyer/peeringdb v0.0.0-20221216114834-ec4f6d9f14b5 h1:aMdYKBCtK4YsbVxMfHW6MwRgNEiU0EawZuzybP2ZbR0=
 github.com/gmazoyer/peeringdb v0.0.0-20221216114834-ec4f6d9f14b5/go.mod h1:yJLJesC/N5BbSI7HlepR5oMDZ6PrHL2oVgybY1fR34w=
 github.com/paulmach/go.geojson v1.5.0 h1:7mhpMK89SQdHFcEGomT7/LuJhwhEgfmpWYVlVmLEdQw=

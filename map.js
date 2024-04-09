@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { scaleSequential, scalePow, min, max } from 'd3';
+import { scaleSequential, scalePow, scaleLinear, min, max } from 'd3';
 import D3Node from 'd3-node';
 import path from 'path';
 import fs from 'fs';
@@ -96,7 +96,7 @@ function buildImage(projection, opts) {
 
     if (!opts.cableFilter) {
         console.log("using default cableFilter")
-        opts.cableFilter = (cable) => cable.is_planned || cable.properties.rfs_year != null
+        opts.cableFilter = (cable) => cable.properties.rfs_year != null && cable.properties.rfs_year <= new Date().getFullYear()
     }
 
     if (!opts.transparent) {
@@ -132,7 +132,7 @@ function buildImage(projection, opts) {
                 stroke-width: 2;
             }
             .cable-lines.active {
-                stroke: orange;
+                stroke: `+ opts.ActiveCableColor +`;
             }
             .landing {
                 opacity: 0;
@@ -146,7 +146,7 @@ function buildImage(projection, opts) {
                 stroke-width: 2;
             }
             .landing.active {
-                stroke: orange;
+                stroke: `+ opts.ActiveCableColor +`;
             }
             .city {
                 opacity: 0;
@@ -160,7 +160,7 @@ function buildImage(projection, opts) {
                 stroke-width: 2;
             }
             .city.active {
-                stroke: orange;
+                stroke: `+ opts.ActiveCableColor + `;
             }
             .emphasized {
                 font-weight: bold;
@@ -169,8 +169,8 @@ function buildImage(projection, opts) {
             }
             .emphasized.active {
                 font-weight: bold;
-                stroke: orange;
-                fill: orange;
+                stroke: `+ opts.ActiveCableColor +`;
+                fill: `+ opts.ActiveCableColor +`;
             }
             `)
     }
@@ -178,10 +178,10 @@ function buildImage(projection, opts) {
     // Drawing Cables
     const cableData = loadCableGeoData()
     const cableDataFiltered = cableData.cableGeoFeatures.filter(opts.cableFilter);
+    const minYear = min(cableDataFiltered, function (cable) { return cable.properties.rfs_year; });
+    const maxYear = max(cableDataFiltered, function (cable) { return cable.properties.rfs_year; });
 
     if (opts.animate) {
-        const minYear = min(cableDataFiltered, function (cable) { return cable.properties.rfs_year; });
-        const maxYear = max(cableDataFiltered, function (cable) { return cable.properties.rfs_year; });
         var perYearCableStats = _(cableDataFiltered)
             .groupBy('properties.rfs_year')
             .map((grp, rfs_year) =>
@@ -191,7 +191,9 @@ function buildImage(projection, opts) {
 
         let citySpeedsData = fs.readFileSync('./data/city-speeds.json');
         let citySpeeds = JSON.parse(citySpeedsData);
-        const sizeScale = scalePow([0, 150000000], [8, 25])
+        const minSpeed = min(citySpeeds, (city) => city.speed );
+        const maxSpeed = max(citySpeeds, (city) => city.speed );
+        const sizeScale = scalePow([minSpeed, maxSpeed], [8, 25])
 
         const yearlyCitySpeeds = _(citySpeeds)
             .reduce(function (result, city) {
@@ -201,7 +203,7 @@ function buildImage(projection, opts) {
                 return result;
             }, {})
 
-        const topCities = _(_(citySpeeds)
+        const topCities = _.chain(citySpeeds)
             .reduce(function (result, city) {
                 _.forEach(city.speedYears, function (yearSpeed, year) {
                     (result[year] || (result[year] = [])).push({
@@ -214,11 +216,70 @@ function buildImage(projection, opts) {
                     })
                 })
                 return result;
-            }, {}))
+            }, {})
             .reduce(function (result, cities, year) {
                 result[year] = _(cities).sortBy('total').reverse().take(5)
                 return result
             }, {})
+            .value()
+
+        var regions = _.chain(citySpeeds).groupBy('region').keys().value()
+        var perYearRegionStats = _.chain(citySpeeds)
+            .groupBy('region')
+            .reduce(function (result, cities, region) {
+                const regionEntry = {region: region, speedYears: {}}
+                _.forEach(cities, function (city) {
+                    _.forEach(city.speedYears, function (yearSpeed, year) {
+                        const yearEntry = regionEntry.speedYears[year] || (regionEntry.speedYears[year] = {year: year, added_speed: 0, total: 0})
+                        yearEntry.added_speed += yearSpeed.added_speed
+                        yearEntry.total += yearSpeed.total
+                        yearEntry.total_str = prettyBytes(yearEntry.total * 1000 * 1000, { bits: true })
+                        yearEntry.added_str = prettyBytes(yearEntry.added_speed * 1000 * 1000, { bits: true })
+                        regionEntry.speedYears[year] = yearEntry
+                    })
+                })
+                result.push(regionEntry)
+                return result
+            }, [])
+            .reduce(function (result, regionEntry) {
+                _.forEach(regionEntry.speedYears, function (yearSpeed) {
+                    const yearEntry = result[yearSpeed.year] || (result[yearSpeed.year] = [])
+                    yearEntry.push({
+                        region: regionEntry.region,
+                        added_speed: yearSpeed.added_speed,
+                        total: yearSpeed.total,
+                        total_str: yearSpeed.total_str,
+                        added_str: yearSpeed.added_str,
+                    })
+                    result[yearSpeed.year] = _.chain(result[yearSpeed.year]).sortBy("total").reverse().value()
+                })
+                return result
+            }, {})
+            .value()
+
+        svg.append("text")
+            .attr("id", "regions-title")
+            .attr("class", "regions-title")
+            .attr("x", "73%")
+            .attr("y", "200")
+            .attr("font-size", "80")
+            .attr("font-weight", "bold")
+            .attr("fill", opts.countryBackgroundColor)
+            .attr("stroke", opts.countryBackgroundColor)
+            .attr("style", `font-family: monospace, monospace;`)
+            .text("Peering per region")
+
+        regions.forEach((_, idx) => {
+            svg.append("text")
+                .attr("id", `regions-${idx}`)
+                .attr("class", "top")
+                .attr("x", "73%")
+                .attr("y", `${290 + (90 * idx)}`)
+                .attr("font-size", "65")
+                .attr("fill", opts.countryBackgroundColor)
+                .attr("stroke", opts.countryBackgroundColor)
+                .attr("style", `font-family: monospace, monospace;`)
+        })
 
         svg.append("g")
             .selectAll("circle")
@@ -238,9 +299,10 @@ function buildImage(projection, opts) {
         svg.append('script')
             .attr('type', 'text/javascript')
             .text(`<script type="text/javascript"><![CDATA[
-            const yearlyStats = `+ JSON.stringify(perYearCableStats) + `
+            const perYearCableStats = `+ JSON.stringify(perYearCableStats) + `
             const yearlyCitySpeeds = `+ JSON.stringify(yearlyCitySpeeds) + `
             const yearlyTopCities = `+ JSON.stringify(topCities) + `
+            const perYearRegionStats = `+ JSON.stringify(perYearRegionStats) + `
             const minYear = `+ minYear + `
             const maxYear = `+ maxYear + `
             `+ mapEmbed + `
@@ -324,19 +386,26 @@ function buildImage(projection, opts) {
             .style("stroke-width", 1);
     }
 
-    const colorScale = scaleSequential(opts.InternetExchangeColorScale)
-        .domain([0, 1000000]); // Set the domain of the color scale based on the available bandwidth
+     // Set the domain of the color scale based on the year established
+    // const cableColorScale = scalePow().range([opts.CableColor, opts.ActiveCableColor]).domain([minYear, maxYear]);
 
     svg.append("g")
         .selectAll("path")
         .data(cableDataFiltered)
         .enter()
         .append("path")
-        .attr("class", function (d) { return "cable-lines rfs-" + d.properties.rfs_year })
+        .attr("class", (d) => "cable-lines rfs-" + d.properties.rfs_year)
         .attr("d", geoPath().projection(gfg))
         .attr("fill", "none")
-        .attr("stroke", function (d) { return opts.CableColor; })
-        .style("stroke-width", 2);
+        // .attr("stroke", (d) => cableColorScale(d.properties.rfs_year))
+        .attr("stroke", function(d) {
+            if (d.properties.rfs_year == maxYear) {
+                return opts.ActiveCableColor
+            } else {
+                return opts.CableColor
+            }
+        })
+        .attr("stroke-width", 2);
 
     if (opts.showLandingPoints) {
         // Drawing Landings
@@ -346,16 +415,28 @@ function buildImage(projection, opts) {
             .data(landingPointData.landingPointFeatures)
             .enter()
             .append("path")
-            .attr("d", geoPath().projection(gfg).pointRadius(function (d) { return 0.3; }))
+            .attr("d", geoPath().projection(gfg).pointRadius(() => 0.3))
             .attr("fill", opts.LandingPointColor)
-            .attr("stroke", function (d) { return "#eee"; })
-            .style("stroke-width", 1);
-
+            // .attr("stroke", d => cableColorScale(d.properties.rfs_year))
+            .attr("stroke", function(d) {
+                if (d.properties.rfs_year == maxYear) {
+                    return opts.ActiveCableColor
+                } else {
+                    return opts.CableColor
+                }
+            })
+            .attr("stroke-width", 1);
     }
+
     if (opts.showCitySpeeds && !opts.animate) {
         let citySpeedsData = fs.readFileSync('./data/city-speeds.json');
         let citySpeeds = JSON.parse(citySpeedsData);
-        const sizeScale = scalePow([0, 100000000], [10, 20])
+        const minSpeed = min(citySpeeds, (city) => city.speed );
+        const maxSpeed = max(citySpeeds, (city) => city.speed );
+
+        // Set the domain of the color scale based on the available bandwidth
+        // const cityColorScale = scalePow().range([opts.CableColor, opts.ActiveCableColor]).domain([minSpeed, maxSpeed]);
+        const citySizeScale = scalePow([minSpeed, maxSpeed], [8, 25])
 
         // Draw Cities that have an IX, sized/colored by bandwidth
         svg.append("g")
@@ -366,10 +447,17 @@ function buildImage(projection, opts) {
             .attr("class", "city")
             .attr("cx", d => gfg([d.long, d.lat])[0])
             .attr("cy", d => gfg([d.long, d.lat])[1])
-            .attr("r", d => Math.floor(sizeScale(d.speed)))
-            .attr("fill", d => colorScale(d.speed))
-            .attr("stroke", opts.InternetExchangeCircleColor)
-            .attr("stroke-width", 1);
+            .attr("r", d => Math.floor(citySizeScale(d.speed)))
+            .attr("fill", "none")
+            .attr("stroke", function(d) {
+                let yearlySpeed = d.speedYears[maxYear]
+                if (yearlySpeed && yearlySpeed.added_speed > 0) {
+                    return opts.ActiveCableColor
+                } else {
+                    return opts.CableColor
+                }
+            })
+            .attr("stroke-width", 2);
     }
 
     if (opts.animate || opts.title) {
@@ -502,22 +590,6 @@ function buildImage(projection, opts) {
     })
 }
 
-// buildImage(geoMercator(), {
-//     width: 5600,
-//     height: 4000,
-//     transparent: false,
-//     animate: true,
-//     showCountryLines: true,
-//     backgroundColor: "#9ddbff",
-//     countryBackgroundColor: "#fefded",
-//     outputPrefix: "output/light_",
-//     // From https://design.gitlab.com/data-visualization/color
-//     InternetExchangeColorScale: ["#e9ebff", "#e99b60"],
-//     CableColor: "#555",
-//     LandingPointColor: "#555",
-//     InternetExchangeCircleColor: "black",
-// })
-
 buildImage(geoMercator(), {
     width: 5600,
     height: 4000,
@@ -531,6 +603,7 @@ buildImage(geoMercator(), {
     // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
     InternetExchangeColorScale: ["#577590", "#4D908E"],
     CableColor: "#577590",
+    ActiveCableColor: "#FFA500",
     LandingPointColor: "#555",
     InternetExchangeCircleColor: "white",
 })
@@ -548,6 +621,7 @@ buildImage(geoMercator(), {
     // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
     InternetExchangeColorScale: ["#577590", "#4D908E"],
     CableColor: "#577590",
+    ActiveCableColor: "#FFA500",
     LandingPointColor: "#555",
     InternetExchangeCircleColor: "white",
 })
@@ -565,6 +639,7 @@ buildImage(geoMercator(), {
     // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
     InternetExchangeColorScale: ["#577590", "#4D908E"],
     CableColor: "#577590",
+    ActiveCableColor: "#FFA500",
     LandingPointColor: "#555",
     InternetExchangeCircleColor: "white",
 })
@@ -575,7 +650,7 @@ buildImage(geoMercator(), {
     transparent: false,
     animate: true,
     showCitySpeeds: true,
-    showLandingPoints: false,
+    showLandingPoints: true,
     showCountryLines: true,
     backgroundColor: "#333",
     countryBackgroundColor: "#888",
@@ -584,6 +659,7 @@ buildImage(geoMercator(), {
     // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
     InternetExchangeColorScale: ["#577590", "#4D908E"],
     CableColor: "#577590",
+    ActiveCableColor: "#FFA500",
     LandingPointColor: "#555",
     InternetExchangeCircleColor: "white",
 })
@@ -594,7 +670,7 @@ buildImage(geoMercator(), {
     transparent: false,
     animate: true,
     showCitySpeeds: true,
-    showLandingPoints: false,
+    showLandingPoints: true,
     showCountryLines: false,
     backgroundColor: "#333",
     countryBackgroundColor: "#888",
@@ -603,45 +679,7 @@ buildImage(geoMercator(), {
     // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
     InternetExchangeColorScale: ["#577590", "#4D908E"],
     CableColor: "#577590",
+    ActiveCableColor: "#FFA500",
     LandingPointColor: "#555",
     InternetExchangeCircleColor: "white",
 })
-
-// for (let year = 1990; year <= new Date().getFullYear(); year++) { 
-//     buildImage(geoMercator(), {
-//         width: 5600,
-//         height: 4000,
-//         transparent: false,
-//         animate: false,
-//         showLandingPoints: false,
-//         showCountryLines: false,
-//         backgroundColor: "#333",
-//         countryBackgroundColor: "#888",
-//         title: `${year}`,
-//         outputPrefix: `output/tmp/nocountrylines/${year}_`,
-//         cableFilter: (cable) => cable.properties.rfs_year != null && cable.properties.rfs_year <= year,
-//         // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
-//         InternetExchangeColorScale: ["#577590", "#4D908E"],
-//         CableColor: "#577590",
-//         LandingPointColor: "#555",
-//         InternetExchangeCircleColor: "white",
-//     })
-//     buildImage(geoMercator(), {
-//         width: 5600,
-//         height: 4000,
-//         transparent: false,
-//         animate: false,
-//         showLandingPoints: false,
-//         showCountryLines: true,
-//         backgroundColor: "#333",
-//         countryBackgroundColor: "#888",
-//         title: `${year}`,
-//         outputPrefix: `output/tmp/countrylines/${year}_`,
-//         cableFilter: (cable) => cable.properties.rfs_year != null && cable.properties.rfs_year <= year,
-//         // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
-//         InternetExchangeColorScale: ["#577590", "#4D908E"],
-//         CableColor: "#577590",
-//         LandingPointColor: "#555",
-//         InternetExchangeCircleColor: "white",
-//     })
-// }

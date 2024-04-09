@@ -15,14 +15,14 @@ const setYear = function (year) {
         entry.innerHTML = ""
     })
 
-    yearStats = yearlyStats[year]
+    yearStats = perYearCableStats[year]
     yearStats.longest.forEach((cable, idx) => {
         document.getElementById(`top-${idx}`).innerHTML = `${cable.properties.name}: <tspan class="emphasized active">${numberFormatter.format(cable.lengthKm)}km</tspan>`
     })
     var totalKm = 0
     var totalCount = 0
     for (let i = minYear; i <= year; i++) { 
-        stats = yearlyStats[i]
+        stats = perYearCableStats[i]
         totalCount+= stats.count
         totalKm += stats.lengthKm
     }
@@ -47,16 +47,23 @@ const setYear = function (year) {
             document.getElementById(`top-peering-${idx}`).innerHTML = `${city.city}, ${city.country}: <tspan class="emphasized">${city.total_str}</tspan> <tspan class="emphasized active">(+${city.added_str})</tspan>`
         })
     }
+
+    var yearlyRegionStats = perYearRegionStats[year]
+    if (yearlyRegionStats) {
+        yearlyRegionStats.forEach((region, idx) => {
+            document.getElementById(`regions-${idx}`).innerHTML = `${region.region}: <tspan class="emphasized">${region.total_str}</tspan> <tspan class="emphasized active">(+${region.added_str})</tspan>`
+        })
+    }
 }
 
 async function main() {
-    for (let i = minYear; i <= maxYear; i++) { 
+    for (let i = minYear; i <= maxYear; i++) {
         setYear(i);
         if (i >= 2010) {
             await new Promise(r => setTimeout(r, 1090*2));
         }
     }
-    await new Promise(r => setTimeout(r, 1090*8));
+    await new Promise(r => setTimeout(r, 1090*2));
 
     // Clear all text
     const textElems = document.querySelectorAll("text")
@@ -90,18 +97,47 @@ async function main() {
     document.querySelectorAll("svg")[0].setAttribute("viewBox", "4200 2400 1000 1000")
     await new Promise(r => setTimeout(r, 1090*4));
 
+    // East Asia
+    document.querySelectorAll("svg")[0].setAttribute("viewBox", "4200 1700 1000 1000")
+    await new Promise(r => setTimeout(r, 1090*4));
+
     // Re-show all text
     textElems.forEach((elem) => { elem.setAttribute("visibility", "visible") })
     cableLines.forEach((elem) => { elem.style.strokeWidth = "2" })
 
     // Overall View
     document.querySelectorAll("svg")[0].setAttribute("viewBox", "0 0 5600 4000")
+    await new Promise(r => setTimeout(r, 1090*4));
+
+    // Remove the shown class for everything to reset everything
+    resetShown()
+
+    textElems.forEach((elem) => { elem.setAttribute("visibility", "hidden") })
+    document.getElementById("svg-title").setAttribute("visibility", "visible")
+    document.getElementById("svg-title-2").setAttribute("visibility", "visible")
+    // Back to beginning
+    for (let i = minYear; i <= maxYear; i++) {
+        resetShown()
+        setYear(i);
+        if (i >= 2010) {
+            await new Promise(r => setTimeout(r, 1090*1));
+        }
+    }
+
+    // Back to end
+    for (let i = minYear; i <= maxYear; i++) {
+        setYear(i);
+    }
     await new Promise(r => setTimeout(r, 1090*8));
 
     // call stopCapture() if it's defined
     if (typeof stopCapture === 'function') {
         stopCapture()
     }
+}
+
+function resetShown() {
+    document.querySelectorAll(".shown").forEach((cable) => { cable.classList.remove("shown") })
 }
 
 window.onload = function() { main() }
