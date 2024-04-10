@@ -116,7 +116,7 @@ function buildImage(projection, opts) {
         svg.append('style')
             .text(`
             .svg-title {
-                color: `+ opts.countryBackgroundColor + `;
+                color: `+ opts.textColor + `;
                 font-size: 8em;
                 font-family: monospace, monospace;
             }
@@ -175,11 +175,65 @@ function buildImage(projection, opts) {
             `)
     }
 
+    if (opts.showCountryLines) {
+        // Drawing the country boundaries
+        let worldMapData = fs.readFileSync('./data/world.geo.json');
+        let worldMap = JSON.parse(worldMapData);
+        svg.append("g")
+            .selectAll("path")
+            .data(worldMap.features)
+            .enter()
+            .append("path")
+            .attr("class", "country-lines")
+            .attr("fill", opts.countryBackgroundColor)
+            .attr("d", geoPath().projection(gfg))
+            .style("stroke", opts.backgroundColor)
+            .style("stroke-width", 1);
+    }
+
     // Drawing Cables
     const cableData = loadCableGeoData()
     const cableDataFiltered = cableData.cableGeoFeatures.filter(opts.cableFilter);
     const minYear = min(cableDataFiltered, function (cable) { return cable.properties.rfs_year; });
     const maxYear = max(cableDataFiltered, function (cable) { return cable.properties.rfs_year; });
+    svg.append("g")
+        .selectAll("path")
+        .data(cableDataFiltered)
+        .enter()
+        .append("path")
+        .attr("class", (d) => "cable-lines rfs-" + d.properties.rfs_year)
+        .attr("d", geoPath().projection(gfg))
+        .attr("fill", "none")
+        // .attr("stroke", (d) => cableColorScale(d.properties.rfs_year))
+        .attr("stroke", function(d) {
+            if (d.properties.rfs_year == maxYear) {
+                return opts.ActiveCableColor
+            } else {
+                return opts.CableColor
+            }
+        })
+        .attr("stroke-width", 2);
+
+    if (opts.showLandingPoints) {
+        // Drawing Landings
+        const landingPointData = loadLandingGeoData()
+        svg.append("g")
+            .selectAll("path")
+            .data(landingPointData.landingPointFeatures)
+            .enter()
+            .append("path")
+            .attr("d", geoPath().projection(gfg).pointRadius(() => 0.3))
+            .attr("fill", opts.LandingPointColor)
+            // .attr("stroke", d => cableColorScale(d.properties.rfs_year))
+            .attr("stroke", function(d) {
+                if (d.properties.rfs_year == maxYear) {
+                    return opts.ActiveCableColor
+                } else {
+                    return opts.CableColor
+                }
+            })
+            .attr("stroke-width", 1);
+    }
 
     if (opts.animate) {
         var perYearCableStats = _(cableDataFiltered)
@@ -256,30 +310,6 @@ function buildImage(projection, opts) {
                 return result
             }, {})
             .value()
-
-        svg.append("text")
-            .attr("id", "regions-title")
-            .attr("class", "regions-title")
-            .attr("x", "73%")
-            .attr("y", "200")
-            .attr("font-size", "80")
-            .attr("font-weight", "bold")
-            .attr("fill", opts.countryBackgroundColor)
-            .attr("stroke", opts.countryBackgroundColor)
-            .attr("style", `font-family: monospace, monospace;`)
-            .text("Peering per region")
-
-        regions.forEach((_, idx) => {
-            svg.append("text")
-                .attr("id", `regions-${idx}`)
-                .attr("class", "top")
-                .attr("x", "73%")
-                .attr("y", `${290 + (90 * idx)}`)
-                .attr("font-size", "65")
-                .attr("fill", opts.countryBackgroundColor)
-                .attr("stroke", opts.countryBackgroundColor)
-                .attr("style", `font-family: monospace, monospace;`)
-        })
 
         svg.append("g")
             .selectAll("circle")
@@ -369,64 +399,8 @@ function buildImage(projection, opts) {
             .attr("transform-origin", `${leftSideOfControls + 1200} 5%`)
     }
 
-    if (opts.showCountryLines) {
-        // Drawing the country boundaries
-        let worldMapData = fs.readFileSync('./data/world.geo.json');
-        let worldMap = JSON.parse(worldMapData);
-        svg.append("g")
-            .selectAll("path")
-            .data(worldMap.features)
-            .enter()
-            .append("path")
-            .attr("class", "country-lines")
-            .attr("fill", opts.countryBackgroundColor)
-            .attr("opacity", "10%")
-            .attr("d", geoPath().projection(gfg))
-            .style("stroke", opts.backgroundColor)
-            .style("stroke-width", 1);
-    }
-
-     // Set the domain of the color scale based on the year established
+    // Set the domain of the color scale based on the year established
     // const cableColorScale = scalePow().range([opts.CableColor, opts.ActiveCableColor]).domain([minYear, maxYear]);
-
-    svg.append("g")
-        .selectAll("path")
-        .data(cableDataFiltered)
-        .enter()
-        .append("path")
-        .attr("class", (d) => "cable-lines rfs-" + d.properties.rfs_year)
-        .attr("d", geoPath().projection(gfg))
-        .attr("fill", "none")
-        // .attr("stroke", (d) => cableColorScale(d.properties.rfs_year))
-        .attr("stroke", function(d) {
-            if (d.properties.rfs_year == maxYear) {
-                return opts.ActiveCableColor
-            } else {
-                return opts.CableColor
-            }
-        })
-        .attr("stroke-width", 2);
-
-    if (opts.showLandingPoints) {
-        // Drawing Landings
-        const landingPointData = loadLandingGeoData()
-        svg.append("g")
-            .selectAll("path")
-            .data(landingPointData.landingPointFeatures)
-            .enter()
-            .append("path")
-            .attr("d", geoPath().projection(gfg).pointRadius(() => 0.3))
-            .attr("fill", opts.LandingPointColor)
-            // .attr("stroke", d => cableColorScale(d.properties.rfs_year))
-            .attr("stroke", function(d) {
-                if (d.properties.rfs_year == maxYear) {
-                    return opts.ActiveCableColor
-                } else {
-                    return opts.CableColor
-                }
-            })
-            .attr("stroke-width", 1);
-    }
 
     if (opts.showCitySpeeds && !opts.animate) {
         let citySpeedsData = fs.readFileSync('./data/city-speeds.json');
@@ -469,7 +443,7 @@ function buildImage(projection, opts) {
             .attr("y", "7%")
             .attr("font-size", "120")
             .attr("font-weight", "bold")
-            .attr("fill", opts.countryBackgroundColor)
+            .attr("fill", opts.textColor)
             .attr("text-anchor", "middle")
             .attr("dominant-baseline", "middle")
             .attr("style", `font-family: monospace, monospace;`)
@@ -482,7 +456,7 @@ function buildImage(projection, opts) {
             .attr("y", "12%")
             .attr("font-size", "120")
             .attr("font-weight", "bold")
-            .attr("fill", opts.countryBackgroundColor)
+            .attr("fill", opts.textColor)
             .attr("text-anchor", "middle")
             .attr("dominant-baseline", "middle")
             .attr("style", `font-family: monospace, monospace;`)
@@ -497,8 +471,8 @@ function buildImage(projection, opts) {
             .attr("y", `${height - 600}`)
             .attr("font-size", "80")
             .attr("font-weight", "bold")
-            .attr("fill", opts.countryBackgroundColor)
-            .attr("stroke", opts.countryBackgroundColor)
+            .attr("fill", opts.textColor)
+            .attr("stroke", opts.textColor)
             .attr("style", `font-family: monospace, monospace;`)
 
         for (let topNumber = 0; topNumber < 5; topNumber++) {
@@ -508,8 +482,8 @@ function buildImage(projection, opts) {
                 .attr("x", "1%")
                 .attr("y", `${height - 510 + (90 * topNumber)}`)
                 .attr("font-size", "65")
-                .attr("fill", opts.countryBackgroundColor)
-                .attr("stroke", opts.countryBackgroundColor)
+                .attr("fill", opts.textColor)
+                .attr("stroke", opts.textColor)
                 .attr("style", `font-family: monospace, monospace;`)
         }
 
@@ -520,8 +494,8 @@ function buildImage(projection, opts) {
             .attr("y", "200")
             .attr("font-size", "80")
             .attr("font-weight", "bold")
-            .attr("fill", opts.countryBackgroundColor)
-            .attr("stroke", opts.countryBackgroundColor)
+            .attr("fill", opts.textColor)
+            .attr("stroke", opts.textColor)
             .attr("style", `font-family: monospace, monospace;`)
 
         for (let topNumber = 0; topNumber < 5; topNumber++) {
@@ -531,8 +505,8 @@ function buildImage(projection, opts) {
                 .attr("x", "1%")
                 .attr("y", `${290 + (90 * topNumber)}`)
                 .attr("font-size", "65")
-                .attr("fill", opts.countryBackgroundColor)
-                .attr("stroke", opts.countryBackgroundColor)
+                .attr("fill", opts.textColor)
+                .attr("stroke", opts.textColor)
                 .attr("style", `font-family: monospace, monospace;`)
         }
 
@@ -545,8 +519,8 @@ function buildImage(projection, opts) {
             .attr("x", leftColumnX)
             .attr("y", `${height - 330}`)
             .attr("font-size", "65")
-            .attr("fill", opts.countryBackgroundColor)
-            .attr("stroke", opts.countryBackgroundColor)
+            .attr("fill", opts.textColor)
+            .attr("stroke", opts.textColor)
             .attr("style", `font-family: monospace, monospace;`)
 
         svg.append("text")
@@ -555,8 +529,8 @@ function buildImage(projection, opts) {
             .attr("x", rightColumnX)
             .attr("y", `${height - 330}`)
             .attr("font-size", "65")
-            .attr("fill", opts.countryBackgroundColor)
-            .attr("stroke", opts.countryBackgroundColor)
+            .attr("fill", opts.textColor)
+            .attr("stroke", opts.textColor)
             .attr("style", `font-family: monospace, monospace;`)
 
 
@@ -566,8 +540,8 @@ function buildImage(projection, opts) {
             .attr("x", leftColumnX)
             .attr("y", `${height - 240}`)
             .attr("font-size", "65")
-            .attr("fill", opts.countryBackgroundColor)
-            .attr("stroke", opts.countryBackgroundColor)
+            .attr("fill", opts.textColor)
+            .attr("stroke", opts.textColor)
             .attr("style", `font-family: monospace, monospace;`)
 
         svg.append("text")
@@ -576,9 +550,33 @@ function buildImage(projection, opts) {
             .attr("x", rightColumnX)
             .attr("y", `${height - 240}`)
             .attr("font-size", "65")
-            .attr("fill", opts.countryBackgroundColor)
-            .attr("stroke", opts.countryBackgroundColor)
+            .attr("fill", opts.textColor)
+            .attr("stroke", opts.textColor)
             .attr("style", `font-family: monospace, monospace;`)
+
+        svg.append("text")
+            .attr("id", "regions-title")
+            .attr("class", "regions-title")
+            .attr("x", "73%")
+            .attr("y", "200")
+            .attr("font-size", "80")
+            .attr("font-weight", "bold")
+            .attr("fill", opts.textColor)
+            .attr("stroke", opts.textColor)
+            .attr("style", `font-family: monospace, monospace;`)
+            .text("Peering per region")
+
+        regions.forEach((_, idx) => {
+            svg.append("text")
+                .attr("id", `regions-${idx}`)
+                .attr("class", "top")
+                .attr("x", "73%")
+                .attr("y", `${290 + (90 * idx)}`)
+                .attr("font-size", "65")
+                .attr("fill", opts.textColor)
+                .attr("stroke", opts.textColor)
+                .attr("style", `font-family: monospace, monospace;`)
+        })
     }
 
     const outFile = opts.outputPrefix + "geo-mercator.svg"
@@ -590,6 +588,34 @@ function buildImage(projection, opts) {
     })
 }
 
+let citySpeedsData = fs.readFileSync('./data/city-speeds.json');
+let citySpeeds = JSON.parse(citySpeedsData);
+
+const cityPeering = _.chain(citySpeeds)
+    .reduce(function (result, city) {
+        _.forEach(city.speedYears, function (yearSpeed, year) {
+            (result[year] || (result[year] = [])).push({
+                id: `city-${city.id}`,
+                city: city.city,
+                country: city.country,
+                total: yearSpeed.total,
+                total_str: prettyBytes(yearSpeed.total * 1000 * 1000, { bits: true }),
+                added_str: prettyBytes(yearSpeed.added_speed * 1000 * 1000, { bits: true }),
+            })
+        })
+        return result;
+    }, {})
+    .reduce(function (result, cities, year) {
+        result[year] = _(cities).sortBy('total').reverse()
+        return result
+    }, {})
+    .value()
+
+fs.mkdirSync("output/", { recursive: true });
+fs.writeFile("output/sorted-city-peering.json", JSON.stringify(cityPeering), function (err) {
+    if (err) return console.log(err);
+})
+
 buildImage(geoMercator(), {
     width: 5600,
     height: 4000,
@@ -598,7 +624,8 @@ buildImage(geoMercator(), {
     showCitySpeeds: true,
     showCountryLines: false,
     backgroundColor: "#333",
-    countryBackgroundColor: "#888",
+    countryBackgroundColor: "#3c3c3c",
+    textColor: "#888",
     outputPrefix: "output/transparent_",
     // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
     InternetExchangeColorScale: ["#577590", "#4D908E"],
@@ -616,7 +643,8 @@ buildImage(geoMercator(), {
     showCitySpeeds: true,
     showCountryLines: true,
     backgroundColor: "#333",
-    countryBackgroundColor: "#888",
+    countryBackgroundColor: "#3c3c3c",
+    textColor: "#888",
     outputPrefix: "output/",
     // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
     InternetExchangeColorScale: ["#577590", "#4D908E"],
@@ -634,7 +662,8 @@ buildImage(geoMercator(), {
     showCitySpeeds: true,
     showCountryLines: false,
     backgroundColor: "#333",
-    countryBackgroundColor: "#888",
+    countryBackgroundColor: "#3c3c3c",
+    textColor: "#888",
     outputPrefix: "output/nocountrylines_",
     // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
     InternetExchangeColorScale: ["#577590", "#4D908E"],
@@ -653,7 +682,8 @@ buildImage(geoMercator(), {
     showLandingPoints: true,
     showCountryLines: true,
     backgroundColor: "#333",
-    countryBackgroundColor: "#888",
+    countryBackgroundColor: "#3c3c3c",
+    textColor: "#888",
     outputPrefix: `output/animated/`,
     cableFilter: (cable) => cable.properties.rfs_year != null && cable.properties.rfs_year <= 2024,
     // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
@@ -673,7 +703,8 @@ buildImage(geoMercator(), {
     showLandingPoints: true,
     showCountryLines: false,
     backgroundColor: "#333",
-    countryBackgroundColor: "#888",
+    countryBackgroundColor: "#3c3c3c",
+    textColor: "#888",
     outputPrefix: `output/animated/nocountrylines_`,
     cableFilter: (cable) => cable.properties.rfs_year != null && cable.properties.rfs_year <= 2024,
     // https://coolors.co/palette/f94144-f3722c-f8961e-f9844a-f9c74f-90be6d-43aa8b-4d908e-577590-277da1
