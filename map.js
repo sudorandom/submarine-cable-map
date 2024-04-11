@@ -579,7 +579,7 @@ function buildImage(projection, opts) {
         })
     }
 
-    const outFile = opts.outputPrefix + "geo-mercator.svg"
+    const outFile = opts.outputPrefix + "the-internet-map.svg"
     const dirName = path.dirname(outFile)
     console.log('writing output to ' + outFile);
     fs.mkdirSync(dirName, { recursive: true });
